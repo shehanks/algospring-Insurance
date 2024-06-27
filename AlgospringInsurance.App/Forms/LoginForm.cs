@@ -1,9 +1,8 @@
 using AlgospringInsurance.App.Dtos;
-using AlgospringInsurance.DataAccess.Repository.Contracts;
+using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
 using AlgospringInsurance.Services.Contracts;
-using MySql.Data.MySqlClient;
-using System.Data;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AlgospringInsurance.App.Forms
 {
@@ -11,18 +10,18 @@ namespace AlgospringInsurance.App.Forms
     {
         private readonly IFormFactory formFactory;
 
-        private readonly IConnectionProvider connectionProvider;
-
         private readonly IUserService userService;
 
+        private readonly IUnitOfWork unitOfWork;
+
         public LoginForm(
-            IConnectionProvider connectionProvider,
             IFormFactory formFactory,
-            IUserService userService)
+            IUserService userService,
+            IUnitOfWork unitOfWork)
         {
-            this.connectionProvider = connectionProvider;
             this.formFactory = formFactory;
             this.userService = userService;
+            this.unitOfWork = unitOfWork;
             InitializeComponent();
         }
 
@@ -51,54 +50,37 @@ namespace AlgospringInsurance.App.Forms
             if (!IsValidLogin())
                 return;
 
-            var user = userService.GetUser(1);
-
-            var con = new MySqlConnection();
-            var query = "select Name, Email, IsAdmin from user where binary username = binary @userName and password = @password limit 1";
+            var passwordHash = SecurityProvider.Encrypt(LoginForm_Password_Textbox.Text);
+            var userName = LoginForm_Username_Textbox.Text.Trim();
 
             try
             {
-                using (con = new MySqlConnection(connectionProvider.GetConnectionString()))
+                var user = unitOfWork.UserRepository
+                    .Get(u => string.Equals(u.Username, userName) && string.Equals(u.Password, passwordHash))
+                    .SingleOrDefault();
+
+                if (user is null)
                 {
-                    con.Open();
-                    var command = con.CreateCommand();
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@username", LoginForm_Username_Textbox.Text.Trim());
-                    command.Parameters.AddWithValue("@password", SecurityProvider.Encrypt(LoginForm_Password_Textbox.Text));
-                    var reader = command.ExecuteReader(CommandBehavior.SingleRow);
+                    MessageBox.Show(
+                        "Invalid login credentials, please check Username and Password and try again",
+                        "Invalid login details",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                else
+                {
+                    LoginFormDataParser.LoginName = user.Name;
+                    LoginFormDataParser.Email = user.Email;
+                    LoginFormDataParser.IsAdmin = user.IsAdmin;
 
-                    if (!reader.HasRows)
-                    {
-                        MessageBox.Show(
-                            "Invalid login credentials, please check Username and Password and try again",
-                            "Invalid login details",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        while (reader.Read())
-                        {
-                            LoginFormDataParser.LoginName = reader["Name"].ToString();
-                            LoginFormDataParser.Email = reader["Email"].ToString();
-                            LoginFormDataParser.IsAdmin = reader["IsAdmin"].ToString() == "1" ? true : false;
-                        }
-
-                        Hide();
-                        var userForm = formFactory.Create<UserForm>();
-                        userForm.Show();
-                    }
-
-                    reader.Close();
+                    Hide();
+                    var userForm = formFactory.Create<UserForm>();
+                    userForm.Show();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
             }
         }
 

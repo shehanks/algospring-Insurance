@@ -1,14 +1,15 @@
 using AlgospringInsurance.App.Forms;
-using AlgospringInsurance.DataAccess.Repository.Contracts;
+using AlgospringInsurance.DataAccess.Data;
 using AlgospringInsurance.DataAccess.Repository;
+using AlgospringInsurance.DataAccess.Repository.Contracts;
+using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
+using AlgospringInsurance.Services;
+using AlgospringInsurance.Services.Contracts;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Configuration;
-using AlgospringInsurance.DataAccess.Data;
-using Microsoft.EntityFrameworkCore;
-using AlgospringInsurance.Services.Contracts;
-using AlgospringInsurance.Services;
 
 namespace AlgospringInsurance.App
 {
@@ -54,7 +55,6 @@ namespace AlgospringInsurance.App
                     services.AddTransient<UserForm>();
                     services.AddTransient<AdminForm>();
 
-                    services.AddSingleton<IConnectionProvider, ConnectionProvider>();
                     services.AddSingleton<IFormFactory, FormFactory>();
                 });
         }

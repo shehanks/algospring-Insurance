@@ -77,14 +77,14 @@
             LoginForm_Login_GroupBox.Controls.Add(LoginForm_Username_Label);
             LoginForm_Login_GroupBox.Location = new Point(12, 128);
             LoginForm_Login_GroupBox.Name = "LoginForm_Login_GroupBox";
-            LoginForm_Login_GroupBox.Size = new Size(391, 182);
+            LoginForm_Login_GroupBox.Size = new Size(391, 168);
             LoginForm_Login_GroupBox.TabIndex = 2;
             LoginForm_Login_GroupBox.TabStop = false;
             LoginForm_Login_GroupBox.Text = "Login";
             // 
             // LoginForm_Login_Button
             // 
-            LoginForm_Login_Button.Location = new Point(265, 131);
+            LoginForm_Login_Button.Location = new Point(265, 121);
             LoginForm_Login_Button.Name = "LoginForm_Login_Button";
             LoginForm_Login_Button.Size = new Size(94, 39);
             LoginForm_Login_Button.TabIndex = 5;
@@ -94,7 +94,7 @@
             // 
             // LoginForm_Clear_Button
             // 
-            LoginForm_Clear_Button.Location = new Point(165, 131);
+            LoginForm_Clear_Button.Location = new Point(165, 121);
             LoginForm_Clear_Button.Name = "LoginForm_Clear_Button";
             LoginForm_Clear_Button.Size = new Size(94, 39);
             LoginForm_Clear_Button.TabIndex = 4;
@@ -104,7 +104,7 @@
             // 
             // LoginForm_Password_Textbox
             // 
-            LoginForm_Password_Textbox.Location = new Point(101, 90);
+            LoginForm_Password_Textbox.Location = new Point(101, 79);
             LoginForm_Password_Textbox.Name = "LoginForm_Password_Textbox";
             LoginForm_Password_Textbox.Size = new Size(258, 27);
             LoginForm_Password_Textbox.TabIndex = 3;
@@ -113,7 +113,7 @@
             // LoginForm_Password_Label
             // 
             LoginForm_Password_Label.AutoSize = true;
-            LoginForm_Password_Label.Location = new Point(6, 93);
+            LoginForm_Password_Label.Location = new Point(6, 82);
             LoginForm_Password_Label.Name = "LoginForm_Password_Label";
             LoginForm_Password_Label.Size = new Size(70, 20);
             LoginForm_Password_Label.TabIndex = 2;
@@ -139,7 +139,7 @@
             // 
             // LoginForm_Exit_Button
             // 
-            LoginForm_Exit_Button.Location = new Point(309, 316);
+            LoginForm_Exit_Button.Location = new Point(309, 302);
             LoginForm_Exit_Button.Name = "LoginForm_Exit_Button";
             LoginForm_Exit_Button.Size = new Size(94, 39);
             LoginForm_Exit_Button.TabIndex = 6;
@@ -159,7 +159,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(411, 367);
+            ClientSize = new Size(411, 351);
             Controls.Add(LoginForm_Exit_Button);
             Controls.Add(LoginForm_Login_GroupBox);
             Controls.Add(LoginForm_Heading_Label);

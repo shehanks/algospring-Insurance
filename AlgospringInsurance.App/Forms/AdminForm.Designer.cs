@@ -112,7 +112,7 @@
             // 
             // AdminForm_Email_TextBox
             // 
-            AdminForm_Email_TextBox.Location = new Point(115, 74);
+            AdminForm_Email_TextBox.Location = new Point(115, 108);
             AdminForm_Email_TextBox.MaxLength = 320;
             AdminForm_Email_TextBox.Name = "AdminForm_Email_TextBox";
             AdminForm_Email_TextBox.Size = new Size(319, 27);
@@ -143,7 +143,7 @@
             // AdminForm_IsAdmin_CheckBox
             // 
             AdminForm_IsAdmin_CheckBox.AutoSize = true;
-            AdminForm_IsAdmin_CheckBox.Location = new Point(115, 240);
+            AdminForm_IsAdmin_CheckBox.Location = new Point(115, 207);
             AdminForm_IsAdmin_CheckBox.Name = "AdminForm_IsAdmin_CheckBox";
             AdminForm_IsAdmin_CheckBox.Size = new Size(18, 17);
             AdminForm_IsAdmin_CheckBox.TabIndex = 9;
@@ -162,7 +162,7 @@
             // AdminForm_IsAdmin_Label
             // 
             AdminForm_IsAdmin_Label.AutoSize = true;
-            AdminForm_IsAdmin_Label.Location = new Point(6, 237);
+            AdminForm_IsAdmin_Label.Location = new Point(6, 204);
             AdminForm_IsAdmin_Label.Name = "AdminForm_IsAdmin_Label";
             AdminForm_IsAdmin_Label.Size = new Size(91, 20);
             AdminForm_IsAdmin_Label.TabIndex = 8;
@@ -180,7 +180,7 @@
             // 
             // AdminForm_Password_TextBox
             // 
-            AdminForm_Password_TextBox.Location = new Point(115, 195);
+            AdminForm_Password_TextBox.Location = new Point(115, 174);
             AdminForm_Password_TextBox.MaxLength = 20;
             AdminForm_Password_TextBox.Name = "AdminForm_Password_TextBox";
             AdminForm_Password_TextBox.PlaceholderText = "Add a new password";
@@ -200,7 +200,7 @@
             // AdminForm_Password_Label
             // 
             AdminForm_Password_Label.AutoSize = true;
-            AdminForm_Password_Label.Location = new Point(6, 198);
+            AdminForm_Password_Label.Location = new Point(6, 177);
             AdminForm_Password_Label.Name = "AdminForm_Password_Label";
             AdminForm_Password_Label.Size = new Size(70, 20);
             AdminForm_Password_Label.TabIndex = 6;
@@ -208,7 +208,7 @@
             // 
             // AdminForm_Username_TextBox
             // 
-            AdminForm_Username_TextBox.Location = new Point(115, 153);
+            AdminForm_Username_TextBox.Location = new Point(115, 141);
             AdminForm_Username_TextBox.MaxLength = 20;
             AdminForm_Username_TextBox.Name = "AdminForm_Username_TextBox";
             AdminForm_Username_TextBox.Size = new Size(319, 27);
@@ -217,7 +217,7 @@
             // AdminForm_Username_Label
             // 
             AdminForm_Username_Label.AutoSize = true;
-            AdminForm_Username_Label.Location = new Point(6, 156);
+            AdminForm_Username_Label.Location = new Point(6, 144);
             AdminForm_Username_Label.Name = "AdminForm_Username_Label";
             AdminForm_Username_Label.Size = new Size(75, 20);
             AdminForm_Username_Label.TabIndex = 4;
@@ -225,7 +225,7 @@
             // 
             // AdminForm_Name_TextBox
             // 
-            AdminForm_Name_TextBox.Location = new Point(115, 113);
+            AdminForm_Name_TextBox.Location = new Point(115, 75);
             AdminForm_Name_TextBox.MaxLength = 50;
             AdminForm_Name_TextBox.Name = "AdminForm_Name_TextBox";
             AdminForm_Name_TextBox.Size = new Size(319, 27);
@@ -234,7 +234,7 @@
             // AdminForm_Email_Label
             // 
             AdminForm_Email_Label.AutoSize = true;
-            AdminForm_Email_Label.Location = new Point(6, 116);
+            AdminForm_Email_Label.Location = new Point(6, 78);
             AdminForm_Email_Label.Name = "AdminForm_Email_Label";
             AdminForm_Email_Label.Size = new Size(49, 20);
             AdminForm_Email_Label.TabIndex = 2;
@@ -243,7 +243,7 @@
             // AdminForm_Name_Label
             // 
             AdminForm_Name_Label.AutoSize = true;
-            AdminForm_Name_Label.Location = new Point(6, 77);
+            AdminForm_Name_Label.Location = new Point(6, 111);
             AdminForm_Name_Label.Name = "AdminForm_Name_Label";
             AdminForm_Name_Label.Size = new Size(46, 20);
             AdminForm_Name_Label.TabIndex = 0;

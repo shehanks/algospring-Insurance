@@ -1,167 +1,110 @@
 ﻿using AlgospringInsurance.App.Dtos;
+using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
-using MySql.Data.MySqlClient;
-using System.Data;
 
 namespace AlgospringInsurance.App.Forms
 {
     public partial class AdminForm : Form
     {
-        private readonly IConnectionProvider _connectionProvider;
+        private readonly IUnitOfWork unitOfWork;
 
-        public AdminForm(IConnectionProvider connectionProvider)
+        public AdminForm(
+            IUnitOfWork unitOfWork)
         {
-            _connectionProvider = connectionProvider;
+            this.unitOfWork = unitOfWork;
             InitializeComponent();
             LoadUserNameItems();
         }
 
         private void LoadUserNameItems()
         {
-            var con = new MySqlConnection();
             AdminForm_Search_ComboBox.Items.Clear();
 
             try
             {
-                using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
+                var users = unitOfWork.UserRepository
+                    .Get(u => !string.Equals(u.Email, LoginFormDataParser.Email));
+
+                if (users.Any())
                 {
-                    con.Open();
-                    var command = con.CreateCommand();
-                    command.CommandText = "select Id, Name, Email from user where email != @email";
-                    command.Parameters.AddWithValue("@email", LoginFormDataParser.Email);
-                    var reader = command.ExecuteReader();
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            AddNewUserSearchComboBoxItem(
-                                Convert.ToInt32(reader["Id"].ToString()), reader["Name"].ToString()!, reader["Email"].ToString()!);
-                        }
-                    }
-
-                    reader.Close();
+                    foreach (var user in users)
+                        AddNewUserSearchComboBoxItem(user.Id, user.Name, user.Email);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
         }
 
         private void AdminForm_Search_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var con = new MySqlConnection();
-            var selectedItem = AdminForm_Search_ComboBox.SelectedItem as DropDownItem;
-            var query = "select Name, Email, Username, IsAdmin from user where Id = @id";
+            var selectedUser = AdminForm_Search_ComboBox.SelectedItem as DropDownItem;
+            UseRegistrationForm_Register_Button.Enabled = false;
 
             try
             {
-                using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
-                {
-                    con.Open();
-                    var command = con.CreateCommand();
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@id", selectedItem!.Id);
-                    var reader = command.ExecuteReader();
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id)!;
 
-                    if (reader.HasRows && reader.Read())
-                    {
-                        AdminForm_Email_TextBox.Text = reader["Email"].ToString();
-                        AdminForm_Name_TextBox.Text = reader["Name"].ToString();
-                        AdminForm_Username_TextBox.Text = reader["Username"].ToString();
-                        AdminForm_IsAdmin_CheckBox.Checked = reader["IsAdmin"].ToString() is "1" ? true : false;
-                    }
-
-                    reader.Close();
-                }
+                AdminForm_Email_TextBox.Text = user.Email;
+                AdminForm_Name_TextBox.Text = user.Name;
+                AdminForm_Username_TextBox.Text = user.Username;
+                AdminForm_IsAdmin_CheckBox.Checked = user.IsAdmin;
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
         }
 
         private void UseRegistrationForm_Register_Button_Click(object sender, EventArgs e)
         {
-            var con = new MySqlConnection();
-            var query = @$"insert into user (`Name`, `Username`, `Password`, `Email`, `IsAdmin`)" +
-                    "values (@name, @username, @password, @email, @isAdmin)";
-
             try
             {
-                using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
+                var user = unitOfWork.UserRepository.Insert(new DataAccess.Models.User
                 {
-                    var name = AdminForm_Name_TextBox.Text.Trim().ToString();
-                    var email = AdminForm_Email_TextBox.Text.Trim().ToString();
-                    var username = AdminForm_Username_TextBox.Text.Trim().ToString();
+                    Name = AdminForm_Name_TextBox.Text.Trim(),
+                    Email = AdminForm_Email_TextBox.Text.Trim(),
+                    Username = AdminForm_Username_TextBox.Text.Trim(),
+                    Password = SecurityProvider.Encrypt(AdminForm_Password_TextBox.Text),
+                    IsAdmin = AdminForm_IsAdmin_CheckBox.Checked
+                });
 
-                    con.Open();
-                    var command = con.CreateCommand();
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@name", name);
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", SecurityProvider.Encrypt(AdminForm_Password_TextBox.Text.ToString()));
-                    command.Parameters.AddWithValue("@email", email);
-                    command.Parameters.AddWithValue("@isAdmin", AdminForm_IsAdmin_CheckBox.Checked);
-                    var reader = command.ExecuteReader();
+                unitOfWork.Complete();
 
-                    MessageBox.Show("Record Added Succesfully", "Register User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResetUserForm();
-                    reader.Close();
-                }
+                MessageBox.Show("Record Added Succesfully", "Register User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ResetUserForm();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
         }
 
         private void UseRegistrationForm_Update_Button_Click(object sender, EventArgs e)
         {
-            var con = new MySqlConnection();
-            var userContext = GetUserContext();
-            var query = @"update user set `Name` = @name, `Username` = @username, `Password` = @password, `Email` = @email, `IsAdmin` = @isAdmin where email = @email";
+            var selectedUser = AdminForm_Search_ComboBox.SelectedItem as DropDownItem;
 
             try
-            {            
-                if (userContext.isValid)
+            {
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id);
+
+                if (user is not null)
                 {
-                    using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
-                    {
-                        var name = AdminForm_Name_TextBox.Text.Trim().ToString();
-                        var email = AdminForm_Email_TextBox.Text.Trim().ToString();
-                        var username = AdminForm_Username_TextBox.Text.Trim().ToString();
-                        var rawPassword = AdminForm_Password_TextBox.Text.ToString();
-                        var hashPassword = string.IsNullOrWhiteSpace(rawPassword) ? userContext.passwordHash : SecurityProvider.Encrypt(rawPassword);
+                    user.Name = AdminForm_Name_TextBox.Text.Trim();
+                    user.Email = AdminForm_Email_TextBox.Text.Trim();
+                    user.Username = AdminForm_Username_TextBox.Text.Trim();
+                    user.IsAdmin = AdminForm_IsAdmin_CheckBox.Checked;
 
-                        con.Open();
-                        var command = con.CreateCommand();
-                        command.CommandText = query;
-                        command.Parameters.AddWithValue("@name", name);
-                        command.Parameters.AddWithValue("@username", username);
-                        command.Parameters.AddWithValue("@password", hashPassword);
-                        command.Parameters.AddWithValue("@email", email);
-                        command.Parameters.AddWithValue("@isAdmin", AdminForm_IsAdmin_CheckBox.Checked);
-                        var reader = command.ExecuteReader();
+                    if (!string.IsNullOrWhiteSpace(AdminForm_Password_TextBox.Text))
+                        user.Password = SecurityProvider.Encrypt(AdminForm_Password_TextBox.Text);
 
-                        MessageBox.Show("Record Updated Succesfully", "Update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ResetUserForm();
-                        reader.Close();
-                    }
+                    unitOfWork.UserRepository.Update(user);
+                    unitOfWork.Complete();
+
+                    MessageBox.Show("Record Updated Succesfully", "Update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResetUserForm();
                 }
                 else
                 {
@@ -173,55 +116,40 @@ namespace AlgospringInsurance.App.Forms
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally
-            {
-                con.Close();
-            }
         }
 
         private void UseRegistrationForm_Delete_Button_Click(object sender, EventArgs e)
         {
-            var con = new MySqlConnection();
-            var userContext = GetUserContext();
-            var query = @"delete from user where Id = @id";
+            var selectedUser = AdminForm_Search_ComboBox.SelectedItem as DropDownItem;
 
             try
             {
-                if (userContext.isValid)
+
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id);
+
+                if (user is not null)
                 {
                     var deleteDialog = MessageBox.Show(
-                            "Are you sure, Do you really want to Delete this Record...?",
-                            "Delete",
-                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        "Are you sure, Do you really want to Delete this Record...?",
+                        "Delete",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                     if (deleteDialog == DialogResult.Yes)
                     {
-                        using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
-                        {
-                            con.Open();
-                            var command = con.CreateCommand();
-                            command.CommandText = query;
-                            command.Parameters.AddWithValue("@id", userContext.Id);
-                            command.ExecuteNonQuery();
-
-                            MessageBox.Show("Record Deleted Succesfully", "Delete user", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            ResetUserForm();
-                        }
-                    }         
+                        unitOfWork.UserRepository.Delete(user);
+                        unitOfWork.Complete();
+                        MessageBox.Show("Record Deleted Succesfully", "Delete user", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ResetUserForm();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid record", "Delete User",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid record", "Delete User", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
             }
         }
 
@@ -234,41 +162,7 @@ namespace AlgospringInsurance.App.Forms
             AdminForm_Password_TextBox.ResetText();
             AdminForm_Username_TextBox.ResetText();
             AdminForm_IsAdmin_CheckBox.Checked = false;
-        }
-
-        private (bool isValid, string? Id, string? passwordHash) GetUserContext()
-        {
-            var con = new MySqlConnection();
-            var email = AdminForm_Email_TextBox.Text.Trim().ToString();
-
-            try
-            {
-                var query = @"select Id, Password from user where email = @email";
-
-                using (con = new MySqlConnection(_connectionProvider.GetConnectionString()))
-                {
-                    con.Open();
-                    var command = con.CreateCommand();
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@email", email);
-
-                    using (var reader = command.ExecuteReader(CommandBehavior.SingleRow))
-                    {
-                        if (reader.Read())
-                            return (true, reader["Id"].ToString(), reader["Password"].ToString());
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}", "Unexpected error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                con.Close();
-            }
-
-            return (false, null, null);
+            UseRegistrationForm_Register_Button.Enabled = true;
         }
 
         private void AddNewUserSearchComboBoxItem(int id, string name, string email) =>

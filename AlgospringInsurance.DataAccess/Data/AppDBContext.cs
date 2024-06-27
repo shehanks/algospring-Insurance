@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using AlgospringInsurance.DataAccess.Models;
+﻿using AlgospringInsurance.DataAccess.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace AlgospringInsurance.DataAccess.Data
 {
@@ -18,8 +18,8 @@ namespace AlgospringInsurance.DataAccess.Data
             dbContextOptions = options;
         }
 
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        public DbSet<EmailReceivers> EmailReceiver { get; set; }
+        public DbSet<EmailReceiver> EmailReceivers { get; set; }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using AlgospringInsurance.DataAccess.Data;
+using AlgospringInsurance.DataAccess.Repository;
 using AlgospringInsurance.DataAccess.Repository.Contracts;
 
-namespace AlgospringInsurance.DataAccess.Repository
+namespace AlgospringInsurance.DataAccess.UnitOfWork
 {
     public class UnitOfWork : IUnitOfWork
     {

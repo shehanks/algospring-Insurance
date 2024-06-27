@@ -5,7 +5,8 @@ using System.Linq.Expressions;
 
 namespace AlgospringInsurance.DataAccess.Repository
 {
-    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
+    public class RepositoryBase<TEntity> : 
+        IRepositoryBase<TEntity> where TEntity : class
     {
         internal AppDBContext etiqaDbContext;
         internal DbSet<TEntity> dbSet;

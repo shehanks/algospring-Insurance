@@ -31,19 +31,19 @@
             AdminForm_Manage_TabPage = new TabControl();
             AdminForm_ManageUsers_Tab = new TabPage();
             AdminForm_UserRegistration_GroupBox = new GroupBox();
-            AdminForm_Email_TextBox = new TextBox();
+            AdminForm_UseRegistration_Email_TextBox = new TextBox();
             AdminForm_Search_ComboBox = new ComboBox();
-            UseRegistrationForm_Delete_Button = new Button();
-            AdminForm_IsAdmin_CheckBox = new CheckBox();
-            UseRegistrationForm_Clear_Button = new Button();
+            AdminForm_UseRegistration_Delete_Button = new Button();
+            AdminForm_UseRegistration_IsAdmin_CheckBox = new CheckBox();
+            AdminForm_UseRegistration_Reset_Button = new Button();
             AdminForm_IsAdmin_Label = new Label();
-            UseRegistrationForm_Register_Button = new Button();
-            AdminForm_Password_TextBox = new TextBox();
-            UseRegistrationForm_Update_Button = new Button();
+            AdminForm_UseRegistration_Register_Button = new Button();
+            AdminForm_UseRegistration_Password_TextBox = new TextBox();
+            AdminForm_UseRegistration_Update_Button = new Button();
             AdminForm_Password_Label = new Label();
-            AdminForm_Username_TextBox = new TextBox();
+            AdminForm_UseRegistration_Username_TextBox = new TextBox();
             AdminForm_Username_Label = new Label();
-            AdminForm_Name_TextBox = new TextBox();
+            AdminForm_UseRegistration_Name_TextBox = new TextBox();
             AdminForm_Email_Label = new Label();
             AdminForm_Name_Label = new Label();
             AdminForm_ManageSenders_Tab = new TabPage();
@@ -88,19 +88,19 @@
             // 
             // AdminForm_UserRegistration_GroupBox
             // 
-            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Email_TextBox);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Email_TextBox);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Search_ComboBox);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(UseRegistrationForm_Delete_Button);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_IsAdmin_CheckBox);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(UseRegistrationForm_Clear_Button);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Delete_Button);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_IsAdmin_CheckBox);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Reset_Button);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_IsAdmin_Label);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(UseRegistrationForm_Register_Button);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Password_TextBox);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(UseRegistrationForm_Update_Button);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Register_Button);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Password_TextBox);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Update_Button);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Password_Label);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Username_TextBox);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Username_TextBox);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Username_Label);
-            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Name_TextBox);
+            AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_UseRegistration_Name_TextBox);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Email_Label);
             AdminForm_UserRegistration_GroupBox.Controls.Add(AdminForm_Name_Label);
             AdminForm_UserRegistration_GroupBox.Location = new Point(6, 6);
@@ -110,13 +110,13 @@
             AdminForm_UserRegistration_GroupBox.TabStop = false;
             AdminForm_UserRegistration_GroupBox.Text = "User Registration";
             // 
-            // AdminForm_Email_TextBox
+            // AdminForm_UseRegistration_Email_TextBox
             // 
-            AdminForm_Email_TextBox.Location = new Point(115, 108);
-            AdminForm_Email_TextBox.MaxLength = 320;
-            AdminForm_Email_TextBox.Name = "AdminForm_Email_TextBox";
-            AdminForm_Email_TextBox.Size = new Size(319, 27);
-            AdminForm_Email_TextBox.TabIndex = 20;
+            AdminForm_UseRegistration_Email_TextBox.Location = new Point(115, 108);
+            AdminForm_UseRegistration_Email_TextBox.MaxLength = 320;
+            AdminForm_UseRegistration_Email_TextBox.Name = "AdminForm_UseRegistration_Email_TextBox";
+            AdminForm_UseRegistration_Email_TextBox.Size = new Size(319, 27);
+            AdminForm_UseRegistration_Email_TextBox.TabIndex = 20;
             // 
             // AdminForm_Search_ComboBox
             // 
@@ -130,34 +130,34 @@
             AdminForm_Search_ComboBox.ValueMember = "Id";
             AdminForm_Search_ComboBox.SelectedIndexChanged += AdminForm_Search_ComboBox_SelectedIndexChanged;
             // 
-            // UseRegistrationForm_Delete_Button
+            // AdminForm_UseRegistration_Delete_Button
             // 
-            UseRegistrationForm_Delete_Button.Location = new Point(315, 283);
-            UseRegistrationForm_Delete_Button.Name = "UseRegistrationForm_Delete_Button";
-            UseRegistrationForm_Delete_Button.Size = new Size(94, 39);
-            UseRegistrationForm_Delete_Button.TabIndex = 17;
-            UseRegistrationForm_Delete_Button.Text = "Delete";
-            UseRegistrationForm_Delete_Button.UseVisualStyleBackColor = true;
-            UseRegistrationForm_Delete_Button.Click += UseRegistrationForm_Delete_Button_Click;
+            AdminForm_UseRegistration_Delete_Button.Location = new Point(315, 283);
+            AdminForm_UseRegistration_Delete_Button.Name = "AdminForm_UseRegistration_Delete_Button";
+            AdminForm_UseRegistration_Delete_Button.Size = new Size(94, 39);
+            AdminForm_UseRegistration_Delete_Button.TabIndex = 17;
+            AdminForm_UseRegistration_Delete_Button.Text = "Delete";
+            AdminForm_UseRegistration_Delete_Button.UseVisualStyleBackColor = true;
+            AdminForm_UseRegistration_Delete_Button.Click += AdminForm_UseRegistration_Delete_Button_Click;
             // 
-            // AdminForm_IsAdmin_CheckBox
+            // AdminForm_UseRegistration_IsAdmin_CheckBox
             // 
-            AdminForm_IsAdmin_CheckBox.AutoSize = true;
-            AdminForm_IsAdmin_CheckBox.Location = new Point(115, 207);
-            AdminForm_IsAdmin_CheckBox.Name = "AdminForm_IsAdmin_CheckBox";
-            AdminForm_IsAdmin_CheckBox.Size = new Size(18, 17);
-            AdminForm_IsAdmin_CheckBox.TabIndex = 9;
-            AdminForm_IsAdmin_CheckBox.UseVisualStyleBackColor = true;
+            AdminForm_UseRegistration_IsAdmin_CheckBox.AutoSize = true;
+            AdminForm_UseRegistration_IsAdmin_CheckBox.Location = new Point(115, 207);
+            AdminForm_UseRegistration_IsAdmin_CheckBox.Name = "AdminForm_UseRegistration_IsAdmin_CheckBox";
+            AdminForm_UseRegistration_IsAdmin_CheckBox.Size = new Size(18, 17);
+            AdminForm_UseRegistration_IsAdmin_CheckBox.TabIndex = 9;
+            AdminForm_UseRegistration_IsAdmin_CheckBox.UseVisualStyleBackColor = true;
             // 
-            // UseRegistrationForm_Clear_Button
+            // AdminForm_UseRegistration_Reset_Button
             // 
-            UseRegistrationForm_Clear_Button.Location = new Point(415, 283);
-            UseRegistrationForm_Clear_Button.Name = "UseRegistrationForm_Clear_Button";
-            UseRegistrationForm_Clear_Button.Size = new Size(94, 39);
-            UseRegistrationForm_Clear_Button.TabIndex = 18;
-            UseRegistrationForm_Clear_Button.Text = "Reset";
-            UseRegistrationForm_Clear_Button.UseVisualStyleBackColor = true;
-            UseRegistrationForm_Clear_Button.Click += UseRegistrationForm_Clear_Button_Click;
+            AdminForm_UseRegistration_Reset_Button.Location = new Point(415, 283);
+            AdminForm_UseRegistration_Reset_Button.Name = "AdminForm_UseRegistration_Reset_Button";
+            AdminForm_UseRegistration_Reset_Button.Size = new Size(94, 39);
+            AdminForm_UseRegistration_Reset_Button.TabIndex = 18;
+            AdminForm_UseRegistration_Reset_Button.Text = "Reset";
+            AdminForm_UseRegistration_Reset_Button.UseVisualStyleBackColor = true;
+            AdminForm_UseRegistration_Reset_Button.Click += AdminForm_UseRegistration_Reset_Button_Click;
             // 
             // AdminForm_IsAdmin_Label
             // 
@@ -168,34 +168,34 @@
             AdminForm_IsAdmin_Label.TabIndex = 8;
             AdminForm_IsAdmin_Label.Text = "Make admin";
             // 
-            // UseRegistrationForm_Register_Button
+            // AdminForm_UseRegistration_Register_Button
             // 
-            UseRegistrationForm_Register_Button.Location = new Point(115, 283);
-            UseRegistrationForm_Register_Button.Name = "UseRegistrationForm_Register_Button";
-            UseRegistrationForm_Register_Button.Size = new Size(94, 39);
-            UseRegistrationForm_Register_Button.TabIndex = 15;
-            UseRegistrationForm_Register_Button.Text = "Register";
-            UseRegistrationForm_Register_Button.UseVisualStyleBackColor = true;
-            UseRegistrationForm_Register_Button.Click += UseRegistrationForm_Register_Button_Click;
+            AdminForm_UseRegistration_Register_Button.Location = new Point(115, 283);
+            AdminForm_UseRegistration_Register_Button.Name = "AdminForm_UseRegistration_Register_Button";
+            AdminForm_UseRegistration_Register_Button.Size = new Size(94, 39);
+            AdminForm_UseRegistration_Register_Button.TabIndex = 15;
+            AdminForm_UseRegistration_Register_Button.Text = "Register";
+            AdminForm_UseRegistration_Register_Button.UseVisualStyleBackColor = true;
+            AdminForm_UseRegistration_Register_Button.Click += AdminForm_UseRegistration_Register_Button_Click;
             // 
-            // AdminForm_Password_TextBox
+            // AdminForm_UseRegistration_Password_TextBox
             // 
-            AdminForm_Password_TextBox.Location = new Point(115, 174);
-            AdminForm_Password_TextBox.MaxLength = 20;
-            AdminForm_Password_TextBox.Name = "AdminForm_Password_TextBox";
-            AdminForm_Password_TextBox.PlaceholderText = "Add a new password";
-            AdminForm_Password_TextBox.Size = new Size(319, 27);
-            AdminForm_Password_TextBox.TabIndex = 7;
+            AdminForm_UseRegistration_Password_TextBox.Location = new Point(115, 174);
+            AdminForm_UseRegistration_Password_TextBox.MaxLength = 20;
+            AdminForm_UseRegistration_Password_TextBox.Name = "AdminForm_UseRegistration_Password_TextBox";
+            AdminForm_UseRegistration_Password_TextBox.PlaceholderText = "Add a new password";
+            AdminForm_UseRegistration_Password_TextBox.Size = new Size(319, 27);
+            AdminForm_UseRegistration_Password_TextBox.TabIndex = 7;
             // 
-            // UseRegistrationForm_Update_Button
+            // AdminForm_UseRegistration_Update_Button
             // 
-            UseRegistrationForm_Update_Button.Location = new Point(215, 283);
-            UseRegistrationForm_Update_Button.Name = "UseRegistrationForm_Update_Button";
-            UseRegistrationForm_Update_Button.Size = new Size(94, 39);
-            UseRegistrationForm_Update_Button.TabIndex = 16;
-            UseRegistrationForm_Update_Button.Text = "Update";
-            UseRegistrationForm_Update_Button.UseVisualStyleBackColor = true;
-            UseRegistrationForm_Update_Button.Click += UseRegistrationForm_Update_Button_Click;
+            AdminForm_UseRegistration_Update_Button.Location = new Point(215, 283);
+            AdminForm_UseRegistration_Update_Button.Name = "AdminForm_UseRegistration_Update_Button";
+            AdminForm_UseRegistration_Update_Button.Size = new Size(94, 39);
+            AdminForm_UseRegistration_Update_Button.TabIndex = 16;
+            AdminForm_UseRegistration_Update_Button.Text = "Update";
+            AdminForm_UseRegistration_Update_Button.UseVisualStyleBackColor = true;
+            AdminForm_UseRegistration_Update_Button.Click += AdminForm_UseRegistration_Update_Button_Click;
             // 
             // AdminForm_Password_Label
             // 
@@ -206,13 +206,13 @@
             AdminForm_Password_Label.TabIndex = 6;
             AdminForm_Password_Label.Text = "Password";
             // 
-            // AdminForm_Username_TextBox
+            // AdminForm_UseRegistration_Username_TextBox
             // 
-            AdminForm_Username_TextBox.Location = new Point(115, 141);
-            AdminForm_Username_TextBox.MaxLength = 20;
-            AdminForm_Username_TextBox.Name = "AdminForm_Username_TextBox";
-            AdminForm_Username_TextBox.Size = new Size(319, 27);
-            AdminForm_Username_TextBox.TabIndex = 5;
+            AdminForm_UseRegistration_Username_TextBox.Location = new Point(115, 141);
+            AdminForm_UseRegistration_Username_TextBox.MaxLength = 20;
+            AdminForm_UseRegistration_Username_TextBox.Name = "AdminForm_UseRegistration_Username_TextBox";
+            AdminForm_UseRegistration_Username_TextBox.Size = new Size(319, 27);
+            AdminForm_UseRegistration_Username_TextBox.TabIndex = 5;
             // 
             // AdminForm_Username_Label
             // 
@@ -223,13 +223,13 @@
             AdminForm_Username_Label.TabIndex = 4;
             AdminForm_Username_Label.Text = "Username";
             // 
-            // AdminForm_Name_TextBox
+            // AdminForm_UseRegistration_Name_TextBox
             // 
-            AdminForm_Name_TextBox.Location = new Point(115, 75);
-            AdminForm_Name_TextBox.MaxLength = 50;
-            AdminForm_Name_TextBox.Name = "AdminForm_Name_TextBox";
-            AdminForm_Name_TextBox.Size = new Size(319, 27);
-            AdminForm_Name_TextBox.TabIndex = 3;
+            AdminForm_UseRegistration_Name_TextBox.Location = new Point(115, 75);
+            AdminForm_UseRegistration_Name_TextBox.MaxLength = 50;
+            AdminForm_UseRegistration_Name_TextBox.Name = "AdminForm_UseRegistration_Name_TextBox";
+            AdminForm_UseRegistration_Name_TextBox.Size = new Size(319, 27);
+            AdminForm_UseRegistration_Name_TextBox.TabIndex = 3;
             // 
             // AdminForm_Email_Label
             // 
@@ -397,17 +397,17 @@
         private GroupBox AdminForm_UserRegistration_GroupBox;
         private Label AdminForm_Name_Label;
         private Label AdminForm_Email_Label;
-        private TextBox AdminForm_Name_TextBox;
-        private CheckBox AdminForm_IsAdmin_CheckBox;
+        private TextBox AdminForm_UseRegistration_Name_TextBox;
+        private CheckBox AdminForm_UseRegistration_IsAdmin_CheckBox;
         private Label AdminForm_IsAdmin_Label;
-        private TextBox AdminForm_Password_TextBox;
+        private TextBox AdminForm_UseRegistration_Password_TextBox;
         private Label AdminForm_Password_Label;
-        private TextBox AdminForm_Username_TextBox;
+        private TextBox AdminForm_UseRegistration_Username_TextBox;
         private Label AdminForm_Username_Label;
-        private Button UseRegistrationForm_Clear_Button;
-        private Button UseRegistrationForm_Delete_Button;
-        private Button UseRegistrationForm_Update_Button;
-        private Button UseRegistrationForm_Register_Button;
+        private Button AdminForm_UseRegistration_Reset_Button;
+        private Button AdminForm_UseRegistration_Delete_Button;
+        private Button AdminForm_UseRegistration_Update_Button;
+        private Button AdminForm_UseRegistration_Register_Button;
         private GroupBox AdminForm_SenderRegistration_GroupBox;
         private CheckBox checkBox2;
         private Label label2;
@@ -420,6 +420,6 @@
         private TextBox textBox3;
         private Label label4;
         private ComboBox AdminForm_Search_ComboBox;
-        private TextBox AdminForm_Email_TextBox;
+        private TextBox AdminForm_UseRegistration_Email_TextBox;
     }
 }

@@ -5,11 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgospringInsurance.App", "AlgospringInsurance.App\AlgospringInsurance.App.csproj", "{DA265990-B406-48CD-9E27-762A32B39BC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgospringInsurance.DataAccess", "AlgospringInsurance.DataAccess\AlgospringInsurance.DataAccess.csproj", "{48329F83-F75F-4C43-A7CB-3B6E2E2793F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgospringInsurance.DataAccess", "AlgospringInsurance.DataAccess\AlgospringInsurance.DataAccess.csproj", "{48329F83-F75F-4C43-A7CB-3B6E2E2793F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgospringInsurance.Infrastructure", "AlgospringInsurance.Infrastructure\AlgospringInsurance.Infrastructure.csproj", "{BDBDA9E1-2786-420A-9342-4CACC0F0AA3F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgospringInsurance.Services", "AlgospringInsurance.Services\AlgospringInsurance.Services.csproj", "{05F43021-3C92-413B-8F3D-8DAD6A7C16E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgospringInsurance.Infrastructure", "AlgospringInsurance.Infrastructure\AlgospringInsurance.Infrastructure.csproj", "{BDBDA9E1-2786-420A-9342-4CACC0F0AA3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{BDBDA9E1-2786-420A-9342-4CACC0F0AA3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDBDA9E1-2786-420A-9342-4CACC0F0AA3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDBDA9E1-2786-420A-9342-4CACC0F0AA3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05F43021-3C92-413B-8F3D-8DAD6A7C16E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05F43021-3C92-413B-8F3D-8DAD6A7C16E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05F43021-3C92-413B-8F3D-8DAD6A7C16E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05F43021-3C92-413B-8F3D-8DAD6A7C16E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

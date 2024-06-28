@@ -50,8 +50,6 @@ namespace AlgospringInsurance.App
 
                     services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
 
-                    services.AddTransient<IUserService, UserService>();
-
                     services.AddTransient<LoginForm>();
                     services.AddTransient<UserForm>();
                     services.AddTransient<AdminForm>();

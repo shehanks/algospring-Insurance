@@ -26,7 +26,6 @@
   <ItemGroup>
     <ProjectReference Include="..\AlgospringInsurance.DataAccess\AlgospringInsurance.DataAccess.csproj" />
     <ProjectReference Include="..\AlgospringInsurance.Infrastructure\AlgospringInsurance.Infrastructure.csproj" />
-    <ProjectReference Include="..\AlgospringInsurance.Services\AlgospringInsurance.Services.csproj" />
   </ItemGroup>
 
 </Project>

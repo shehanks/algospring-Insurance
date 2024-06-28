@@ -55,6 +55,7 @@ namespace AlgospringInsurance.App
                     services.AddTransient<UserForm>();
                     services.AddTransient<AdminForm>();
 
+                    services.AddTransient<IValidationProvider, ValidationProvider>();
                     services.AddSingleton<IFormFactory, FormFactory>();
                 });
         }

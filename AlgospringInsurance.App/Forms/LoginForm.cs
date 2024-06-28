@@ -1,8 +1,6 @@
 using AlgospringInsurance.App.Dtos;
 using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
-using AlgospringInsurance.Services.Contracts;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace AlgospringInsurance.App.Forms
 {
@@ -10,20 +8,22 @@ namespace AlgospringInsurance.App.Forms
     {
         private readonly IFormFactory formFactory;
 
-        private readonly IUserService userService;
-
         private readonly IUnitOfWork unitOfWork;
+
+        private readonly IValidationProvider validationProvider;
 
         public LoginForm(
             IFormFactory formFactory,
-            IUserService userService,
-            IUnitOfWork unitOfWork)
+            IUnitOfWork unitOfWork,
+            IValidationProvider validationProvider)
         {
             this.formFactory = formFactory;
-            this.userService = userService;
             this.unitOfWork = unitOfWork;
+            this.validationProvider = validationProvider;
             InitializeComponent();
         }
+
+        #region Control Events
 
         private void LoginForm_Exit_Button_Click(object sender, EventArgs e)
         {
@@ -84,59 +84,26 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void LoginForm_Username_Textbox_TextChanged(object sender, EventArgs e)
-            => ValidateUserName(LoginForm_Username_Textbox.Text);
+        private void LoginForm_Username_Textbox_TextChanged(object sender, EventArgs e) => ValidateUsername();
 
-        private void LoginForm_Password_Textbox_TextChanged(object sender, EventArgs e)
-            => ValidatePassword(LoginForm_Password_Textbox.Text);
+        private void LoginForm_Password_Textbox_TextChanged(object sender, EventArgs e) => ValidatePassword();
+
+        #endregion
 
         #region Validations
 
-        private bool IsValidLogin()
-        {
-            var validations = new List<Func<bool>>()
+        private bool IsValidLogin() =>
+            validationProvider.ValidateAll(new List<Func<bool>>()
             {
-                () => ValidateUserName(LoginForm_Username_Textbox.Text),
-                () => ValidatePassword(LoginForm_Password_Textbox.Text)
-            };
+                () => ValidateUsername(),
+                () => ValidatePassword()
+            });
 
-            var results = new List<bool>();
+        private bool ValidateUsername() =>
+            validationProvider.Required(LoginForm_Username_Textbox, LoginForm_Username_ErrorProvider);
 
-            foreach (var action in validations)
-                results.Add(action.Invoke());
-
-            return !results.Any(x => !x);
-        }
-
-        private bool ValidateUserName(string text)
-        {
-            bool isValid = false;
-
-            if (string.IsNullOrWhiteSpace(text))
-                LoginForm_Username_ErrorProvider.SetError(LoginForm_Username_Textbox, "Username is required.");
-            else
-            {
-                LoginForm_Username_ErrorProvider.SetError(LoginForm_Username_Textbox, string.Empty);
-                isValid = true;
-            }
-
-            return isValid;
-        }
-
-        private bool ValidatePassword(string text)
-        {
-            bool isValid = false;
-
-            if (string.IsNullOrWhiteSpace(text))
-                LoginForm_Password_ErrorProvider.SetError(LoginForm_Password_Textbox, "Password is required.");
-            else
-            {
-                LoginForm_Password_ErrorProvider.SetError(LoginForm_Password_Textbox, string.Empty);
-                isValid = true;
-            }
-
-            return isValid;
-        }
+        private bool ValidatePassword() =>
+            validationProvider.Required(LoginForm_Password_Textbox, LoginForm_Password_ErrorProvider);
 
         #endregion
     }

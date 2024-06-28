@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             AdminForm_Manage_TabPage = new TabControl();
             AdminForm_ManageUsers_Tab = new TabPage();
             AdminForm_UserRegistration_GroupBox = new GroupBox();
@@ -58,11 +59,19 @@
             button4 = new Button();
             textBox3 = new TextBox();
             label4 = new Label();
+            AdminForm_UseRegistration_Name_ErrorProvider = new ErrorProvider(components);
+            AdminForm_UseRegistration_Email_ErrorProvider = new ErrorProvider(components);
+            AdminForm_UseRegistration_Username_ErrorProvider = new ErrorProvider(components);
+            AdminForm_UseRegistration_Password_ErrorProvider = new ErrorProvider(components);
             AdminForm_Manage_TabPage.SuspendLayout();
             AdminForm_ManageUsers_Tab.SuspendLayout();
             AdminForm_UserRegistration_GroupBox.SuspendLayout();
             AdminForm_ManageSenders_Tab.SuspendLayout();
             AdminForm_SenderRegistration_GroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Name_ErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Email_ErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Username_ErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Password_ErrorProvider).BeginInit();
             SuspendLayout();
             // 
             // AdminForm_Manage_TabPage
@@ -117,6 +126,7 @@
             AdminForm_UseRegistration_Email_TextBox.Name = "AdminForm_UseRegistration_Email_TextBox";
             AdminForm_UseRegistration_Email_TextBox.Size = new Size(319, 27);
             AdminForm_UseRegistration_Email_TextBox.TabIndex = 20;
+            AdminForm_UseRegistration_Email_TextBox.TextChanged += AdminForm_UseRegistration_Email_TextBox_TextChanged;
             // 
             // AdminForm_Search_ComboBox
             // 
@@ -132,6 +142,7 @@
             // 
             // AdminForm_UseRegistration_Delete_Button
             // 
+            AdminForm_UseRegistration_Delete_Button.Enabled = false;
             AdminForm_UseRegistration_Delete_Button.Location = new Point(315, 283);
             AdminForm_UseRegistration_Delete_Button.Name = "AdminForm_UseRegistration_Delete_Button";
             AdminForm_UseRegistration_Delete_Button.Size = new Size(94, 39);
@@ -186,9 +197,11 @@
             AdminForm_UseRegistration_Password_TextBox.PlaceholderText = "Add a new password";
             AdminForm_UseRegistration_Password_TextBox.Size = new Size(319, 27);
             AdminForm_UseRegistration_Password_TextBox.TabIndex = 7;
+            AdminForm_UseRegistration_Password_TextBox.TextChanged += AdminForm_UseRegistration_Password_TextBox_TextChanged;
             // 
             // AdminForm_UseRegistration_Update_Button
             // 
+            AdminForm_UseRegistration_Update_Button.Enabled = false;
             AdminForm_UseRegistration_Update_Button.Location = new Point(215, 283);
             AdminForm_UseRegistration_Update_Button.Name = "AdminForm_UseRegistration_Update_Button";
             AdminForm_UseRegistration_Update_Button.Size = new Size(94, 39);
@@ -213,6 +226,7 @@
             AdminForm_UseRegistration_Username_TextBox.Name = "AdminForm_UseRegistration_Username_TextBox";
             AdminForm_UseRegistration_Username_TextBox.Size = new Size(319, 27);
             AdminForm_UseRegistration_Username_TextBox.TabIndex = 5;
+            AdminForm_UseRegistration_Username_TextBox.TextChanged += AdminForm_UseRegistration_Username_TextBox_TextChanged;
             // 
             // AdminForm_Username_Label
             // 
@@ -230,6 +244,7 @@
             AdminForm_UseRegistration_Name_TextBox.Name = "AdminForm_UseRegistration_Name_TextBox";
             AdminForm_UseRegistration_Name_TextBox.Size = new Size(319, 27);
             AdminForm_UseRegistration_Name_TextBox.TabIndex = 3;
+            AdminForm_UseRegistration_Name_TextBox.TextChanged += AdminForm_UseRegistration_Name_TextBox_TextChanged;
             // 
             // AdminForm_Email_Label
             // 
@@ -368,6 +383,22 @@
             label4.TabIndex = 2;
             label4.Text = "Email";
             // 
+            // AdminForm_UseRegistration_Name_ErrorProvider
+            // 
+            AdminForm_UseRegistration_Name_ErrorProvider.ContainerControl = this;
+            // 
+            // AdminForm_UseRegistration_Email_ErrorProvider
+            // 
+            AdminForm_UseRegistration_Email_ErrorProvider.ContainerControl = this;
+            // 
+            // AdminForm_UseRegistration_Username_ErrorProvider
+            // 
+            AdminForm_UseRegistration_Username_ErrorProvider.ContainerControl = this;
+            // 
+            // AdminForm_UseRegistration_Password_ErrorProvider
+            // 
+            AdminForm_UseRegistration_Password_ErrorProvider.ContainerControl = this;
+            // 
             // AdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -386,6 +417,10 @@
             AdminForm_ManageSenders_Tab.ResumeLayout(false);
             AdminForm_SenderRegistration_GroupBox.ResumeLayout(false);
             AdminForm_SenderRegistration_GroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Name_ErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Email_ErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Username_ErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)AdminForm_UseRegistration_Password_ErrorProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -421,5 +456,9 @@
         private Label label4;
         private ComboBox AdminForm_Search_ComboBox;
         private TextBox AdminForm_UseRegistration_Email_TextBox;
+        private ErrorProvider AdminForm_UseRegistration_Name_ErrorProvider;
+        private ErrorProvider AdminForm_UseRegistration_Email_ErrorProvider;
+        private ErrorProvider AdminForm_UseRegistration_Username_ErrorProvider;
+        private ErrorProvider AdminForm_UseRegistration_Password_ErrorProvider;
     }
 }

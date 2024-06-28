@@ -4,8 +4,6 @@ using AlgospringInsurance.DataAccess.Repository;
 using AlgospringInsurance.DataAccess.Repository.Contracts;
 using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
-using AlgospringInsurance.Services;
-using AlgospringInsurance.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;

@@ -275,7 +275,7 @@
             AdminForm_ManageSenders_Tab.Padding = new Padding(3);
             AdminForm_ManageSenders_Tab.Size = new Size(538, 346);
             AdminForm_ManageSenders_Tab.TabIndex = 1;
-            AdminForm_ManageSenders_Tab.Text = "Senders";
+            AdminForm_ManageSenders_Tab.Text = "Email Receivers";
             AdminForm_ManageSenders_Tab.UseVisualStyleBackColor = true;
             // 
             // AdminForm_EmailReceiverRegistration_GroupBox

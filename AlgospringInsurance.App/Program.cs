@@ -46,6 +46,7 @@ namespace AlgospringInsurance.App
 
                     services.AddTransient(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
                     services.AddTransient(typeof(IUserRepository), typeof(UserRepository));
+                    services.AddTransient(typeof(IEmailReceiverRegistrationRepository), typeof(EmailReceiverRegistrationRepository));
 
                     services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
 

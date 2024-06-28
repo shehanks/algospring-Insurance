@@ -20,6 +20,6 @@ namespace AlgospringInsurance.DataAccess.Data
 
         public DbSet<User> Users { get; set; }
 
-        public DbSet<EmailReceiver> EmailReceivers { get; set; }
+        public DbSet<EmailReceiverRegistration> EmailReceiverRegistrations { get; set; }
     }
 }

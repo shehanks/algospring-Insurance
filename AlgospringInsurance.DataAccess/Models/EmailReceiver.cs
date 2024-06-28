@@ -2,8 +2,8 @@
 
 namespace AlgospringInsurance.DataAccess.Models
 {
-    [Table("EmailReceivers")]
-    public class EmailReceiver : EntityBase
+    [Table("email_receiver")]
+    public class EmailReceiverRegistration : EntityBase
     {
         public string Email { get; set; } = string.Empty;
 

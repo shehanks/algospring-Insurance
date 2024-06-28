@@ -6,6 +6,8 @@ namespace AlgospringInsurance.DataAccess.UnitOfWork
     {
         IUserRepository UserRepository { get; }
 
+        IEmailReceiverRegistrationRepository EmailReceiverRegistrationRepository { get; }
+
         void Complete();
     }
 }

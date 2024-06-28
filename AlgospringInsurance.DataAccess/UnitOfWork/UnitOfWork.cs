@@ -9,13 +9,18 @@ namespace AlgospringInsurance.DataAccess.UnitOfWork
         private bool disposed = false;
         private readonly AppDBContext appDBContext;
         private IUserRepository? userRepository;
-
-        public IUserRepository UserRepository => userRepository ?? (userRepository = new UserRepository(appDBContext));
+        private IEmailReceiverRegistrationRepository? emailReceiverRegistrationRepository;
 
         public UnitOfWork(AppDBContext dbContext)
         {
             appDBContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
         }
+
+        public IUserRepository UserRepository =>
+            userRepository ?? (userRepository = new UserRepository(appDBContext));
+
+        public IEmailReceiverRegistrationRepository EmailReceiverRegistrationRepository =>
+            emailReceiverRegistrationRepository ?? (emailReceiverRegistrationRepository = new EmailReceiverRegistrationRepository(appDBContext));
 
         public void Complete() => appDBContext.SaveChanges();
 

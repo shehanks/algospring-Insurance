@@ -2,7 +2,7 @@
 
 namespace AlgospringInsurance.DataAccess.Models
 {
-    [Table("User")]
+    [Table("user")]
     public class User : EntityBase
     {
         public string Name { get; set; } = string.Empty;

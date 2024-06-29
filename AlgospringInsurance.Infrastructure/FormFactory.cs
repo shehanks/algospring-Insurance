@@ -11,9 +11,7 @@ namespace AlgospringInsurance.Infrastructure
             serviceProvider = services;
         }
 
-        public TForm Create<TForm>() where TForm : Form
-        {
-            return serviceProvider.GetRequiredService<TForm>();
-        }
+        public TForm Create<TForm>() where TForm : Form => 
+            serviceProvider.GetRequiredService<TForm>();
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             AdminForm_Manage_TabPage = new TabControl();
             AdminForm_ManageUsers_Tab = new TabPage();
             AdminForm_UserRegistration_GroupBox = new GroupBox();
@@ -433,6 +434,7 @@
             ClientSize = new Size(559, 386);
             Controls.Add(AdminForm_Manage_TabPage);
             FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "AdminForm";
             StartPosition = FormStartPosition.CenterScreen;

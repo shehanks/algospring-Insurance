@@ -5,11 +5,11 @@ namespace AlgospringInsurance.App.Forms
 {
     public partial class UserForm : Form
     {
-        private readonly IFormFactory _formFactory;
+        private readonly IFormFactory formFactory;
 
         public UserForm(IFormFactory formFactory)
         {
-            _formFactory = formFactory;
+            this.formFactory = formFactory;
             InitializeComponent();
         }
 
@@ -34,12 +34,6 @@ namespace AlgospringInsurance.App.Forms
                 UserForm_Superadmin_LinkLabel.Hide();
         }
 
-        private void UserForm_StudentRegistration_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //var resistrationForm = new StudentRegistrationForm();
-            //resistrationForm.ShowDialog();
-        }
-
         private void UserForm_Exit_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var dialogResult = MessageBox.Show(
@@ -50,12 +44,6 @@ namespace AlgospringInsurance.App.Forms
             {
                 Application.Exit();
             }
-        }
-
-        private void UserForm_UserRegistration_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            //var resistrationForm = new UserRegistrationForm();
-            //resistrationForm.ShowDialog();
         }
 
         private void UserForm_Logout_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -76,10 +64,13 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void UserForm_Superadmin_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            var adminForm = _formFactory.Create<AdminForm>();
-            adminForm.ShowDialog();
-        }
+        private void UserForm_Superadmin_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+            formFactory.Create<AdminForm>().ShowDialog();
+
+        private void UserForm_MotorQuoteRequest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+            formFactory.Create<MotorQuoteRequestForm>().ShowDialog(this);
+
+        private void UserForm_MedicalQuoteRequest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+            formFactory.Create<MedicalQuoteRequestForm>().ShowDialog();
     }
 }

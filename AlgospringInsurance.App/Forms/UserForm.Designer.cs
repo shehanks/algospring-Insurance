@@ -37,7 +37,6 @@
             UserForm_MedicalQuoteRequest_LinkLabel = new LinkLabel();
             UserForm_Exit_LinkLabel = new LinkLabel();
             UserForm_Logout_LinkLabel = new LinkLabel();
-            UserForm_Heading_Label = new Label();
             UserForm_Welcome_Label = new Label();
             UserForm_Superadmin_LinkLabel = new LinkLabel();
             UserForm_MotorInsurance_GroupBox.SuspendLayout();
@@ -53,13 +52,13 @@
             UserForm_MotorQuoteRequest_LinkLabel.TabIndex = 0;
             UserForm_MotorQuoteRequest_LinkLabel.TabStop = true;
             UserForm_MotorQuoteRequest_LinkLabel.Text = "Quote Request";
-            UserForm_MotorQuoteRequest_LinkLabel.LinkClicked += UserForm_UserRegistration_LinkLabel_LinkClicked;
+            UserForm_MotorQuoteRequest_LinkLabel.LinkClicked += UserForm_MotorQuoteRequest_LinkLabel_LinkClicked;
             // 
             // UserForm_MotorInsurance_GroupBox
             // 
             UserForm_MotorInsurance_GroupBox.Controls.Add(UserForm_MotorDescription_Label);
             UserForm_MotorInsurance_GroupBox.Controls.Add(UserForm_MotorQuoteRequest_LinkLabel);
-            UserForm_MotorInsurance_GroupBox.Location = new Point(13, 112);
+            UserForm_MotorInsurance_GroupBox.Location = new Point(13, 37);
             UserForm_MotorInsurance_GroupBox.Name = "UserForm_MotorInsurance_GroupBox";
             UserForm_MotorInsurance_GroupBox.Size = new Size(505, 88);
             UserForm_MotorInsurance_GroupBox.TabIndex = 1;
@@ -79,7 +78,7 @@
             // 
             UserForm_MedicalInsurance_GroupBox.Controls.Add(UserForm_MedicalDescription_Label);
             UserForm_MedicalInsurance_GroupBox.Controls.Add(UserForm_MedicalQuoteRequest_LinkLabel);
-            UserForm_MedicalInsurance_GroupBox.Location = new Point(13, 206);
+            UserForm_MedicalInsurance_GroupBox.Location = new Point(13, 131);
             UserForm_MedicalInsurance_GroupBox.Name = "UserForm_MedicalInsurance_GroupBox";
             UserForm_MedicalInsurance_GroupBox.Size = new Size(505, 88);
             UserForm_MedicalInsurance_GroupBox.TabIndex = 2;
@@ -104,12 +103,12 @@
             UserForm_MedicalQuoteRequest_LinkLabel.TabIndex = 0;
             UserForm_MedicalQuoteRequest_LinkLabel.TabStop = true;
             UserForm_MedicalQuoteRequest_LinkLabel.Text = "Quote Request";
-            UserForm_MedicalQuoteRequest_LinkLabel.LinkClicked += UserForm_StudentRegistration_LinkLabel_LinkClicked;
+            UserForm_MedicalQuoteRequest_LinkLabel.LinkClicked += UserForm_MedicalQuoteRequest_LinkLabel_LinkClicked;
             // 
             // UserForm_Exit_LinkLabel
             // 
             UserForm_Exit_LinkLabel.AutoSize = true;
-            UserForm_Exit_LinkLabel.Location = new Point(485, 297);
+            UserForm_Exit_LinkLabel.Location = new Point(485, 222);
             UserForm_Exit_LinkLabel.Name = "UserForm_Exit_LinkLabel";
             UserForm_Exit_LinkLabel.Size = new Size(33, 20);
             UserForm_Exit_LinkLabel.TabIndex = 3;
@@ -120,7 +119,7 @@
             // UserForm_Logout_LinkLabel
             // 
             UserForm_Logout_LinkLabel.AutoSize = true;
-            UserForm_Logout_LinkLabel.Location = new Point(461, 5);
+            UserForm_Logout_LinkLabel.Location = new Point(462, 5);
             UserForm_Logout_LinkLabel.Name = "UserForm_Logout_LinkLabel";
             UserForm_Logout_LinkLabel.Size = new Size(56, 20);
             UserForm_Logout_LinkLabel.TabIndex = 4;
@@ -128,21 +127,10 @@
             UserForm_Logout_LinkLabel.Text = "Logout";
             UserForm_Logout_LinkLabel.LinkClicked += UserForm_Logout_LinkLabel_LinkClicked;
             // 
-            // UserForm_Heading_Label
-            // 
-            UserForm_Heading_Label.AutoSize = true;
-            UserForm_Heading_Label.FlatStyle = FlatStyle.System;
-            UserForm_Heading_Label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold);
-            UserForm_Heading_Label.Location = new Point(75, 61);
-            UserForm_Heading_Label.Name = "UserForm_Heading_Label";
-            UserForm_Heading_Label.Size = new Size(372, 46);
-            UserForm_Heading_Label.TabIndex = 5;
-            UserForm_Heading_Label.Text = "Alogispring Insurance";
-            // 
             // UserForm_Welcome_Label
             // 
             UserForm_Welcome_Label.AutoSize = true;
-            UserForm_Welcome_Label.Location = new Point(13, 30);
+            UserForm_Welcome_Label.Location = new Point(13, 5);
             UserForm_Welcome_Label.Name = "UserForm_Welcome_Label";
             UserForm_Welcome_Label.Size = new Size(133, 20);
             UserForm_Welcome_Label.TabIndex = 6;
@@ -151,7 +139,7 @@
             // UserForm_Superadmin_LinkLabel
             // 
             UserForm_Superadmin_LinkLabel.AutoSize = true;
-            UserForm_Superadmin_LinkLabel.Location = new Point(13, 5);
+            UserForm_Superadmin_LinkLabel.Location = new Point(390, 5);
             UserForm_Superadmin_LinkLabel.Name = "UserForm_Superadmin_LinkLabel";
             UserForm_Superadmin_LinkLabel.Size = new Size(53, 20);
             UserForm_Superadmin_LinkLabel.TabIndex = 7;
@@ -163,10 +151,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(529, 327);
+            ClientSize = new Size(529, 251);
             Controls.Add(UserForm_Superadmin_LinkLabel);
             Controls.Add(UserForm_Welcome_Label);
-            Controls.Add(UserForm_Heading_Label);
             Controls.Add(UserForm_Logout_LinkLabel);
             Controls.Add(UserForm_Exit_LinkLabel);
             Controls.Add(UserForm_MedicalInsurance_GroupBox);
@@ -196,7 +183,6 @@
         private LinkLabel UserForm_MedicalQuoteRequest_LinkLabel;
         private LinkLabel UserForm_Exit_LinkLabel;
         private LinkLabel UserForm_Logout_LinkLabel;
-        private Label UserForm_Heading_Label;
         private Label UserForm_Welcome_Label;
         private LinkLabel UserForm_Superadmin_LinkLabel;
     }

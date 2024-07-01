@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="LoginForm_Image_PictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="LogoImagePictureBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAALUAAAArCAYAAAA+P8maAAAABGdBTUEAALGPC/xhBQAACGNJREFUeF7t
         W11uGzcQVp0U6GNuUF8gcXqC5Ab1SyDZCBAFPUB6g/StQFF7gaLvOkKOoCPkCDqCm/Shj+l8XK7MHX5D
@@ -159,7 +159,7 @@
         D07wNrHo25FasGjO3Tc1nY8VL6X2AanElz4+7XcfV80H/J0uaLPZ/5ruCTSW68YdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="LoginForm_Username_ErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="UsernameErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -3390,7 +3390,7 @@
         DqtpFRhyQubUlpJf2zC4FDGYJ0Pe/x+rU2Kx0lVZ5AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="LoginForm_Password_ErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>313, 17</value>
+  <metadata name="PasswordErrorProvider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>230, 17</value>
   </metadata>
 </root>

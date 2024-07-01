@@ -25,7 +25,7 @@ namespace AlgospringInsurance.App.Forms
 
         #region Control Events
 
-        private void LoginForm_Exit_Button_Click(object sender, EventArgs e)
+        private void ExitButtonClick(object sender, EventArgs e)
         {
             var dialogResult = MessageBox.Show(
                 "Are you sure, Do you really want to Exit...?",
@@ -38,20 +38,22 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void LoginForm_Clear_Button_Click(object sender, EventArgs e)
+        private void ClearButtonClick(object sender, EventArgs e)
         {
-            LoginForm_Password_Textbox.Clear();
-            LoginForm_Username_Textbox.Clear();
-            LoginForm_Username_Textbox.Focus();
+            Password.Clear();
+            Username.Clear();
+            Username.Focus();
+            UsernameErrorProvider.Clear();
+            PasswordErrorProvider.Clear();
         }
 
-        private void LoginForm_Login_Button_Click(object sender, EventArgs e)
+        private void LoginButtonClick(object sender, EventArgs e)
         {
             if (!IsValidLogin())
                 return;
 
-            var passwordHash = SecurityProvider.Encrypt(LoginForm_Password_Textbox.Text);
-            var userName = LoginForm_Username_Textbox.Text.Trim();
+            var passwordHash = SecurityProvider.Encrypt(Password.Text);
+            var userName = Username.Text.Trim();
 
             try
             {
@@ -84,9 +86,9 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void LoginForm_Username_Textbox_TextChanged(object sender, EventArgs e) => ValidateUsername();
+        private void UsernameTextChanged(object sender, EventArgs e) => ValidateUsername();
 
-        private void LoginForm_Password_Textbox_TextChanged(object sender, EventArgs e) => ValidatePassword();
+        private void PasswordTextChanged(object sender, EventArgs e) => ValidatePassword();
 
         #endregion
 
@@ -100,10 +102,10 @@ namespace AlgospringInsurance.App.Forms
             });
 
         private bool ValidateUsername() =>
-            validationProvider.Required(LoginForm_Username_Textbox, LoginForm_Username_ErrorProvider);
+            validationProvider.Required(Username, UsernameErrorProvider);
 
         private bool ValidatePassword() =>
-            validationProvider.Required(LoginForm_Password_Textbox, LoginForm_Password_ErrorProvider);
+            validationProvider.Required(Password, PasswordErrorProvider);
 
         #endregion
     }

@@ -30,168 +30,168 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            LoginForm_Image_PictureBox = new PictureBox();
-            LoginForm_Heading_Label = new Label();
-            LoginForm_Login_GroupBox = new GroupBox();
-            LoginForm_Login_Button = new Button();
-            LoginForm_Clear_Button = new Button();
-            LoginForm_Password_Textbox = new TextBox();
-            LoginForm_Password_Label = new Label();
-            LoginForm_Username_Textbox = new TextBox();
-            LoginForm_Username_Label = new Label();
-            LoginForm_Exit_Button = new Button();
-            LoginForm_Username_ErrorProvider = new ErrorProvider(components);
-            LoginForm_Password_ErrorProvider = new ErrorProvider(components);
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Image_PictureBox).BeginInit();
-            LoginForm_Login_GroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Username_ErrorProvider).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Password_ErrorProvider).BeginInit();
+            LogoImagePictureBox = new PictureBox();
+            HeadingLabel = new Label();
+            LoginGroupBox = new GroupBox();
+            LoginButton = new Button();
+            ClearButton = new Button();
+            Password = new TextBox();
+            PasswordLabel = new Label();
+            Username = new TextBox();
+            UsernameLabel = new Label();
+            ExitButton = new Button();
+            UsernameErrorProvider = new ErrorProvider(components);
+            PasswordErrorProvider = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)LogoImagePictureBox).BeginInit();
+            LoginGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)UsernameErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)PasswordErrorProvider).BeginInit();
             SuspendLayout();
             // 
-            // LoginForm_Image_PictureBox
+            // LogoImagePictureBox
             // 
-            LoginForm_Image_PictureBox.Image = (Image)resources.GetObject("LoginForm_Image_PictureBox.Image");
-            LoginForm_Image_PictureBox.Location = new Point(113, 12);
-            LoginForm_Image_PictureBox.Name = "LoginForm_Image_PictureBox";
-            LoginForm_Image_PictureBox.Size = new Size(185, 50);
-            LoginForm_Image_PictureBox.TabIndex = 0;
-            LoginForm_Image_PictureBox.TabStop = false;
+            LogoImagePictureBox.Image = (Image)resources.GetObject("LogoImagePictureBox.Image");
+            LogoImagePictureBox.Location = new Point(113, 14);
+            LogoImagePictureBox.Name = "LogoImagePictureBox";
+            LogoImagePictureBox.Size = new Size(185, 50);
+            LogoImagePictureBox.TabIndex = 0;
+            LogoImagePictureBox.TabStop = false;
             // 
-            // LoginForm_Heading_Label
+            // HeadingLabel
             // 
-            LoginForm_Heading_Label.AutoSize = true;
-            LoginForm_Heading_Label.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LoginForm_Heading_Label.Location = new Point(12, 65);
-            LoginForm_Heading_Label.Name = "LoginForm_Heading_Label";
-            LoginForm_Heading_Label.Size = new Size(362, 46);
-            LoginForm_Heading_Label.TabIndex = 1;
-            LoginForm_Heading_Label.Text = "Algospring Insurance";
+            HeadingLabel.AutoSize = true;
+            HeadingLabel.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            HeadingLabel.Location = new Point(18, 67);
+            HeadingLabel.Name = "HeadingLabel";
+            HeadingLabel.Size = new Size(362, 46);
+            HeadingLabel.TabIndex = 1;
+            HeadingLabel.Text = "Algospring Insurance";
             // 
-            // LoginForm_Login_GroupBox
+            // LoginGroupBox
             // 
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Login_Button);
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Clear_Button);
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Password_Textbox);
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Password_Label);
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Username_Textbox);
-            LoginForm_Login_GroupBox.Controls.Add(LoginForm_Username_Label);
-            LoginForm_Login_GroupBox.Location = new Point(12, 128);
-            LoginForm_Login_GroupBox.Name = "LoginForm_Login_GroupBox";
-            LoginForm_Login_GroupBox.Size = new Size(391, 168);
-            LoginForm_Login_GroupBox.TabIndex = 2;
-            LoginForm_Login_GroupBox.TabStop = false;
-            LoginForm_Login_GroupBox.Text = "Login";
+            LoginGroupBox.Controls.Add(LoginButton);
+            LoginGroupBox.Controls.Add(ClearButton);
+            LoginGroupBox.Controls.Add(Password);
+            LoginGroupBox.Controls.Add(PasswordLabel);
+            LoginGroupBox.Controls.Add(Username);
+            LoginGroupBox.Controls.Add(UsernameLabel);
+            LoginGroupBox.Location = new Point(12, 128);
+            LoginGroupBox.Name = "LoginGroupBox";
+            LoginGroupBox.Size = new Size(391, 168);
+            LoginGroupBox.TabIndex = 2;
+            LoginGroupBox.TabStop = false;
+            LoginGroupBox.Text = "Login";
             // 
-            // LoginForm_Login_Button
+            // LoginButton
             // 
-            LoginForm_Login_Button.Location = new Point(265, 121);
-            LoginForm_Login_Button.Name = "LoginForm_Login_Button";
-            LoginForm_Login_Button.Size = new Size(94, 39);
-            LoginForm_Login_Button.TabIndex = 5;
-            LoginForm_Login_Button.Text = "Login";
-            LoginForm_Login_Button.UseVisualStyleBackColor = true;
-            LoginForm_Login_Button.Click += LoginForm_Login_Button_Click;
+            LoginButton.Location = new Point(265, 121);
+            LoginButton.Name = "LoginButton";
+            LoginButton.Size = new Size(94, 39);
+            LoginButton.TabIndex = 5;
+            LoginButton.Text = "Login";
+            LoginButton.UseVisualStyleBackColor = true;
+            LoginButton.Click += LoginButtonClick;
             // 
-            // LoginForm_Clear_Button
+            // ClearButton
             // 
-            LoginForm_Clear_Button.Location = new Point(165, 121);
-            LoginForm_Clear_Button.Name = "LoginForm_Clear_Button";
-            LoginForm_Clear_Button.Size = new Size(94, 39);
-            LoginForm_Clear_Button.TabIndex = 4;
-            LoginForm_Clear_Button.Text = "Clear";
-            LoginForm_Clear_Button.UseVisualStyleBackColor = true;
-            LoginForm_Clear_Button.Click += LoginForm_Clear_Button_Click;
+            ClearButton.Location = new Point(165, 121);
+            ClearButton.Name = "ClearButton";
+            ClearButton.Size = new Size(94, 39);
+            ClearButton.TabIndex = 4;
+            ClearButton.Text = "Clear";
+            ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButtonClick;
             // 
-            // LoginForm_Password_Textbox
+            // Password
             // 
-            LoginForm_Password_Textbox.Location = new Point(101, 79);
-            LoginForm_Password_Textbox.Name = "LoginForm_Password_Textbox";
-            LoginForm_Password_Textbox.Size = new Size(258, 27);
-            LoginForm_Password_Textbox.TabIndex = 3;
-            LoginForm_Password_Textbox.TextChanged += LoginForm_Password_Textbox_TextChanged;
+            Password.Location = new Point(101, 79);
+            Password.Name = "Password";
+            Password.Size = new Size(258, 27);
+            Password.TabIndex = 3;
+            Password.TextChanged += PasswordTextChanged;
             // 
-            // LoginForm_Password_Label
+            // PasswordLabel
             // 
-            LoginForm_Password_Label.AutoSize = true;
-            LoginForm_Password_Label.Location = new Point(6, 82);
-            LoginForm_Password_Label.Name = "LoginForm_Password_Label";
-            LoginForm_Password_Label.Size = new Size(70, 20);
-            LoginForm_Password_Label.TabIndex = 2;
-            LoginForm_Password_Label.Text = "Password";
+            PasswordLabel.AutoSize = true;
+            PasswordLabel.Location = new Point(6, 82);
+            PasswordLabel.Name = "PasswordLabel";
+            PasswordLabel.Size = new Size(70, 20);
+            PasswordLabel.TabIndex = 2;
+            PasswordLabel.Text = "Password";
             // 
-            // LoginForm_Username_Textbox
+            // Username
             // 
-            LoginForm_Username_Textbox.Location = new Point(101, 37);
-            LoginForm_Username_Textbox.MaxLength = 20;
-            LoginForm_Username_Textbox.Name = "LoginForm_Username_Textbox";
-            LoginForm_Username_Textbox.Size = new Size(258, 27);
-            LoginForm_Username_Textbox.TabIndex = 1;
-            LoginForm_Username_Textbox.TextChanged += LoginForm_Username_Textbox_TextChanged;
+            Username.Location = new Point(101, 37);
+            Username.MaxLength = 20;
+            Username.Name = "Username";
+            Username.Size = new Size(258, 27);
+            Username.TabIndex = 1;
+            Username.TextChanged += UsernameTextChanged;
             // 
-            // LoginForm_Username_Label
+            // UsernameLabel
             // 
-            LoginForm_Username_Label.AutoSize = true;
-            LoginForm_Username_Label.Location = new Point(6, 40);
-            LoginForm_Username_Label.Name = "LoginForm_Username_Label";
-            LoginForm_Username_Label.Size = new Size(75, 20);
-            LoginForm_Username_Label.TabIndex = 0;
-            LoginForm_Username_Label.Text = "Username";
+            UsernameLabel.AutoSize = true;
+            UsernameLabel.Location = new Point(6, 40);
+            UsernameLabel.Name = "UsernameLabel";
+            UsernameLabel.Size = new Size(75, 20);
+            UsernameLabel.TabIndex = 0;
+            UsernameLabel.Text = "Username";
             // 
-            // LoginForm_Exit_Button
+            // ExitButton
             // 
-            LoginForm_Exit_Button.Location = new Point(309, 302);
-            LoginForm_Exit_Button.Name = "LoginForm_Exit_Button";
-            LoginForm_Exit_Button.Size = new Size(94, 39);
-            LoginForm_Exit_Button.TabIndex = 6;
-            LoginForm_Exit_Button.Text = "Exit";
-            LoginForm_Exit_Button.UseVisualStyleBackColor = true;
-            LoginForm_Exit_Button.Click += LoginForm_Exit_Button_Click;
+            ExitButton.Location = new Point(309, 302);
+            ExitButton.Name = "ExitButton";
+            ExitButton.Size = new Size(94, 39);
+            ExitButton.TabIndex = 6;
+            ExitButton.Text = "Exit";
+            ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButtonClick;
             // 
-            // LoginForm_Username_ErrorProvider
+            // UsernameErrorProvider
             // 
-            LoginForm_Username_ErrorProvider.ContainerControl = this;
+            UsernameErrorProvider.ContainerControl = this;
             // 
-            // LoginForm_Password_ErrorProvider
+            // PasswordErrorProvider
             // 
-            LoginForm_Password_ErrorProvider.ContainerControl = this;
+            PasswordErrorProvider.ContainerControl = this;
             // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(411, 351);
-            Controls.Add(LoginForm_Exit_Button);
-            Controls.Add(LoginForm_Login_GroupBox);
-            Controls.Add(LoginForm_Heading_Label);
-            Controls.Add(LoginForm_Image_PictureBox);
+            Controls.Add(ExitButton);
+            Controls.Add(LoginGroupBox);
+            Controls.Add(HeadingLabel);
+            Controls.Add(LogoImagePictureBox);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login - Alogospring Insurance";
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Image_PictureBox).EndInit();
-            LoginForm_Login_GroupBox.ResumeLayout(false);
-            LoginForm_Login_GroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Username_ErrorProvider).EndInit();
-            ((System.ComponentModel.ISupportInitialize)LoginForm_Password_ErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)LogoImagePictureBox).EndInit();
+            LoginGroupBox.ResumeLayout(false);
+            LoginGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)UsernameErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)PasswordErrorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox LoginForm_Image_PictureBox;
-        private Label LoginForm_Heading_Label;
-        private GroupBox LoginForm_Login_GroupBox;
-        private Button LoginForm_Login_Button;
-        private Button LoginForm_Clear_Button;
-        private TextBox LoginForm_Password_Textbox;
-        private Label LoginForm_Password_Label;
-        private TextBox LoginForm_Username_Textbox;
-        private Label LoginForm_Username_Label;
-        private Button LoginForm_Exit_Button;
-        private ErrorProvider LoginForm_Username_ErrorProvider;
-        private ErrorProvider LoginForm_Password_ErrorProvider;
+        private PictureBox LogoImagePictureBox;
+        private Label HeadingLabel;
+        private GroupBox LoginGroupBox;
+        private Button LoginButton;
+        private Button ClearButton;
+        private TextBox Password;
+        private Label PasswordLabel;
+        private TextBox Username;
+        private Label UsernameLabel;
+        private Button ExitButton;
+        private ErrorProvider UsernameErrorProvider;
+        private ErrorProvider PasswordErrorProvider;
     }
 }

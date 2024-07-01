@@ -26,13 +26,13 @@ namespace AlgospringInsurance.App.Forms
 
         #region Control Events
 
-        private void AdminForm_UserRegistration_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void UserRegistrationDropDownSelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedUser = AdminForm_UserRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedUser = UserRegistrationDropDown.SelectedItem as DropDownItem;
 
-            AdminForm_UserRegistration_Register_Button.Enabled = false;
-            AdminForm_UserRegistration_Update_Button.Enabled = true;
-            AdminForm_UserRegistration_Delete_Button.Enabled = true;
+            UserRegistrationRegisterButton.Enabled = false;
+            UserRegistrationUpdateButton.Enabled = true;
+            UserRegistrationDeleteButton.Enabled = true;
 
             ResetUserRegistrationErrors();
 
@@ -40,10 +40,10 @@ namespace AlgospringInsurance.App.Forms
             {
                 var user = unitOfWork.UserRepository.GetById(selectedUser!.Id)!;
 
-                AdminForm_UserRegistration_Email_TextBox.Text = user.Email;
-                AdminForm_UserRegistration_Name_TextBox.Text = user.Name;
-                AdminForm_UserRegistration_Username_TextBox.Text = user.Username;
-                AdminForm_UserRegistration_IsAdmin_CheckBox.Checked = user.IsAdmin;
+                UserRegistrationEmail.Text = user.Email;
+                UserRegistrationName.Text = user.Name;
+                UserRegistrationUsername.Text = user.Username;
+                UserRegistrationIsAdmin.Checked = user.IsAdmin;
             }
             catch (Exception ex)
             {
@@ -52,7 +52,7 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_UserRegistration_Register_Button_Click(object sender, EventArgs e)
+        private void UserRegistrationRegisterButtonClick(object sender, EventArgs e)
         {
             if (!IsValidUserRegistration())
                 return;
@@ -61,11 +61,11 @@ namespace AlgospringInsurance.App.Forms
             {
                 var user = unitOfWork.UserRepository.Insert(new DataAccess.Models.User
                 {
-                    Name = AdminForm_UserRegistration_Name_TextBox.Text.Trim(),
-                    Email = AdminForm_UserRegistration_Email_TextBox.Text.Trim(),
-                    Username = AdminForm_UserRegistration_Username_TextBox.Text.Trim(),
-                    Password = SecurityProvider.Encrypt(AdminForm_UserRegistration_Password_TextBox.Text),
-                    IsAdmin = AdminForm_UserRegistration_IsAdmin_CheckBox.Checked
+                    Name = UserRegistrationName.Text.Trim(),
+                    Email = UserRegistrationEmail.Text.Trim(),
+                    Username = UserRegistrationUsername.Text.Trim(),
+                    Password = SecurityProvider.Encrypt(UserRegistrationPassword.Text),
+                    IsAdmin = UserRegistrationIsAdmin.Checked
                 });
 
                 unitOfWork.Complete();
@@ -79,9 +79,9 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_UserRegistration_Update_Button_Click(object sender, EventArgs e)
+        private void UserRegistrationUpdateButtonClick(object sender, EventArgs e)
         {
-            var selectedUser = AdminForm_UserRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedUser = UserRegistrationDropDown.SelectedItem as DropDownItem;
 
             if (!IsValidUserRegistration())
                 return;
@@ -92,13 +92,13 @@ namespace AlgospringInsurance.App.Forms
 
                 if (user is not null)
                 {
-                    user.Name = AdminForm_UserRegistration_Name_TextBox.Text.Trim();
-                    user.Email = AdminForm_UserRegistration_Email_TextBox.Text.Trim();
-                    user.Username = AdminForm_UserRegistration_Username_TextBox.Text.Trim();
-                    user.IsAdmin = AdminForm_UserRegistration_IsAdmin_CheckBox.Checked;
+                    user.Name = UserRegistrationName.Text.Trim();
+                    user.Email = UserRegistrationEmail.Text.Trim();
+                    user.Username = UserRegistrationUsername.Text.Trim();
+                    user.IsAdmin = UserRegistrationIsAdmin.Checked;
 
-                    if (!string.IsNullOrWhiteSpace(AdminForm_UserRegistration_Password_TextBox.Text))
-                        user.Password = SecurityProvider.Encrypt(AdminForm_UserRegistration_Password_TextBox.Text);
+                    if (!string.IsNullOrWhiteSpace(UserRegistrationPassword.Text))
+                        user.Password = SecurityProvider.Encrypt(UserRegistrationPassword.Text);
 
                     unitOfWork.UserRepository.Update(user);
                     unitOfWork.Complete();
@@ -118,9 +118,9 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_UserRegistration_Delete_Button_Click(object sender, EventArgs e)
+        private void UserRegistrationDeleteButtonClick(object sender, EventArgs e)
         {
-            var selectedUser = AdminForm_UserRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedUser = UserRegistrationDropDown.SelectedItem as DropDownItem;
 
             try
             {
@@ -153,19 +153,19 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_UserRegistration_Reset_Button_Click(object sender, EventArgs e) =>
+        private void UserRegistrationResetButtonClick(object sender, EventArgs e) =>
             ResetUserForm();
 
-        private void AdminForm_UserRegistration_Name_TextBox_TextChanged(object sender, EventArgs e) =>
+        private void UserRegistrationNameTextChanged(object sender, EventArgs e) =>
             ValidateUserRegistrationName();
 
-        private void AdminForm_UserRegistration_Email_TextBox_TextChanged(object sender, EventArgs e) =>
+        private void UserRegistrationEmailTextChanged(object sender, EventArgs e) =>
             ValidateUserRegistrationEmail();
 
-        private void AdminForm_UserRegistration_Username_TextBox_TextChanged(object sender, EventArgs e) =>
+        private void UserRegistrationUsernameTextChanged(object sender, EventArgs e) =>
             ValidateUserRegistrationUsername();
 
-        private void AdminForm_UserRegistration_Password_TextBox_TextChanged(object sender, EventArgs e) =>
+        private void UserRegistrationPasswordTextChanged(object sender, EventArgs e) =>
             ValidateUserRegistrationPassword();
 
         #endregion
@@ -174,7 +174,7 @@ namespace AlgospringInsurance.App.Forms
 
         private void LoadUsers()
         {
-            AdminForm_UserRegistration_ComboBox.Items.Clear();
+            UserRegistrationDropDown.Items.Clear();
 
             try
             {
@@ -185,7 +185,7 @@ namespace AlgospringInsurance.App.Forms
                 {
                     foreach (var user in users)
                     {
-                        AdminForm_UserRegistration_ComboBox.Items.Add(new DropDownItem
+                        UserRegistrationDropDown.Items.Add(new DropDownItem
                         {
                             Id = user.Id,
                             Text = $"{user.Name} - {user.Email}"
@@ -202,28 +202,28 @@ namespace AlgospringInsurance.App.Forms
         private void ResetUserForm()
         {
             LoadUsers();
-            AdminForm_UserRegistration_Name_TextBox.ResetText();
-            AdminForm_UserRegistration_Email_TextBox.ResetText();
-            AdminForm_UserRegistration_Password_TextBox.ResetText();
-            AdminForm_UserRegistration_Username_TextBox.ResetText();
-            AdminForm_UserRegistration_IsAdmin_CheckBox.Checked = false;
+            UserRegistrationName.ResetText();
+            UserRegistrationEmail.ResetText();
+            UserRegistrationPassword.ResetText();
+            UserRegistrationUsername.ResetText();
+            UserRegistrationIsAdmin.Checked = false;
 
             ResetUserRegistrationErrors();
 
-            AdminForm_UserRegistration_Register_Button.Enabled = true;
-            AdminForm_UserRegistration_Update_Button.Enabled = false;
-            AdminForm_UserRegistration_Delete_Button.Enabled = false;
+            UserRegistrationRegisterButton.Enabled = true;
+            UserRegistrationUpdateButton.Enabled = false;
+            UserRegistrationDeleteButton.Enabled = false;
         }
 
         private bool isUserEditMode() =>
-            AdminForm_UserRegistration_ComboBox.SelectedItem as DropDownItem is not null;
+            UserRegistrationDropDown.SelectedItem as DropDownItem is not null;
 
         private void ResetUserRegistrationErrors() =>
             ImmutableList.Create(
-                AdminForm_UserRegistration_Name_ErrorProvider,
-                AdminForm_UserRegistration_Email_ErrorProvider,
-                AdminForm_UserRegistration_Username_ErrorProvider,
-                AdminForm_UserRegistration_Password_ErrorProvider)
+                UserRegistrationNameErrorProvider,
+                UserRegistrationEmailErrorProvider,
+                UserRegistrationUsernameErrorProvider,
+                UserRegistrationPasswordErrorProvider)
                 .ForEach(x => x.Clear());
 
         #endregion
@@ -240,27 +240,27 @@ namespace AlgospringInsurance.App.Forms
             });
 
         private bool ValidateUserRegistrationName() =>
-            validationProvider.Required(AdminForm_UserRegistration_Name_TextBox, AdminForm_UserRegistration_Name_ErrorProvider);
+            validationProvider.Required(UserRegistrationName, UserRegistrationNameErrorProvider);
 
         private bool ValidateUserRegistrationEmail() =>
-            validationProvider.Required(AdminForm_UserRegistration_Email_TextBox, AdminForm_UserRegistration_Email_ErrorProvider) &&
-            validationProvider.Email(AdminForm_UserRegistration_Email_TextBox, AdminForm_UserRegistration_Email_ErrorProvider);
+            validationProvider.Required(UserRegistrationEmail, UserRegistrationEmailErrorProvider) &&
+            validationProvider.Email(UserRegistrationEmail, UserRegistrationEmailErrorProvider);
 
         private bool ValidateUserRegistrationUsername() =>
-            validationProvider.Required(AdminForm_UserRegistration_Username_TextBox, AdminForm_UserRegistration_Username_ErrorProvider) &&
-            validationProvider.Length(4, AdminForm_UserRegistration_Username_TextBox, AdminForm_UserRegistration_Username_ErrorProvider);
+            validationProvider.Required(UserRegistrationUsername, UserRegistrationUsernameErrorProvider) &&
+            validationProvider.Length(4, UserRegistrationUsername, UserRegistrationUsernameErrorProvider);
 
         private bool ValidateUserRegistrationPassword()
         {
             if (!isUserEditMode() ||
-                (isUserEditMode() && !string.IsNullOrEmpty(AdminForm_UserRegistration_Password_TextBox.Text)))
+                (isUserEditMode() && !string.IsNullOrEmpty(UserRegistrationPassword.Text)))
             {
                 return
-                    validationProvider.Required(AdminForm_UserRegistration_Password_TextBox, AdminForm_UserRegistration_Password_ErrorProvider) &&
-                    validationProvider.Length(3, AdminForm_UserRegistration_Password_TextBox, AdminForm_UserRegistration_Password_ErrorProvider);
+                    validationProvider.Required(UserRegistrationPassword, UserRegistrationPasswordErrorProvider) &&
+                    validationProvider.Length(3, UserRegistrationPassword, UserRegistrationPasswordErrorProvider);
             }
 
-            AdminForm_UserRegistration_Password_ErrorProvider.Clear();
+            UserRegistrationPasswordErrorProvider.Clear();
             return true;
         }
 
@@ -272,22 +272,22 @@ namespace AlgospringInsurance.App.Forms
 
         #region Control Events
 
-        private void AdminForm_EmailReceiverRegistration_ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void EmailReceiverRegistrationDropDownSelectedIndexChanged(object sender, EventArgs e)
         {
-            var selectedEmailReceiverRegistration = AdminForm_EmailReceiverRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedEmailReceiverRegistration = EmailReceiverRegistrationDropDown.SelectedItem as DropDownItem;
 
-            AdminForm_EmailReceiverRegistration_Register_Button.Enabled = false;
-            AdminForm_EmailReceiverRegistration_Update_Button.Enabled = true;
-            AdminForm_EmailReceiverRegistration_Delete_Button.Enabled = true;
+            EmailReceiverRegistrationRegisterButton.Enabled = false;
+            EmailReceiverRegistrationUpdateButton.Enabled = true;
+            EmailReceiverRegistrationDeleteButton.Enabled = true;
 
             ResetEmailReceiverRegistrationErrors();
 
             try
             {
                 var EmailReceiverRegistration = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedEmailReceiverRegistration!.Id)!;
-                AdminForm_EmailReceiverRegistration_Email_TextBox.Text = EmailReceiverRegistration.Email;
-                AdminForm_EmailReceiverRegistration_IsMedical_CheckBox.Checked = EmailReceiverRegistration.IsMedical;
-                AdminForm_EmailReceiverRegistration_IsMotor_CheckBox.Checked = EmailReceiverRegistration.IsMotor;
+                EmailReceiverRegistrationEmail.Text = EmailReceiverRegistration.Email;
+                EmailReceiverRegistrationIsMedical.Checked = EmailReceiverRegistration.IsMedical;
+                EmailReceiverRegistrationIsMotor.Checked = EmailReceiverRegistration.IsMotor;
             }
             catch (Exception ex)
             {
@@ -296,7 +296,7 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_EmailReceiverRegistration_Register_Button_Click(object sender, EventArgs e)
+        private void EmailReceiverRegistrationRegisterButtonClick(object sender, EventArgs e)
         {
             if (!IsValidEmailReceiverRegistration())
                 return;
@@ -305,9 +305,9 @@ namespace AlgospringInsurance.App.Forms
             {
                 var user = unitOfWork.EmailReceiverRegistrationRepository.Insert(new DataAccess.Models.EmailReceiverRegistration
                 {
-                    Email = AdminForm_EmailReceiverRegistration_Email_TextBox.Text.Trim(),
-                    IsMotor = AdminForm_EmailReceiverRegistration_IsMotor_CheckBox.Checked,
-                    IsMedical = AdminForm_EmailReceiverRegistration_IsMedical_CheckBox.Checked
+                    Email = EmailReceiverRegistrationEmail.Text.Trim(),
+                    IsMotor = EmailReceiverRegistrationIsMotor.Checked,
+                    IsMedical = EmailReceiverRegistrationIsMedical.Checked
                 });
 
                 unitOfWork.Complete();
@@ -321,9 +321,9 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_EmailReceiverRegistration_Update_Button_Click(object sender, EventArgs e)
+        private void EmailReceiverRegistrationUpdateButtonClick(object sender, EventArgs e)
         {
-            var selectedUser = AdminForm_EmailReceiverRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedUser = EmailReceiverRegistrationDropDown.SelectedItem as DropDownItem;
 
             if (!IsValidEmailReceiverRegistration())
                 return;
@@ -334,9 +334,9 @@ namespace AlgospringInsurance.App.Forms
 
                 if (emailReceiver is not null)
                 {
-                    emailReceiver.Email = AdminForm_EmailReceiverRegistration_Email_TextBox.Text.Trim();
-                    emailReceiver.IsMotor = AdminForm_EmailReceiverRegistration_IsMotor_CheckBox.Checked;
-                    emailReceiver.IsMedical = AdminForm_EmailReceiverRegistration_IsMedical_CheckBox.Checked;
+                    emailReceiver.Email = EmailReceiverRegistrationEmail.Text.Trim();
+                    emailReceiver.IsMotor = EmailReceiverRegistrationIsMotor.Checked;
+                    emailReceiver.IsMedical = EmailReceiverRegistrationIsMedical.Checked;
 
                     unitOfWork.EmailReceiverRegistrationRepository.Update(emailReceiver);
                     unitOfWork.Complete();
@@ -356,9 +356,9 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_EmailReceiverRegistration_Delete_Button_Click(object sender, EventArgs e)
+        private void EmailReceiverRegistrationDeleteButtonClick(object sender, EventArgs e)
         {
-            var selectedUser = AdminForm_EmailReceiverRegistration_ComboBox.SelectedItem as DropDownItem;
+            var selectedUser = EmailReceiverRegistrationDropDown.SelectedItem as DropDownItem;
 
             try
             {
@@ -391,10 +391,10 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void AdminForm_EmailReceiverRegistration_Reset_Button_Click(object sender, EventArgs e) =>
+        private void EmailReceiverRegistrationResetButtonClick(object sender, EventArgs e) =>
             ResetEmailReceiverForm();
 
-        private void AdminForm_EmailReceiverRegistration_Email_TextBox_TextChanged(object sender, EventArgs e) =>
+        private void EmailReceiverRegistrationEmailTextChanged(object sender, EventArgs e) =>
             ValidateEmailReceiverRegistrationEmail();
 
         #endregion
@@ -403,7 +403,7 @@ namespace AlgospringInsurance.App.Forms
 
         private void LoadEmailReceivers()
         {
-            AdminForm_EmailReceiverRegistration_ComboBox.Items.Clear();
+            EmailReceiverRegistrationDropDown.Items.Clear();
 
             try
             {
@@ -413,7 +413,7 @@ namespace AlgospringInsurance.App.Forms
                 {
                     foreach (var receiver in emailReceivers)
                     {
-                        AdminForm_EmailReceiverRegistration_ComboBox.Items.Add(new DropDownItem
+                        EmailReceiverRegistrationDropDown.Items.Add(new DropDownItem
                         {
                             Id = receiver.Id,
                             Text = receiver.Email
@@ -430,22 +430,22 @@ namespace AlgospringInsurance.App.Forms
         private void ResetEmailReceiverForm()
         {
             LoadEmailReceivers();
-            AdminForm_EmailReceiverRegistration_Email_TextBox.ResetText();
-            AdminForm_EmailReceiverRegistration_IsMedical_CheckBox.Checked = false;
-            AdminForm_EmailReceiverRegistration_IsMotor_CheckBox.Checked = false;
+            EmailReceiverRegistrationEmail.ResetText();
+            EmailReceiverRegistrationIsMedical.Checked = false;
+            EmailReceiverRegistrationIsMotor.Checked = false;
 
             ResetEmailReceiverRegistrationErrors();
 
-            AdminForm_EmailReceiverRegistration_Register_Button.Enabled = true;
-            AdminForm_EmailReceiverRegistration_Update_Button.Enabled = false;
-            AdminForm_EmailReceiverRegistration_Delete_Button.Enabled = false;
+            EmailReceiverRegistrationRegisterButton.Enabled = true;
+            EmailReceiverRegistrationUpdateButton.Enabled = false;
+            EmailReceiverRegistrationDeleteButton.Enabled = false;
         }
 
         private bool isEmailReceiverEditMode() =>
-            AdminForm_EmailReceiverRegistration_ComboBox.SelectedItem as DropDownItem is not null;
+            EmailReceiverRegistrationDropDown.SelectedItem as DropDownItem is not null;
 
         private void ResetEmailReceiverRegistrationErrors() => ImmutableList.Create(
-            AdminForm_EmailReceiverRegistration_Email_ErrorProvider)
+            EmailReceiverRegistrationEmailErrorProvider)
             .ForEach(x => x.Clear());
 
         #endregion
@@ -459,8 +459,8 @@ namespace AlgospringInsurance.App.Forms
             });
 
         private bool ValidateEmailReceiverRegistrationEmail() =>
-            validationProvider.Required(AdminForm_EmailReceiverRegistration_Email_TextBox, AdminForm_EmailReceiverRegistration_Email_ErrorProvider) &&
-            validationProvider.Email(AdminForm_EmailReceiverRegistration_Email_TextBox, AdminForm_EmailReceiverRegistration_Email_ErrorProvider);
+            validationProvider.Required(EmailReceiverRegistrationEmail, EmailReceiverRegistrationEmailErrorProvider) &&
+            validationProvider.Email(EmailReceiverRegistrationEmail, EmailReceiverRegistrationEmailErrorProvider);
 
         #endregion
 

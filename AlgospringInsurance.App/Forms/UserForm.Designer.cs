@@ -29,135 +29,135 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
-            UserForm_MotorQuoteRequest_LinkLabel = new LinkLabel();
-            UserForm_MotorInsurance_GroupBox = new GroupBox();
-            UserForm_MotorDescription_Label = new Label();
-            UserForm_MedicalInsurance_GroupBox = new GroupBox();
-            UserForm_MedicalDescription_Label = new Label();
-            UserForm_MedicalQuoteRequest_LinkLabel = new LinkLabel();
-            UserForm_Exit_LinkLabel = new LinkLabel();
-            UserForm_Logout_LinkLabel = new LinkLabel();
-            UserForm_Welcome_Label = new Label();
-            UserForm_Superadmin_LinkLabel = new LinkLabel();
-            UserForm_MotorInsurance_GroupBox.SuspendLayout();
-            UserForm_MedicalInsurance_GroupBox.SuspendLayout();
+            MotorQuoteRequestLinkLabel = new LinkLabel();
+            MotorInsuranceGroupBox = new GroupBox();
+            MotorDescriptionLabel = new Label();
+            MedicalInsuranceGroupBox = new GroupBox();
+            MedicalDescriptionLabel = new Label();
+            MedicalQuoteRequestLinkLabel = new LinkLabel();
+            ExitLinkLabel = new LinkLabel();
+            LogoutLinkLabel = new LinkLabel();
+            WelcomeLabel = new Label();
+            AdminLinkLabel = new LinkLabel();
+            MotorInsuranceGroupBox.SuspendLayout();
+            MedicalInsuranceGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // UserForm_MotorQuoteRequest_LinkLabel
+            // MotorQuoteRequestLinkLabel
             // 
-            UserForm_MotorQuoteRequest_LinkLabel.AutoSize = true;
-            UserForm_MotorQuoteRequest_LinkLabel.Location = new Point(437, 54);
-            UserForm_MotorQuoteRequest_LinkLabel.Name = "UserForm_MotorQuoteRequest_LinkLabel";
-            UserForm_MotorQuoteRequest_LinkLabel.Size = new Size(62, 20);
-            UserForm_MotorQuoteRequest_LinkLabel.TabIndex = 0;
-            UserForm_MotorQuoteRequest_LinkLabel.TabStop = true;
-            UserForm_MotorQuoteRequest_LinkLabel.Text = "Request";
-            UserForm_MotorQuoteRequest_LinkLabel.LinkClicked += UserForm_MotorQuoteRequest_LinkLabel_LinkClicked;
+            MotorQuoteRequestLinkLabel.AutoSize = true;
+            MotorQuoteRequestLinkLabel.Location = new Point(437, 54);
+            MotorQuoteRequestLinkLabel.Name = "MotorQuoteRequestLinkLabel";
+            MotorQuoteRequestLinkLabel.Size = new Size(62, 20);
+            MotorQuoteRequestLinkLabel.TabIndex = 0;
+            MotorQuoteRequestLinkLabel.TabStop = true;
+            MotorQuoteRequestLinkLabel.Text = "Request";
+            MotorQuoteRequestLinkLabel.LinkClicked += MotorQuoteRequestLinkClicked;
             // 
-            // UserForm_MotorInsurance_GroupBox
+            // MotorInsuranceGroupBox
             // 
-            UserForm_MotorInsurance_GroupBox.Controls.Add(UserForm_MotorDescription_Label);
-            UserForm_MotorInsurance_GroupBox.Controls.Add(UserForm_MotorQuoteRequest_LinkLabel);
-            UserForm_MotorInsurance_GroupBox.Location = new Point(13, 37);
-            UserForm_MotorInsurance_GroupBox.Name = "UserForm_MotorInsurance_GroupBox";
-            UserForm_MotorInsurance_GroupBox.Size = new Size(505, 88);
-            UserForm_MotorInsurance_GroupBox.TabIndex = 1;
-            UserForm_MotorInsurance_GroupBox.TabStop = false;
-            UserForm_MotorInsurance_GroupBox.Text = "Motor";
+            MotorInsuranceGroupBox.Controls.Add(MotorDescriptionLabel);
+            MotorInsuranceGroupBox.Controls.Add(MotorQuoteRequestLinkLabel);
+            MotorInsuranceGroupBox.Location = new Point(13, 37);
+            MotorInsuranceGroupBox.Name = "MotorInsuranceGroupBox";
+            MotorInsuranceGroupBox.Size = new Size(505, 88);
+            MotorInsuranceGroupBox.TabIndex = 1;
+            MotorInsuranceGroupBox.TabStop = false;
+            MotorInsuranceGroupBox.Text = "Motor";
             // 
-            // UserForm_MotorDescription_Label
+            // MotorDescriptionLabel
             // 
-            UserForm_MotorDescription_Label.AutoSize = true;
-            UserForm_MotorDescription_Label.Location = new Point(6, 23);
-            UserForm_MotorDescription_Label.Name = "UserForm_MotorDescription_Label";
-            UserForm_MotorDescription_Label.Size = new Size(444, 20);
-            UserForm_MotorDescription_Label.TabIndex = 1;
-            UserForm_MotorDescription_Label.Text = "Please proceed here to request a quotation for a motor insurance.";
+            MotorDescriptionLabel.AutoSize = true;
+            MotorDescriptionLabel.Location = new Point(6, 23);
+            MotorDescriptionLabel.Name = "MotorDescriptionLabel";
+            MotorDescriptionLabel.Size = new Size(444, 20);
+            MotorDescriptionLabel.TabIndex = 1;
+            MotorDescriptionLabel.Text = "Please proceed here to request a quotation for a motor insurance.";
             // 
-            // UserForm_MedicalInsurance_GroupBox
+            // MedicalInsuranceGroupBox
             // 
-            UserForm_MedicalInsurance_GroupBox.Controls.Add(UserForm_MedicalDescription_Label);
-            UserForm_MedicalInsurance_GroupBox.Controls.Add(UserForm_MedicalQuoteRequest_LinkLabel);
-            UserForm_MedicalInsurance_GroupBox.Location = new Point(13, 131);
-            UserForm_MedicalInsurance_GroupBox.Name = "UserForm_MedicalInsurance_GroupBox";
-            UserForm_MedicalInsurance_GroupBox.Size = new Size(505, 88);
-            UserForm_MedicalInsurance_GroupBox.TabIndex = 2;
-            UserForm_MedicalInsurance_GroupBox.TabStop = false;
-            UserForm_MedicalInsurance_GroupBox.Text = "Medical";
+            MedicalInsuranceGroupBox.Controls.Add(MedicalDescriptionLabel);
+            MedicalInsuranceGroupBox.Controls.Add(MedicalQuoteRequestLinkLabel);
+            MedicalInsuranceGroupBox.Location = new Point(13, 131);
+            MedicalInsuranceGroupBox.Name = "MedicalInsuranceGroupBox";
+            MedicalInsuranceGroupBox.Size = new Size(505, 88);
+            MedicalInsuranceGroupBox.TabIndex = 2;
+            MedicalInsuranceGroupBox.TabStop = false;
+            MedicalInsuranceGroupBox.Text = "Medical";
             // 
-            // UserForm_MedicalDescription_Label
+            // MedicalDescriptionLabel
             // 
-            UserForm_MedicalDescription_Label.AutoSize = true;
-            UserForm_MedicalDescription_Label.Location = new Point(6, 23);
-            UserForm_MedicalDescription_Label.Name = "UserForm_MedicalDescription_Label";
-            UserForm_MedicalDescription_Label.Size = new Size(456, 20);
-            UserForm_MedicalDescription_Label.TabIndex = 1;
-            UserForm_MedicalDescription_Label.Text = "Please proceed here to request a quotation for a medical insurance.";
+            MedicalDescriptionLabel.AutoSize = true;
+            MedicalDescriptionLabel.Location = new Point(6, 23);
+            MedicalDescriptionLabel.Name = "MedicalDescriptionLabel";
+            MedicalDescriptionLabel.Size = new Size(456, 20);
+            MedicalDescriptionLabel.TabIndex = 1;
+            MedicalDescriptionLabel.Text = "Please proceed here to request a quotation for a medical insurance.";
             // 
-            // UserForm_MedicalQuoteRequest_LinkLabel
+            // MedicalQuoteRequestLinkLabel
             // 
-            UserForm_MedicalQuoteRequest_LinkLabel.AutoSize = true;
-            UserForm_MedicalQuoteRequest_LinkLabel.Location = new Point(437, 52);
-            UserForm_MedicalQuoteRequest_LinkLabel.Name = "UserForm_MedicalQuoteRequest_LinkLabel";
-            UserForm_MedicalQuoteRequest_LinkLabel.Size = new Size(62, 20);
-            UserForm_MedicalQuoteRequest_LinkLabel.TabIndex = 0;
-            UserForm_MedicalQuoteRequest_LinkLabel.TabStop = true;
-            UserForm_MedicalQuoteRequest_LinkLabel.Text = "Request";
-            UserForm_MedicalQuoteRequest_LinkLabel.LinkClicked += UserForm_MedicalQuoteRequest_LinkLabel_LinkClicked;
+            MedicalQuoteRequestLinkLabel.AutoSize = true;
+            MedicalQuoteRequestLinkLabel.Location = new Point(437, 52);
+            MedicalQuoteRequestLinkLabel.Name = "MedicalQuoteRequestLinkLabel";
+            MedicalQuoteRequestLinkLabel.Size = new Size(62, 20);
+            MedicalQuoteRequestLinkLabel.TabIndex = 0;
+            MedicalQuoteRequestLinkLabel.TabStop = true;
+            MedicalQuoteRequestLinkLabel.Text = "Request";
+            MedicalQuoteRequestLinkLabel.LinkClicked += MedicalQuoteRequestLinkClicked;
             // 
-            // UserForm_Exit_LinkLabel
+            // ExitLinkLabel
             // 
-            UserForm_Exit_LinkLabel.AutoSize = true;
-            UserForm_Exit_LinkLabel.Location = new Point(485, 222);
-            UserForm_Exit_LinkLabel.Name = "UserForm_Exit_LinkLabel";
-            UserForm_Exit_LinkLabel.Size = new Size(33, 20);
-            UserForm_Exit_LinkLabel.TabIndex = 3;
-            UserForm_Exit_LinkLabel.TabStop = true;
-            UserForm_Exit_LinkLabel.Text = "Exit";
-            UserForm_Exit_LinkLabel.LinkClicked += UserForm_Exit_LinkLabel_LinkClicked;
+            ExitLinkLabel.AutoSize = true;
+            ExitLinkLabel.Location = new Point(485, 222);
+            ExitLinkLabel.Name = "ExitLinkLabel";
+            ExitLinkLabel.Size = new Size(33, 20);
+            ExitLinkLabel.TabIndex = 3;
+            ExitLinkLabel.TabStop = true;
+            ExitLinkLabel.Text = "Exit";
+            ExitLinkLabel.LinkClicked += ExitLinkClicked;
             // 
-            // UserForm_Logout_LinkLabel
+            // LogoutLinkLabel
             // 
-            UserForm_Logout_LinkLabel.AutoSize = true;
-            UserForm_Logout_LinkLabel.Location = new Point(456, 5);
-            UserForm_Logout_LinkLabel.Name = "UserForm_Logout_LinkLabel";
-            UserForm_Logout_LinkLabel.Size = new Size(56, 20);
-            UserForm_Logout_LinkLabel.TabIndex = 4;
-            UserForm_Logout_LinkLabel.TabStop = true;
-            UserForm_Logout_LinkLabel.Text = "Logout";
-            UserForm_Logout_LinkLabel.LinkClicked += UserForm_Logout_LinkLabel_LinkClicked;
+            LogoutLinkLabel.AutoSize = true;
+            LogoutLinkLabel.Location = new Point(456, 5);
+            LogoutLinkLabel.Name = "LogoutLinkLabel";
+            LogoutLinkLabel.Size = new Size(56, 20);
+            LogoutLinkLabel.TabIndex = 4;
+            LogoutLinkLabel.TabStop = true;
+            LogoutLinkLabel.Text = "Logout";
+            LogoutLinkLabel.LinkClicked += LogoutLinkClicked;
             // 
-            // UserForm_Welcome_Label
+            // WelcomeLabel
             // 
-            UserForm_Welcome_Label.AutoSize = true;
-            UserForm_Welcome_Label.Location = new Point(13, 5);
-            UserForm_Welcome_Label.Name = "UserForm_Welcome_Label";
-            UserForm_Welcome_Label.Size = new Size(133, 20);
-            UserForm_Welcome_Label.TabIndex = 6;
-            UserForm_Welcome_Label.Text = "Welcome, [name] !";
+            WelcomeLabel.AutoSize = true;
+            WelcomeLabel.Location = new Point(13, 5);
+            WelcomeLabel.Name = "WelcomeLabel";
+            WelcomeLabel.Size = new Size(133, 20);
+            WelcomeLabel.TabIndex = 6;
+            WelcomeLabel.Text = "Welcome, [name] !";
             // 
-            // UserForm_Superadmin_LinkLabel
+            // AdminLinkLabel
             // 
-            UserForm_Superadmin_LinkLabel.AutoSize = true;
-            UserForm_Superadmin_LinkLabel.Location = new Point(397, 5);
-            UserForm_Superadmin_LinkLabel.Name = "UserForm_Superadmin_LinkLabel";
-            UserForm_Superadmin_LinkLabel.Size = new Size(53, 20);
-            UserForm_Superadmin_LinkLabel.TabIndex = 7;
-            UserForm_Superadmin_LinkLabel.TabStop = true;
-            UserForm_Superadmin_LinkLabel.Text = "Admin";
-            UserForm_Superadmin_LinkLabel.LinkClicked += UserForm_Superadmin_LinkLabel_LinkClicked;
+            AdminLinkLabel.AutoSize = true;
+            AdminLinkLabel.Location = new Point(397, 5);
+            AdminLinkLabel.Name = "AdminLinkLabel";
+            AdminLinkLabel.Size = new Size(53, 20);
+            AdminLinkLabel.TabIndex = 7;
+            AdminLinkLabel.TabStop = true;
+            AdminLinkLabel.Text = "Admin";
+            AdminLinkLabel.LinkClicked += AdminLinkClicked;
             // 
             // UserForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(529, 251);
-            Controls.Add(UserForm_Superadmin_LinkLabel);
-            Controls.Add(UserForm_Welcome_Label);
-            Controls.Add(UserForm_Logout_LinkLabel);
-            Controls.Add(UserForm_Exit_LinkLabel);
-            Controls.Add(UserForm_MedicalInsurance_GroupBox);
-            Controls.Add(UserForm_MotorInsurance_GroupBox);
+            Controls.Add(AdminLinkLabel);
+            Controls.Add(WelcomeLabel);
+            Controls.Add(LogoutLinkLabel);
+            Controls.Add(ExitLinkLabel);
+            Controls.Add(MedicalInsuranceGroupBox);
+            Controls.Add(MotorInsuranceGroupBox);
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
@@ -165,25 +165,25 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "User - Alospring Insurance";
             Load += UserForm_Load;
-            UserForm_MotorInsurance_GroupBox.ResumeLayout(false);
-            UserForm_MotorInsurance_GroupBox.PerformLayout();
-            UserForm_MedicalInsurance_GroupBox.ResumeLayout(false);
-            UserForm_MedicalInsurance_GroupBox.PerformLayout();
+            MotorInsuranceGroupBox.ResumeLayout(false);
+            MotorInsuranceGroupBox.PerformLayout();
+            MedicalInsuranceGroupBox.ResumeLayout(false);
+            MedicalInsuranceGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private LinkLabel UserForm_MotorQuoteRequest_LinkLabel;
-        private GroupBox UserForm_MotorInsurance_GroupBox;
-        private Label UserForm_MotorDescription_Label;
-        private GroupBox UserForm_MedicalInsurance_GroupBox;
-        private Label UserForm_MedicalDescription_Label;
-        private LinkLabel UserForm_MedicalQuoteRequest_LinkLabel;
-        private LinkLabel UserForm_Exit_LinkLabel;
-        private LinkLabel UserForm_Logout_LinkLabel;
-        private Label UserForm_Welcome_Label;
-        private LinkLabel UserForm_Superadmin_LinkLabel;
+        private LinkLabel MotorQuoteRequestLinkLabel;
+        private GroupBox MotorInsuranceGroupBox;
+        private Label MotorDescriptionLabel;
+        private GroupBox MedicalInsuranceGroupBox;
+        private Label MedicalDescriptionLabel;
+        private LinkLabel MedicalQuoteRequestLinkLabel;
+        private LinkLabel ExitLinkLabel;
+        private LinkLabel LogoutLinkLabel;
+        private Label WelcomeLabel;
+        private LinkLabel AdminLinkLabel;
     }
 }

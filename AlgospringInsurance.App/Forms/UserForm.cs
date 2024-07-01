@@ -28,13 +28,13 @@ namespace AlgospringInsurance.App.Forms
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            UserForm_Welcome_Label.Text = $"Welcome, {LoginFormDataParser.LoginName} !";
+            WelcomeLabel.Text = $"Welcome, {LoginFormDataParser.LoginName} !";
 
             if (!LoginFormDataParser.IsAdmin)
-                UserForm_Superadmin_LinkLabel.Hide();
+                AdminLinkLabel.Hide();
         }
 
-        private void UserForm_Exit_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ExitLinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var dialogResult = MessageBox.Show(
                 "Are you sure, Do you really want to Exit...?",
@@ -46,7 +46,7 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void UserForm_Logout_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LogoutLinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (Application.OpenForms.Count > 0)
             {
@@ -64,13 +64,13 @@ namespace AlgospringInsurance.App.Forms
             }
         }
 
-        private void UserForm_Superadmin_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+        private void AdminLinkClicked(object sender, LinkLabelLinkClickedEventArgs e) =>
             formFactory.Create<AdminForm>().ShowDialog();
 
-        private void UserForm_MotorQuoteRequest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+        private void MotorQuoteRequestLinkClicked(object sender, LinkLabelLinkClickedEventArgs e) =>
             formFactory.Create<MotorQuoteRequestForm>().ShowDialog(this);
 
-        private void UserForm_MedicalQuoteRequest_LinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => 
+        private void MedicalQuoteRequestLinkClicked(object sender, LinkLabelLinkClickedEventArgs e) =>
             formFactory.Create<MedicalQuoteRequestForm>().ShowDialog();
     }
 }

@@ -213,7 +213,7 @@
             // 
             // LoadDataButton
             // 
-            LoadDataButton.Location = new Point(1097, 295);
+            LoadDataButton.Location = new Point(1097, 293);
             LoadDataButton.Name = "LoadDataButton";
             LoadDataButton.Size = new Size(125, 62);
             LoadDataButton.TabIndex = 46;
@@ -222,7 +222,7 @@
             // 
             // VehicleRegistrationBackBrowseButton
             // 
-            VehicleRegistrationBackBrowseButton.Location = new Point(925, 328);
+            VehicleRegistrationBackBrowseButton.Location = new Point(928, 328);
             VehicleRegistrationBackBrowseButton.Name = "VehicleRegistrationBackBrowseButton";
             VehicleRegistrationBackBrowseButton.Size = new Size(94, 29);
             VehicleRegistrationBackBrowseButton.TabIndex = 45;
@@ -232,7 +232,7 @@
             // VehicleRegistrationBackBrowsePath
             // 
             VehicleRegistrationBackBrowsePath.Enabled = false;
-            VehicleRegistrationBackBrowsePath.Location = new Point(701, 327);
+            VehicleRegistrationBackBrowsePath.Location = new Point(701, 331);
             VehicleRegistrationBackBrowsePath.Name = "VehicleRegistrationBackBrowsePath";
             VehicleRegistrationBackBrowsePath.Size = new Size(220, 27);
             VehicleRegistrationBackBrowsePath.TabIndex = 44;
@@ -248,7 +248,7 @@
             // 
             // DrivingLicenseBrowseButton
             // 
-            DrivingLicenseBrowseButton.Location = new Point(349, 327);
+            DrivingLicenseBrowseButton.Location = new Point(347, 327);
             DrivingLicenseBrowseButton.Name = "DrivingLicenseBrowseButton";
             DrivingLicenseBrowseButton.Size = new Size(94, 29);
             DrivingLicenseBrowseButton.TabIndex = 42;
@@ -258,7 +258,7 @@
             // DrivingLicenseBrowsePath
             // 
             DrivingLicenseBrowsePath.Enabled = false;
-            DrivingLicenseBrowsePath.Location = new Point(123, 328);
+            DrivingLicenseBrowsePath.Location = new Point(121, 328);
             DrivingLicenseBrowsePath.Name = "DrivingLicenseBrowsePath";
             DrivingLicenseBrowsePath.Size = new Size(220, 27);
             DrivingLicenseBrowsePath.TabIndex = 41;
@@ -274,7 +274,7 @@
             // 
             // VehicleRegistrationFrontBrowseButton
             // 
-            VehicleRegistrationFrontBrowseButton.Location = new Point(925, 295);
+            VehicleRegistrationFrontBrowseButton.Location = new Point(928, 297);
             VehicleRegistrationFrontBrowseButton.Name = "VehicleRegistrationFrontBrowseButton";
             VehicleRegistrationFrontBrowseButton.Size = new Size(94, 29);
             VehicleRegistrationFrontBrowseButton.TabIndex = 39;
@@ -284,7 +284,7 @@
             // VehicleRegistrationFrontBrowsePath
             // 
             VehicleRegistrationFrontBrowsePath.Enabled = false;
-            VehicleRegistrationFrontBrowsePath.Location = new Point(701, 294);
+            VehicleRegistrationFrontBrowsePath.Location = new Point(701, 298);
             VehicleRegistrationFrontBrowsePath.Name = "VehicleRegistrationFrontBrowsePath";
             VehicleRegistrationFrontBrowsePath.Size = new Size(220, 27);
             VehicleRegistrationFrontBrowsePath.TabIndex = 38;
@@ -300,7 +300,7 @@
             // 
             // EmiratesIdBrowseButton
             // 
-            EmiratesIdBrowseButton.Location = new Point(349, 297);
+            EmiratesIdBrowseButton.Location = new Point(347, 294);
             EmiratesIdBrowseButton.Name = "EmiratesIdBrowseButton";
             EmiratesIdBrowseButton.Size = new Size(94, 29);
             EmiratesIdBrowseButton.TabIndex = 36;
@@ -310,7 +310,7 @@
             // EmiratesIdBrowsePath
             // 
             EmiratesIdBrowsePath.Enabled = false;
-            EmiratesIdBrowsePath.Location = new Point(123, 295);
+            EmiratesIdBrowsePath.Location = new Point(121, 295);
             EmiratesIdBrowsePath.Name = "EmiratesIdBrowsePath";
             EmiratesIdBrowsePath.Size = new Size(220, 27);
             EmiratesIdBrowsePath.TabIndex = 35;

@@ -44,22 +44,12 @@
             EmiratesIdBrowseButton = new Button();
             EmiratesIdBrowsePath = new TextBox();
             EmiratesIdBrowseLabel = new Label();
-            TradeLicense = new TextBox();
             PlateCategory = new ComboBox();
-            TradeLicenseLabel = new Label();
             PlateCategoryLabel = new Label();
-            PreviousInsuredType = new ComboBox();
-            PreviousInsuredTypeLabel = new Label();
-            PaymentMethod = new ComboBox();
-            PaymentMethodLabel = new Label();
             GCCSpec = new ComboBox();
             GCCSpecLabel = new Label();
             ModifiedVehicle = new ComboBox();
             ModifiedVehicleLabel = new Label();
-            CityOfRegister = new ComboBox();
-            CityOfRegisterLabel = new Label();
-            NoClaimDiscount = new ComboBox();
-            NoClaimDiscountLabel = new Label();
             VehicleType = new ComboBox();
             VehicleTypeLabel = new Label();
             VehicleColor = new ComboBox();
@@ -81,66 +71,76 @@
             CustomerName = new TextBox();
             CustomerLabel = new Label();
             OutPutGroupBox = new GroupBox();
+            SubmitButton = new Button();
+            ClearButton = new Button();
+            CancelButton = new Button();
+            groupBox3 = new GroupBox();
             PortalPanel = new Panel();
-            OutputPortalIsAlsagar = new CheckBox();
-            OutputPortalIsRak = new CheckBox();
-            OutputPortalIsTokio = new CheckBox();
-            OutputPortalIsSukoon = new CheckBox();
-            OutputPortalOriental = new CheckBox();
-            OutputPortalIsFidelity = new CheckBox();
             OutputPortalIsNewIndia = new CheckBox();
-            OutputTrafficPlateNo = new TextBox();
-            OutputTrafficPlateNoLabel = new Label();
-            OutputVehicleDetailsGroupBox = new GroupBox();
-            OutPutEngineNo = new TextBox();
-            OutPutEngineNoLabel = new Label();
-            OutputChassiNo = new TextBox();
-            OutputChassiNoLabel = new Label();
-            OutputTCNo = new TextBox();
-            OutputTCNoLabel = new Label();
-            OutputVehicleModel = new TextBox();
-            OutputVehicleModelLabel = new Label();
+            OutputPortalIsFidelity = new CheckBox();
+            OutputPortalOriental = new CheckBox();
+            OutputPortalIsSukoon = new CheckBox();
+            OutputPortalIsTokio = new CheckBox();
+            OutputPortalIsRak = new CheckBox();
+            OutputPortalIsAlsagar = new CheckBox();
+            groupBox2 = new GroupBox();
+            OutputPlaceOfIssue = new ComboBox();
+            OutputPlaceOfIssueLabel = new Label();
+            OutputDrivingLicenseExpiryDate = new DateTimePicker();
+            OutputDrivingLicenseExpiryDateLabel = new Label();
+            OutputDrivingLicenseIssueDate = new DateTimePicker();
+            OutputDrivingLicenseIssueDateLabel = new Label();
+            OutputLicenseNo = new TextBox();
+            OutputLicenseNoLabel = new Label();
             groupBox1 = new GroupBox();
+            OutputDateOfBirth = new DateTimePicker();
+            OutputDateOfBirthLabel = new Label();
+            OutputNationality = new ComboBox();
+            OutputNationalityLabel = new Label();
             OutputEmiratesExpiryDate = new DateTimePicker();
             OutputEmiratesExpiryDateLabel = new Label();
             OutputEmiratesIssueDate = new DateTimePicker();
             OutputEmiratesIssueDateLabel = new Label();
             OutputEmiratesId = new TextBox();
             OutputEmiratesIdLabel = new Label();
-            OutputNationality = new ComboBox();
-            OutputNationalityLabel = new Label();
-            OutputDateOfBirth = new DateTimePicker();
-            OutputDateOfBirthLabel = new Label();
-            OutputModelYearLabel = new Label();
-            OutputModelYear = new TextBox();
-            OutputOriginLabel = new Label();
-            OutputVehicleOrigin = new TextBox();
-            OutputMakeLabel = new Label();
-            OutputVehicleMake = new TextBox();
-            OutputRegisterDateLabel = new Label();
-            OutputRegisterDate = new DateTimePicker();
-            OutputInsExpDateLabel = new Label();
+            OutputVehicleDetailsGroupBox = new GroupBox();
             OutputInsExpDate = new DateTimePicker();
-            groupBox2 = new GroupBox();
-            OutputPlaceOfIssue = new ComboBox();
-            OutputPlaceOfIssueLabel = new Label();
-            OutputDrivingLicenseIssueDate = new DateTimePicker();
-            OutputDrivingLicenseIssueDateLabel = new Label();
-            OutputLicenseNo = new TextBox();
-            OutputLicenseNoLabel = new Label();
-            OutputDrivingLicenseExpiryDateLabel = new Label();
-            OutputDrivingLicenseExpiryDate = new DateTimePicker();
-            groupBox3 = new GroupBox();
-            ClearButton = new Button();
-            CancelButton = new Button();
-            SubmitButton = new Button();
+            OutputInsExpDateLabel = new Label();
+            OutputRegisterDate = new DateTimePicker();
+            OutputRegisterDateLabel = new Label();
+            OutputVehicleMake = new TextBox();
+            OutputMakeLabel = new Label();
+            OutputVehicleOrigin = new TextBox();
+            OutputOriginLabel = new Label();
+            OutputModelYear = new TextBox();
+            OutputModelYearLabel = new Label();
+            OutputVehicleModel = new TextBox();
+            OutputVehicleModelLabel = new Label();
+            OutputTCNo = new TextBox();
+            OutputTCNoLabel = new Label();
+            OutputChassiNo = new TextBox();
+            OutputChassiNoLabel = new Label();
+            OutPutEngineNo = new TextBox();
+            OutPutEngineNoLabel = new Label();
+            OutputTrafficPlateNo = new TextBox();
+            OutputTrafficPlateNoLabel = new Label();
+            TradeLicense = new TextBox();
+            TradeLicenseLabel = new Label();
+            PreviousInsuredType = new ComboBox();
+            PreviousInsuredTypeLabel = new Label();
+            PaymentMethod = new ComboBox();
+            PaymentMethodLabel = new Label();
+            CityOfRegister = new ComboBox();
+            CityOfRegisterLabel = new Label();
+            NoClaimDiscount = new ComboBox();
+            NoClaimDiscountLabel = new Label();
             GeneralInformationGroupBox.SuspendLayout();
             OutPutGroupBox.SuspendLayout();
-            PortalPanel.SuspendLayout();
-            OutputVehicleDetailsGroupBox.SuspendLayout();
-            groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            PortalPanel.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
+            OutputVehicleDetailsGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // MotorQuoteForm_Heading_Label
@@ -155,6 +155,16 @@
             // 
             // GeneralInformationGroupBox
             // 
+            GeneralInformationGroupBox.Controls.Add(TradeLicense);
+            GeneralInformationGroupBox.Controls.Add(TradeLicenseLabel);
+            GeneralInformationGroupBox.Controls.Add(PreviousInsuredType);
+            GeneralInformationGroupBox.Controls.Add(PreviousInsuredTypeLabel);
+            GeneralInformationGroupBox.Controls.Add(PaymentMethod);
+            GeneralInformationGroupBox.Controls.Add(PaymentMethodLabel);
+            GeneralInformationGroupBox.Controls.Add(CityOfRegister);
+            GeneralInformationGroupBox.Controls.Add(CityOfRegisterLabel);
+            GeneralInformationGroupBox.Controls.Add(NoClaimDiscount);
+            GeneralInformationGroupBox.Controls.Add(NoClaimDiscountLabel);
             GeneralInformationGroupBox.Controls.Add(LoadDataButton);
             GeneralInformationGroupBox.Controls.Add(VehicleRegistrationBackBrowseButton);
             GeneralInformationGroupBox.Controls.Add(VehicleRegistrationBackBrowsePath);
@@ -168,22 +178,12 @@
             GeneralInformationGroupBox.Controls.Add(EmiratesIdBrowseButton);
             GeneralInformationGroupBox.Controls.Add(EmiratesIdBrowsePath);
             GeneralInformationGroupBox.Controls.Add(EmiratesIdBrowseLabel);
-            GeneralInformationGroupBox.Controls.Add(TradeLicense);
             GeneralInformationGroupBox.Controls.Add(PlateCategory);
-            GeneralInformationGroupBox.Controls.Add(TradeLicenseLabel);
             GeneralInformationGroupBox.Controls.Add(PlateCategoryLabel);
-            GeneralInformationGroupBox.Controls.Add(PreviousInsuredType);
-            GeneralInformationGroupBox.Controls.Add(PreviousInsuredTypeLabel);
-            GeneralInformationGroupBox.Controls.Add(PaymentMethod);
-            GeneralInformationGroupBox.Controls.Add(PaymentMethodLabel);
             GeneralInformationGroupBox.Controls.Add(GCCSpec);
             GeneralInformationGroupBox.Controls.Add(GCCSpecLabel);
             GeneralInformationGroupBox.Controls.Add(ModifiedVehicle);
             GeneralInformationGroupBox.Controls.Add(ModifiedVehicleLabel);
-            GeneralInformationGroupBox.Controls.Add(CityOfRegister);
-            GeneralInformationGroupBox.Controls.Add(CityOfRegisterLabel);
-            GeneralInformationGroupBox.Controls.Add(NoClaimDiscount);
-            GeneralInformationGroupBox.Controls.Add(NoClaimDiscountLabel);
             GeneralInformationGroupBox.Controls.Add(VehicleType);
             GeneralInformationGroupBox.Controls.Add(VehicleTypeLabel);
             GeneralInformationGroupBox.Controls.Add(VehicleColor);
@@ -213,7 +213,7 @@
             // 
             // LoadDataButton
             // 
-            LoadDataButton.Location = new Point(1097, 294);
+            LoadDataButton.Location = new Point(1097, 295);
             LoadDataButton.Name = "LoadDataButton";
             LoadDataButton.Size = new Size(125, 62);
             LoadDataButton.TabIndex = 46;
@@ -324,77 +324,27 @@
             EmiratesIdBrowseLabel.TabIndex = 34;
             EmiratesIdBrowseLabel.Text = "Emirates Id";
             // 
-            // TradeLicense
-            // 
-            TradeLicense.Location = new Point(621, 232);
-            TradeLicense.Name = "TradeLicense";
-            TradeLicense.Size = new Size(200, 27);
-            TradeLicense.TabIndex = 33;
-            // 
             // PlateCategory
             // 
             PlateCategory.FormattingEnabled = true;
-            PlateCategory.Location = new Point(1022, 238);
+            PlateCategory.Location = new Point(529, 236);
             PlateCategory.Name = "PlateCategory";
             PlateCategory.Size = new Size(200, 28);
             PlateCategory.TabIndex = 31;
             // 
-            // TradeLicenseLabel
-            // 
-            TradeLicenseLabel.AutoSize = true;
-            TradeLicenseLabel.Location = new Point(392, 235);
-            TradeLicenseLabel.Name = "TradeLicenseLabel";
-            TradeLicenseLabel.Size = new Size(98, 20);
-            TradeLicenseLabel.TabIndex = 32;
-            TradeLicenseLabel.Text = "Trade License";
-            // 
             // PlateCategoryLabel
             // 
             PlateCategoryLabel.AutoSize = true;
-            PlateCategoryLabel.Location = new Point(895, 241);
+            PlateCategoryLabel.Location = new Point(402, 239);
             PlateCategoryLabel.Name = "PlateCategoryLabel";
             PlateCategoryLabel.Size = new Size(106, 20);
             PlateCategoryLabel.TabIndex = 30;
             PlateCategoryLabel.Text = "Plate Category";
             // 
-            // PreviousInsuredType
-            // 
-            PreviousInsuredType.FormattingEnabled = true;
-            PreviousInsuredType.Location = new Point(621, 165);
-            PreviousInsuredType.Name = "PreviousInsuredType";
-            PreviousInsuredType.Size = new Size(200, 28);
-            PreviousInsuredType.TabIndex = 33;
-            // 
-            // PreviousInsuredTypeLabel
-            // 
-            PreviousInsuredTypeLabel.AutoSize = true;
-            PreviousInsuredTypeLabel.Location = new Point(392, 168);
-            PreviousInsuredTypeLabel.Name = "PreviousInsuredTypeLabel";
-            PreviousInsuredTypeLabel.Size = new Size(151, 20);
-            PreviousInsuredTypeLabel.TabIndex = 32;
-            PreviousInsuredTypeLabel.Text = "Previous Insured Type";
-            // 
-            // PaymentMethod
-            // 
-            PaymentMethod.FormattingEnabled = true;
-            PaymentMethod.Location = new Point(621, 199);
-            PaymentMethod.Name = "PaymentMethod";
-            PaymentMethod.Size = new Size(200, 28);
-            PaymentMethod.TabIndex = 21;
-            // 
-            // PaymentMethodLabel
-            // 
-            PaymentMethodLabel.AutoSize = true;
-            PaymentMethodLabel.Location = new Point(392, 202);
-            PaymentMethodLabel.Name = "PaymentMethodLabel";
-            PaymentMethodLabel.Size = new Size(121, 20);
-            PaymentMethodLabel.TabIndex = 20;
-            PaymentMethodLabel.Text = "Payment Method";
-            // 
             // GCCSpec
             // 
             GCCSpec.FormattingEnabled = true;
-            GCCSpec.Location = new Point(1022, 204);
+            GCCSpec.Location = new Point(529, 202);
             GCCSpec.Name = "GCCSpec";
             GCCSpec.Size = new Size(200, 28);
             GCCSpec.TabIndex = 29;
@@ -402,7 +352,7 @@
             // GCCSpecLabel
             // 
             GCCSpecLabel.AutoSize = true;
-            GCCSpecLabel.Location = new Point(895, 207);
+            GCCSpecLabel.Location = new Point(402, 205);
             GCCSpecLabel.Name = "GCCSpecLabel";
             GCCSpecLabel.Size = new Size(73, 20);
             GCCSpecLabel.TabIndex = 28;
@@ -411,7 +361,7 @@
             // ModifiedVehicle
             // 
             ModifiedVehicle.FormattingEnabled = true;
-            ModifiedVehicle.Location = new Point(1022, 170);
+            ModifiedVehicle.Location = new Point(529, 168);
             ModifiedVehicle.Name = "ModifiedVehicle";
             ModifiedVehicle.Size = new Size(200, 28);
             ModifiedVehicle.TabIndex = 27;
@@ -419,50 +369,16 @@
             // ModifiedVehicleLabel
             // 
             ModifiedVehicleLabel.AutoSize = true;
-            ModifiedVehicleLabel.Location = new Point(895, 173);
+            ModifiedVehicleLabel.Location = new Point(402, 171);
             ModifiedVehicleLabel.Name = "ModifiedVehicleLabel";
             ModifiedVehicleLabel.Size = new Size(121, 20);
             ModifiedVehicleLabel.TabIndex = 26;
             ModifiedVehicleLabel.Text = "Modified Vehicle";
             // 
-            // CityOfRegister
-            // 
-            CityOfRegister.FormattingEnabled = true;
-            CityOfRegister.Location = new Point(621, 131);
-            CityOfRegister.Name = "CityOfRegister";
-            CityOfRegister.Size = new Size(200, 28);
-            CityOfRegister.TabIndex = 9;
-            // 
-            // CityOfRegisterLabel
-            // 
-            CityOfRegisterLabel.AutoSize = true;
-            CityOfRegisterLabel.Location = new Point(392, 134);
-            CityOfRegisterLabel.Name = "CityOfRegisterLabel";
-            CityOfRegisterLabel.Size = new Size(110, 20);
-            CityOfRegisterLabel.TabIndex = 8;
-            CityOfRegisterLabel.Text = "City of Register";
-            // 
-            // NoClaimDiscount
-            // 
-            NoClaimDiscount.FormattingEnabled = true;
-            NoClaimDiscount.Location = new Point(621, 97);
-            NoClaimDiscount.Name = "NoClaimDiscount";
-            NoClaimDiscount.Size = new Size(200, 28);
-            NoClaimDiscount.TabIndex = 15;
-            // 
-            // NoClaimDiscountLabel
-            // 
-            NoClaimDiscountLabel.AutoSize = true;
-            NoClaimDiscountLabel.Location = new Point(392, 100);
-            NoClaimDiscountLabel.Name = "NoClaimDiscountLabel";
-            NoClaimDiscountLabel.Size = new Size(223, 20);
-            NoClaimDiscountLabel.TabIndex = 14;
-            NoClaimDiscountLabel.Text = "No Claim Discount (No of Years)";
-            // 
             // VehicleType
             // 
             VehicleType.FormattingEnabled = true;
-            VehicleType.Location = new Point(1022, 68);
+            VehicleType.Location = new Point(529, 66);
             VehicleType.Name = "VehicleType";
             VehicleType.Size = new Size(200, 28);
             VehicleType.TabIndex = 25;
@@ -470,7 +386,7 @@
             // VehicleTypeLabel
             // 
             VehicleTypeLabel.AutoSize = true;
-            VehicleTypeLabel.Location = new Point(895, 71);
+            VehicleTypeLabel.Location = new Point(402, 69);
             VehicleTypeLabel.Name = "VehicleTypeLabel";
             VehicleTypeLabel.Size = new Size(91, 20);
             VehicleTypeLabel.TabIndex = 24;
@@ -479,7 +395,7 @@
             // VehicleColor
             // 
             VehicleColor.FormattingEnabled = true;
-            VehicleColor.Location = new Point(1022, 102);
+            VehicleColor.Location = new Point(529, 100);
             VehicleColor.Name = "VehicleColor";
             VehicleColor.Size = new Size(200, 28);
             VehicleColor.TabIndex = 23;
@@ -487,7 +403,7 @@
             // VehicleColorLabel
             // 
             VehicleColorLabel.AutoSize = true;
-            VehicleColorLabel.Location = new Point(895, 105);
+            VehicleColorLabel.Location = new Point(402, 103);
             VehicleColorLabel.Name = "VehicleColorLabel";
             VehicleColorLabel.Size = new Size(96, 20);
             VehicleColorLabel.TabIndex = 22;
@@ -513,7 +429,7 @@
             // VehicleRepairs
             // 
             VehicleRepairs.FormattingEnabled = true;
-            VehicleRepairs.Location = new Point(1022, 136);
+            VehicleRepairs.Location = new Point(529, 134);
             VehicleRepairs.Name = "VehicleRepairs";
             VehicleRepairs.Size = new Size(200, 28);
             VehicleRepairs.TabIndex = 17;
@@ -521,7 +437,7 @@
             // VehicleRepairsLabel
             // 
             VehicleRepairsLabel.AutoSize = true;
-            VehicleRepairsLabel.Location = new Point(895, 139);
+            VehicleRepairsLabel.Location = new Point(402, 137);
             VehicleRepairsLabel.Name = "VehicleRepairsLabel";
             VehicleRepairsLabel.Size = new Size(109, 20);
             VehicleRepairsLabel.TabIndex = 16;
@@ -530,6 +446,7 @@
             // MobileNumber
             // 
             MobileNumber.Location = new Point(130, 98);
+            MobileNumber.MaxLength = 10;
             MobileNumber.Name = "MobileNumber";
             MobileNumber.Size = new Size(200, 27);
             MobileNumber.TabIndex = 13;
@@ -618,7 +535,7 @@
             // 
             CustomerName.Location = new Point(130, 31);
             CustomerName.Name = "CustomerName";
-            CustomerName.Size = new Size(426, 27);
+            CustomerName.Size = new Size(599, 27);
             CustomerName.TabIndex = 1;
             // 
             // CustomerLabel
@@ -626,9 +543,9 @@
             CustomerLabel.AutoSize = true;
             CustomerLabel.Location = new Point(6, 34);
             CustomerLabel.Name = "CustomerLabel";
-            CustomerLabel.Size = new Size(72, 20);
+            CustomerLabel.Size = new Size(116, 20);
             CustomerLabel.TabIndex = 0;
-            CustomerLabel.Text = "Customer";
+            CustomerLabel.Text = "Customer Name";
             // 
             // OutPutGroupBox
             // 
@@ -646,6 +563,43 @@
             OutPutGroupBox.TabStop = false;
             OutPutGroupBox.Text = "Output";
             // 
+            // SubmitButton
+            // 
+            SubmitButton.Location = new Point(928, 426);
+            SubmitButton.Name = "SubmitButton";
+            SubmitButton.Size = new Size(94, 39);
+            SubmitButton.TabIndex = 71;
+            SubmitButton.Text = "Submit";
+            SubmitButton.UseVisualStyleBackColor = true;
+            // 
+            // ClearButton
+            // 
+            ClearButton.Location = new Point(1028, 426);
+            ClearButton.Name = "ClearButton";
+            ClearButton.Size = new Size(94, 39);
+            ClearButton.TabIndex = 70;
+            ClearButton.Text = "Clear";
+            ClearButton.UseVisualStyleBackColor = true;
+            // 
+            // CancelButton
+            // 
+            CancelButton.Location = new Point(1128, 426);
+            CancelButton.Name = "CancelButton";
+            CancelButton.Size = new Size(94, 39);
+            CancelButton.TabIndex = 69;
+            CancelButton.Text = "Cancel";
+            CancelButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            groupBox3.Controls.Add(PortalPanel);
+            groupBox3.Location = new Point(440, 33);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(782, 138);
+            groupBox3.TabIndex = 68;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Portals";
+            // 
             // PortalPanel
             // 
             PortalPanel.BackColor = SystemColors.ControlLightLight;
@@ -662,55 +616,15 @@
             PortalPanel.Size = new Size(770, 84);
             PortalPanel.TabIndex = 0;
             // 
-            // OutputPortalIsAlsagar
+            // OutputPortalIsNewIndia
             // 
-            OutputPortalIsAlsagar.AutoSize = true;
-            OutputPortalIsAlsagar.Location = new Point(20, 10);
-            OutputPortalIsAlsagar.Name = "OutputPortalIsAlsagar";
-            OutputPortalIsAlsagar.Size = new Size(95, 24);
-            OutputPortalIsAlsagar.TabIndex = 0;
-            OutputPortalIsAlsagar.Text = "ALSAGAR";
-            OutputPortalIsAlsagar.UseVisualStyleBackColor = true;
-            // 
-            // OutputPortalIsRak
-            // 
-            OutputPortalIsRak.AutoSize = true;
-            OutputPortalIsRak.Location = new Point(190, 11);
-            OutputPortalIsRak.Name = "OutputPortalIsRak";
-            OutputPortalIsRak.Size = new Size(59, 24);
-            OutputPortalIsRak.TabIndex = 1;
-            OutputPortalIsRak.Text = "RAK";
-            OutputPortalIsRak.UseVisualStyleBackColor = true;
-            // 
-            // OutputPortalIsTokio
-            // 
-            OutputPortalIsTokio.AutoSize = true;
-            OutputPortalIsTokio.Location = new Point(349, 10);
-            OutputPortalIsTokio.Name = "OutputPortalIsTokio";
-            OutputPortalIsTokio.Size = new Size(73, 24);
-            OutputPortalIsTokio.TabIndex = 2;
-            OutputPortalIsTokio.Text = "TOKIO";
-            OutputPortalIsTokio.UseVisualStyleBackColor = true;
-            // 
-            // OutputPortalIsSukoon
-            // 
-            OutputPortalIsSukoon.AutoSize = true;
-            OutputPortalIsSukoon.Location = new Point(546, 10);
-            OutputPortalIsSukoon.Name = "OutputPortalIsSukoon";
-            OutputPortalIsSukoon.Size = new Size(90, 24);
-            OutputPortalIsSukoon.TabIndex = 3;
-            OutputPortalIsSukoon.Text = "SUKOON";
-            OutputPortalIsSukoon.UseVisualStyleBackColor = true;
-            // 
-            // OutputPortalOriental
-            // 
-            OutputPortalOriental.AutoSize = true;
-            OutputPortalOriental.Location = new Point(18, 48);
-            OutputPortalOriental.Name = "OutputPortalOriental";
-            OutputPortalOriental.Size = new Size(98, 24);
-            OutputPortalOriental.TabIndex = 4;
-            OutputPortalOriental.Text = "ORIENTAL";
-            OutputPortalOriental.UseVisualStyleBackColor = true;
+            OutputPortalIsNewIndia.AutoSize = true;
+            OutputPortalIsNewIndia.Location = new Point(349, 48);
+            OutputPortalIsNewIndia.Name = "OutputPortalIsNewIndia";
+            OutputPortalIsNewIndia.Size = new Size(108, 24);
+            OutputPortalIsNewIndia.TabIndex = 6;
+            OutputPortalIsNewIndia.Text = "NEW INDIA";
+            OutputPortalIsNewIndia.UseVisualStyleBackColor = true;
             // 
             // OutputPortalIsFidelity
             // 
@@ -722,124 +636,145 @@
             OutputPortalIsFidelity.Text = "FIDELITY";
             OutputPortalIsFidelity.UseVisualStyleBackColor = true;
             // 
-            // OutputPortalIsNewIndia
+            // OutputPortalOriental
             // 
-            OutputPortalIsNewIndia.AutoSize = true;
-            OutputPortalIsNewIndia.Location = new Point(349, 48);
-            OutputPortalIsNewIndia.Name = "OutputPortalIsNewIndia";
-            OutputPortalIsNewIndia.Size = new Size(108, 24);
-            OutputPortalIsNewIndia.TabIndex = 6;
-            OutputPortalIsNewIndia.Text = "NEW INDIA";
-            OutputPortalIsNewIndia.UseVisualStyleBackColor = true;
+            OutputPortalOriental.AutoSize = true;
+            OutputPortalOriental.Location = new Point(18, 48);
+            OutputPortalOriental.Name = "OutputPortalOriental";
+            OutputPortalOriental.Size = new Size(98, 24);
+            OutputPortalOriental.TabIndex = 4;
+            OutputPortalOriental.Text = "ORIENTAL";
+            OutputPortalOriental.UseVisualStyleBackColor = true;
             // 
-            // OutputTrafficPlateNo
+            // OutputPortalIsSukoon
             // 
-            OutputTrafficPlateNo.Location = new Point(123, 30);
-            OutputTrafficPlateNo.Name = "OutputTrafficPlateNo";
-            OutputTrafficPlateNo.Size = new Size(200, 27);
-            OutputTrafficPlateNo.TabIndex = 48;
+            OutputPortalIsSukoon.AutoSize = true;
+            OutputPortalIsSukoon.Location = new Point(546, 10);
+            OutputPortalIsSukoon.Name = "OutputPortalIsSukoon";
+            OutputPortalIsSukoon.Size = new Size(90, 24);
+            OutputPortalIsSukoon.TabIndex = 3;
+            OutputPortalIsSukoon.Text = "SUKOON";
+            OutputPortalIsSukoon.UseVisualStyleBackColor = true;
             // 
-            // OutputTrafficPlateNoLabel
+            // OutputPortalIsTokio
             // 
-            OutputTrafficPlateNoLabel.AutoSize = true;
-            OutputTrafficPlateNoLabel.Location = new Point(6, 33);
-            OutputTrafficPlateNoLabel.Name = "OutputTrafficPlateNoLabel";
-            OutputTrafficPlateNoLabel.Size = new Size(111, 20);
-            OutputTrafficPlateNoLabel.TabIndex = 47;
-            OutputTrafficPlateNoLabel.Text = "Traffic Plate No";
+            OutputPortalIsTokio.AutoSize = true;
+            OutputPortalIsTokio.Location = new Point(349, 10);
+            OutputPortalIsTokio.Name = "OutputPortalIsTokio";
+            OutputPortalIsTokio.Size = new Size(73, 24);
+            OutputPortalIsTokio.TabIndex = 2;
+            OutputPortalIsTokio.Text = "TOKIO";
+            OutputPortalIsTokio.UseVisualStyleBackColor = true;
             // 
-            // OutputVehicleDetailsGroupBox
+            // OutputPortalIsRak
             // 
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputInsExpDate);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputInsExpDateLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputRegisterDate);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputRegisterDateLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleMake);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputMakeLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleOrigin);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputOriginLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputModelYear);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputModelYearLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleModel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleModelLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputTCNo);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputTCNoLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNo);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNoLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNo);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNoLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNo);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNoLabel);
-            OutputVehicleDetailsGroupBox.Location = new Point(6, 33);
-            OutputVehicleDetailsGroupBox.Name = "OutputVehicleDetailsGroupBox";
-            OutputVehicleDetailsGroupBox.Size = new Size(380, 367);
-            OutputVehicleDetailsGroupBox.TabIndex = 49;
-            OutputVehicleDetailsGroupBox.TabStop = false;
-            OutputVehicleDetailsGroupBox.Text = "Vehicle Details";
+            OutputPortalIsRak.AutoSize = true;
+            OutputPortalIsRak.Location = new Point(190, 11);
+            OutputPortalIsRak.Name = "OutputPortalIsRak";
+            OutputPortalIsRak.Size = new Size(59, 24);
+            OutputPortalIsRak.TabIndex = 1;
+            OutputPortalIsRak.Text = "RAK";
+            OutputPortalIsRak.UseVisualStyleBackColor = true;
             // 
-            // OutPutEngineNo
+            // OutputPortalIsAlsagar
             // 
-            OutPutEngineNo.Location = new Point(123, 63);
-            OutPutEngineNo.Name = "OutPutEngineNo";
-            OutPutEngineNo.Size = new Size(200, 27);
-            OutPutEngineNo.TabIndex = 50;
+            OutputPortalIsAlsagar.AutoSize = true;
+            OutputPortalIsAlsagar.Location = new Point(20, 10);
+            OutputPortalIsAlsagar.Name = "OutputPortalIsAlsagar";
+            OutputPortalIsAlsagar.Size = new Size(95, 24);
+            OutputPortalIsAlsagar.TabIndex = 0;
+            OutputPortalIsAlsagar.Text = "ALSAGAR";
+            OutputPortalIsAlsagar.UseVisualStyleBackColor = true;
             // 
-            // OutPutEngineNoLabel
+            // groupBox2
             // 
-            OutPutEngineNoLabel.AutoSize = true;
-            OutPutEngineNoLabel.Location = new Point(6, 66);
-            OutPutEngineNoLabel.Name = "OutPutEngineNoLabel";
-            OutPutEngineNoLabel.Size = new Size(78, 20);
-            OutPutEngineNoLabel.TabIndex = 49;
-            OutPutEngineNoLabel.Text = "Engine No";
+            groupBox2.Controls.Add(OutputPlaceOfIssue);
+            groupBox2.Controls.Add(OutputPlaceOfIssueLabel);
+            groupBox2.Controls.Add(OutputDrivingLicenseExpiryDate);
+            groupBox2.Controls.Add(OutputDrivingLicenseExpiryDateLabel);
+            groupBox2.Controls.Add(OutputDrivingLicenseIssueDate);
+            groupBox2.Controls.Add(OutputDrivingLicenseIssueDateLabel);
+            groupBox2.Controls.Add(OutputLicenseNo);
+            groupBox2.Controls.Add(OutputLicenseNoLabel);
+            groupBox2.Location = new Point(858, 230);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(364, 170);
+            groupBox2.TabIndex = 67;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Driving License Details";
             // 
-            // OutputChassiNo
+            // OutputPlaceOfIssue
             // 
-            OutputChassiNo.Location = new Point(123, 96);
-            OutputChassiNo.Name = "OutputChassiNo";
-            OutputChassiNo.Size = new Size(200, 27);
-            OutputChassiNo.TabIndex = 52;
+            OutputPlaceOfIssue.FormattingEnabled = true;
+            OutputPlaceOfIssue.Location = new Point(106, 63);
+            OutputPlaceOfIssue.Name = "OutputPlaceOfIssue";
+            OutputPlaceOfIssue.Size = new Size(200, 28);
+            OutputPlaceOfIssue.TabIndex = 48;
             // 
-            // OutputChassiNoLabel
+            // OutputPlaceOfIssueLabel
             // 
-            OutputChassiNoLabel.AutoSize = true;
-            OutputChassiNoLabel.Location = new Point(6, 99);
-            OutputChassiNoLabel.Name = "OutputChassiNoLabel";
-            OutputChassiNoLabel.Size = new Size(74, 20);
-            OutputChassiNoLabel.TabIndex = 51;
-            OutputChassiNoLabel.Text = "Chassi No";
+            OutputPlaceOfIssueLabel.AutoSize = true;
+            OutputPlaceOfIssueLabel.Location = new Point(6, 69);
+            OutputPlaceOfIssueLabel.Name = "OutputPlaceOfIssueLabel";
+            OutputPlaceOfIssueLabel.Size = new Size(98, 20);
+            OutputPlaceOfIssueLabel.TabIndex = 47;
+            OutputPlaceOfIssueLabel.Text = "Place of Issue";
             // 
-            // OutputTCNo
+            // OutputDrivingLicenseExpiryDate
             // 
-            OutputTCNo.Location = new Point(123, 129);
-            OutputTCNo.Name = "OutputTCNo";
-            OutputTCNo.Size = new Size(200, 27);
-            OutputTCNo.TabIndex = 54;
+            OutputDrivingLicenseExpiryDate.CustomFormat = "dd/MM/yyyy";
+            OutputDrivingLicenseExpiryDate.Format = DateTimePickerFormat.Custom;
+            OutputDrivingLicenseExpiryDate.Location = new Point(106, 130);
+            OutputDrivingLicenseExpiryDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDrivingLicenseExpiryDate.Name = "OutputDrivingLicenseExpiryDate";
+            OutputDrivingLicenseExpiryDate.Size = new Size(200, 27);
+            OutputDrivingLicenseExpiryDate.TabIndex = 64;
+            OutputDrivingLicenseExpiryDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
             // 
-            // OutputTCNoLabel
+            // OutputDrivingLicenseExpiryDateLabel
             // 
-            OutputTCNoLabel.AutoSize = true;
-            OutputTCNoLabel.Location = new Point(6, 132);
-            OutputTCNoLabel.Name = "OutputTCNoLabel";
-            OutputTCNoLabel.Size = new Size(53, 20);
-            OutputTCNoLabel.TabIndex = 53;
-            OutputTCNoLabel.Text = "T.C No";
+            OutputDrivingLicenseExpiryDateLabel.AutoSize = true;
+            OutputDrivingLicenseExpiryDateLabel.Location = new Point(6, 135);
+            OutputDrivingLicenseExpiryDateLabel.Name = "OutputDrivingLicenseExpiryDateLabel";
+            OutputDrivingLicenseExpiryDateLabel.Size = new Size(85, 20);
+            OutputDrivingLicenseExpiryDateLabel.TabIndex = 63;
+            OutputDrivingLicenseExpiryDateLabel.Text = "Expiry Date";
             // 
-            // OutputVehicleModel
+            // OutputDrivingLicenseIssueDate
             // 
-            OutputVehicleModel.Location = new Point(123, 162);
-            OutputVehicleModel.Name = "OutputVehicleModel";
-            OutputVehicleModel.Size = new Size(200, 27);
-            OutputVehicleModel.TabIndex = 56;
+            OutputDrivingLicenseIssueDate.CustomFormat = "dd/MM/yyyy";
+            OutputDrivingLicenseIssueDate.Format = DateTimePickerFormat.Custom;
+            OutputDrivingLicenseIssueDate.Location = new Point(106, 97);
+            OutputDrivingLicenseIssueDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDrivingLicenseIssueDate.Name = "OutputDrivingLicenseIssueDate";
+            OutputDrivingLicenseIssueDate.Size = new Size(200, 27);
+            OutputDrivingLicenseIssueDate.TabIndex = 48;
+            OutputDrivingLicenseIssueDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
             // 
-            // OutputVehicleModelLabel
+            // OutputDrivingLicenseIssueDateLabel
             // 
-            OutputVehicleModelLabel.AutoSize = true;
-            OutputVehicleModelLabel.Location = new Point(6, 165);
-            OutputVehicleModelLabel.Name = "OutputVehicleModelLabel";
-            OutputVehicleModelLabel.Size = new Size(103, 20);
-            OutputVehicleModelLabel.TabIndex = 55;
-            OutputVehicleModelLabel.Text = "Vehicle Model";
+            OutputDrivingLicenseIssueDateLabel.AutoSize = true;
+            OutputDrivingLicenseIssueDateLabel.Location = new Point(6, 102);
+            OutputDrivingLicenseIssueDateLabel.Name = "OutputDrivingLicenseIssueDateLabel";
+            OutputDrivingLicenseIssueDateLabel.Size = new Size(77, 20);
+            OutputDrivingLicenseIssueDateLabel.TabIndex = 47;
+            OutputDrivingLicenseIssueDateLabel.Text = "Issue Date";
+            // 
+            // OutputLicenseNo
+            // 
+            OutputLicenseNo.Location = new Point(106, 30);
+            OutputLicenseNo.Name = "OutputLicenseNo";
+            OutputLicenseNo.Size = new Size(200, 27);
+            OutputLicenseNo.TabIndex = 48;
+            // 
+            // OutputLicenseNoLabel
+            // 
+            OutputLicenseNoLabel.AutoSize = true;
+            OutputLicenseNoLabel.Location = new Point(6, 33);
+            OutputLicenseNoLabel.Name = "OutputLicenseNoLabel";
+            OutputLicenseNoLabel.Size = new Size(81, 20);
+            OutputLicenseNoLabel.TabIndex = 47;
+            OutputLicenseNoLabel.Text = "License No";
             // 
             // groupBox1
             // 
@@ -859,6 +794,43 @@
             groupBox1.TabIndex = 65;
             groupBox1.TabStop = false;
             groupBox1.Text = "Emirates Details";
+            // 
+            // OutputDateOfBirth
+            // 
+            OutputDateOfBirth.CustomFormat = "dd/MM/yyyy";
+            OutputDateOfBirth.Format = DateTimePickerFormat.Custom;
+            OutputDateOfBirth.Location = new Point(106, 98);
+            OutputDateOfBirth.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDateOfBirth.Name = "OutputDateOfBirth";
+            OutputDateOfBirth.Size = new Size(200, 27);
+            OutputDateOfBirth.TabIndex = 66;
+            OutputDateOfBirth.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            // 
+            // OutputDateOfBirthLabel
+            // 
+            OutputDateOfBirthLabel.AutoSize = true;
+            OutputDateOfBirthLabel.Location = new Point(6, 103);
+            OutputDateOfBirthLabel.Name = "OutputDateOfBirthLabel";
+            OutputDateOfBirthLabel.Size = new Size(94, 20);
+            OutputDateOfBirthLabel.TabIndex = 65;
+            OutputDateOfBirthLabel.Text = "Date of Birth";
+            // 
+            // OutputNationality
+            // 
+            OutputNationality.FormattingEnabled = true;
+            OutputNationality.Location = new Point(106, 64);
+            OutputNationality.Name = "OutputNationality";
+            OutputNationality.Size = new Size(200, 28);
+            OutputNationality.TabIndex = 48;
+            // 
+            // OutputNationalityLabel
+            // 
+            OutputNationalityLabel.AutoSize = true;
+            OutputNationalityLabel.Location = new Point(6, 66);
+            OutputNationalityLabel.Name = "OutputNationalityLabel";
+            OutputNationalityLabel.Size = new Size(82, 20);
+            OutputNationalityLabel.TabIndex = 47;
+            OutputNationalityLabel.Text = "Nationality";
             // 
             // OutputEmiratesExpiryDate
             // 
@@ -916,119 +888,34 @@
             OutputEmiratesIdLabel.TabIndex = 47;
             OutputEmiratesIdLabel.Text = "Emirates Id";
             // 
-            // OutputNationality
+            // OutputVehicleDetailsGroupBox
             // 
-            OutputNationality.FormattingEnabled = true;
-            OutputNationality.Location = new Point(106, 64);
-            OutputNationality.Name = "OutputNationality";
-            OutputNationality.Size = new Size(200, 28);
-            OutputNationality.TabIndex = 48;
-            // 
-            // OutputNationalityLabel
-            // 
-            OutputNationalityLabel.AutoSize = true;
-            OutputNationalityLabel.Location = new Point(6, 66);
-            OutputNationalityLabel.Name = "OutputNationalityLabel";
-            OutputNationalityLabel.Size = new Size(82, 20);
-            OutputNationalityLabel.TabIndex = 47;
-            OutputNationalityLabel.Text = "Nationality";
-            // 
-            // OutputDateOfBirth
-            // 
-            OutputDateOfBirth.CustomFormat = "dd/MM/yyyy";
-            OutputDateOfBirth.Format = DateTimePickerFormat.Custom;
-            OutputDateOfBirth.Location = new Point(106, 98);
-            OutputDateOfBirth.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            OutputDateOfBirth.Name = "OutputDateOfBirth";
-            OutputDateOfBirth.Size = new Size(200, 27);
-            OutputDateOfBirth.TabIndex = 66;
-            OutputDateOfBirth.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            // 
-            // OutputDateOfBirthLabel
-            // 
-            OutputDateOfBirthLabel.AutoSize = true;
-            OutputDateOfBirthLabel.Location = new Point(6, 103);
-            OutputDateOfBirthLabel.Name = "OutputDateOfBirthLabel";
-            OutputDateOfBirthLabel.Size = new Size(94, 20);
-            OutputDateOfBirthLabel.TabIndex = 65;
-            OutputDateOfBirthLabel.Text = "Date of Birth";
-            // 
-            // OutputModelYearLabel
-            // 
-            OutputModelYearLabel.AutoSize = true;
-            OutputModelYearLabel.Location = new Point(6, 199);
-            OutputModelYearLabel.Name = "OutputModelYearLabel";
-            OutputModelYearLabel.Size = new Size(84, 20);
-            OutputModelYearLabel.TabIndex = 57;
-            OutputModelYearLabel.Text = "Model Year";
-            // 
-            // OutputModelYear
-            // 
-            OutputModelYear.Location = new Point(123, 196);
-            OutputModelYear.Name = "OutputModelYear";
-            OutputModelYear.Size = new Size(200, 27);
-            OutputModelYear.TabIndex = 58;
-            // 
-            // OutputOriginLabel
-            // 
-            OutputOriginLabel.AutoSize = true;
-            OutputOriginLabel.Location = new Point(6, 232);
-            OutputOriginLabel.Name = "OutputOriginLabel";
-            OutputOriginLabel.Size = new Size(50, 20);
-            OutputOriginLabel.TabIndex = 59;
-            OutputOriginLabel.Text = "Origin";
-            // 
-            // OutputVehicleOrigin
-            // 
-            OutputVehicleOrigin.Location = new Point(124, 229);
-            OutputVehicleOrigin.Name = "OutputVehicleOrigin";
-            OutputVehicleOrigin.Size = new Size(200, 27);
-            OutputVehicleOrigin.TabIndex = 60;
-            // 
-            // OutputMakeLabel
-            // 
-            OutputMakeLabel.AutoSize = true;
-            OutputMakeLabel.Location = new Point(6, 265);
-            OutputMakeLabel.Name = "OutputMakeLabel";
-            OutputMakeLabel.Size = new Size(45, 20);
-            OutputMakeLabel.TabIndex = 61;
-            OutputMakeLabel.Text = "Make";
-            // 
-            // OutputVehicleMake
-            // 
-            OutputVehicleMake.Location = new Point(123, 262);
-            OutputVehicleMake.Name = "OutputVehicleMake";
-            OutputVehicleMake.Size = new Size(200, 27);
-            OutputVehicleMake.TabIndex = 62;
-            // 
-            // OutputRegisterDateLabel
-            // 
-            OutputRegisterDateLabel.AutoSize = true;
-            OutputRegisterDateLabel.Location = new Point(6, 300);
-            OutputRegisterDateLabel.Name = "OutputRegisterDateLabel";
-            OutputRegisterDateLabel.Size = new Size(99, 20);
-            OutputRegisterDateLabel.TabIndex = 47;
-            OutputRegisterDateLabel.Text = "Register Date";
-            // 
-            // OutputRegisterDate
-            // 
-            OutputRegisterDate.CustomFormat = "dd/MM/yyyy";
-            OutputRegisterDate.Format = DateTimePickerFormat.Custom;
-            OutputRegisterDate.Location = new Point(124, 295);
-            OutputRegisterDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            OutputRegisterDate.Name = "OutputRegisterDate";
-            OutputRegisterDate.Size = new Size(200, 27);
-            OutputRegisterDate.TabIndex = 48;
-            OutputRegisterDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            // 
-            // OutputInsExpDateLabel
-            // 
-            OutputInsExpDateLabel.AutoSize = true;
-            OutputInsExpDateLabel.Location = new Point(6, 333);
-            OutputInsExpDateLabel.Name = "OutputInsExpDateLabel";
-            OutputInsExpDateLabel.Size = new Size(58, 20);
-            OutputInsExpDateLabel.TabIndex = 63;
-            OutputInsExpDateLabel.Text = "Ins. Exp";
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputInsExpDate);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputInsExpDateLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputRegisterDate);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputRegisterDateLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleMake);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputMakeLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleOrigin);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputOriginLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputModelYear);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputModelYearLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleModel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputVehicleModelLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputTCNo);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputTCNoLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNo);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNoLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNo);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNoLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNo);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNoLabel);
+            OutputVehicleDetailsGroupBox.Location = new Point(6, 33);
+            OutputVehicleDetailsGroupBox.Name = "OutputVehicleDetailsGroupBox";
+            OutputVehicleDetailsGroupBox.Size = new Size(380, 367);
+            OutputVehicleDetailsGroupBox.TabIndex = 49;
+            OutputVehicleDetailsGroupBox.TabStop = false;
+            OutputVehicleDetailsGroupBox.Text = "Vehicle Details";
             // 
             // OutputInsExpDate
             // 
@@ -1041,132 +928,246 @@
             OutputInsExpDate.TabIndex = 64;
             OutputInsExpDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
             // 
-            // groupBox2
+            // OutputInsExpDateLabel
             // 
-            groupBox2.Controls.Add(OutputPlaceOfIssue);
-            groupBox2.Controls.Add(OutputPlaceOfIssueLabel);
-            groupBox2.Controls.Add(OutputDrivingLicenseExpiryDate);
-            groupBox2.Controls.Add(OutputDrivingLicenseExpiryDateLabel);
-            groupBox2.Controls.Add(OutputDrivingLicenseIssueDate);
-            groupBox2.Controls.Add(OutputDrivingLicenseIssueDateLabel);
-            groupBox2.Controls.Add(OutputLicenseNo);
-            groupBox2.Controls.Add(OutputLicenseNoLabel);
-            groupBox2.Location = new Point(858, 230);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(364, 170);
-            groupBox2.TabIndex = 67;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Driving License Details";
+            OutputInsExpDateLabel.AutoSize = true;
+            OutputInsExpDateLabel.Location = new Point(6, 333);
+            OutputInsExpDateLabel.Name = "OutputInsExpDateLabel";
+            OutputInsExpDateLabel.Size = new Size(58, 20);
+            OutputInsExpDateLabel.TabIndex = 63;
+            OutputInsExpDateLabel.Text = "Ins. Exp";
             // 
-            // OutputPlaceOfIssue
+            // OutputRegisterDate
             // 
-            OutputPlaceOfIssue.FormattingEnabled = true;
-            OutputPlaceOfIssue.Location = new Point(106, 63);
-            OutputPlaceOfIssue.Name = "OutputPlaceOfIssue";
-            OutputPlaceOfIssue.Size = new Size(200, 28);
-            OutputPlaceOfIssue.TabIndex = 48;
+            OutputRegisterDate.CustomFormat = "dd/MM/yyyy";
+            OutputRegisterDate.Format = DateTimePickerFormat.Custom;
+            OutputRegisterDate.Location = new Point(124, 295);
+            OutputRegisterDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputRegisterDate.Name = "OutputRegisterDate";
+            OutputRegisterDate.Size = new Size(200, 27);
+            OutputRegisterDate.TabIndex = 48;
+            OutputRegisterDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
             // 
-            // OutputPlaceOfIssueLabel
+            // OutputRegisterDateLabel
             // 
-            OutputPlaceOfIssueLabel.AutoSize = true;
-            OutputPlaceOfIssueLabel.Location = new Point(6, 69);
-            OutputPlaceOfIssueLabel.Name = "OutputPlaceOfIssueLabel";
-            OutputPlaceOfIssueLabel.Size = new Size(98, 20);
-            OutputPlaceOfIssueLabel.TabIndex = 47;
-            OutputPlaceOfIssueLabel.Text = "Place of Issue";
+            OutputRegisterDateLabel.AutoSize = true;
+            OutputRegisterDateLabel.Location = new Point(6, 300);
+            OutputRegisterDateLabel.Name = "OutputRegisterDateLabel";
+            OutputRegisterDateLabel.Size = new Size(99, 20);
+            OutputRegisterDateLabel.TabIndex = 47;
+            OutputRegisterDateLabel.Text = "Register Date";
             // 
-            // OutputDrivingLicenseIssueDate
+            // OutputVehicleMake
             // 
-            OutputDrivingLicenseIssueDate.CustomFormat = "dd/MM/yyyy";
-            OutputDrivingLicenseIssueDate.Format = DateTimePickerFormat.Custom;
-            OutputDrivingLicenseIssueDate.Location = new Point(106, 97);
-            OutputDrivingLicenseIssueDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            OutputDrivingLicenseIssueDate.Name = "OutputDrivingLicenseIssueDate";
-            OutputDrivingLicenseIssueDate.Size = new Size(200, 27);
-            OutputDrivingLicenseIssueDate.TabIndex = 48;
-            OutputDrivingLicenseIssueDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputVehicleMake.Location = new Point(123, 262);
+            OutputVehicleMake.Name = "OutputVehicleMake";
+            OutputVehicleMake.Size = new Size(200, 27);
+            OutputVehicleMake.TabIndex = 62;
             // 
-            // OutputDrivingLicenseIssueDateLabel
+            // OutputMakeLabel
             // 
-            OutputDrivingLicenseIssueDateLabel.AutoSize = true;
-            OutputDrivingLicenseIssueDateLabel.Location = new Point(6, 102);
-            OutputDrivingLicenseIssueDateLabel.Name = "OutputDrivingLicenseIssueDateLabel";
-            OutputDrivingLicenseIssueDateLabel.Size = new Size(77, 20);
-            OutputDrivingLicenseIssueDateLabel.TabIndex = 47;
-            OutputDrivingLicenseIssueDateLabel.Text = "Issue Date";
+            OutputMakeLabel.AutoSize = true;
+            OutputMakeLabel.Location = new Point(6, 265);
+            OutputMakeLabel.Name = "OutputMakeLabel";
+            OutputMakeLabel.Size = new Size(45, 20);
+            OutputMakeLabel.TabIndex = 61;
+            OutputMakeLabel.Text = "Make";
             // 
-            // OutputLicenseNo
+            // OutputVehicleOrigin
             // 
-            OutputLicenseNo.Location = new Point(106, 30);
-            OutputLicenseNo.Name = "OutputLicenseNo";
-            OutputLicenseNo.Size = new Size(200, 27);
-            OutputLicenseNo.TabIndex = 48;
+            OutputVehicleOrigin.Location = new Point(124, 229);
+            OutputVehicleOrigin.Name = "OutputVehicleOrigin";
+            OutputVehicleOrigin.Size = new Size(200, 27);
+            OutputVehicleOrigin.TabIndex = 60;
             // 
-            // OutputLicenseNoLabel
+            // OutputOriginLabel
             // 
-            OutputLicenseNoLabel.AutoSize = true;
-            OutputLicenseNoLabel.Location = new Point(6, 33);
-            OutputLicenseNoLabel.Name = "OutputLicenseNoLabel";
-            OutputLicenseNoLabel.Size = new Size(81, 20);
-            OutputLicenseNoLabel.TabIndex = 47;
-            OutputLicenseNoLabel.Text = "License No";
+            OutputOriginLabel.AutoSize = true;
+            OutputOriginLabel.Location = new Point(6, 232);
+            OutputOriginLabel.Name = "OutputOriginLabel";
+            OutputOriginLabel.Size = new Size(50, 20);
+            OutputOriginLabel.TabIndex = 59;
+            OutputOriginLabel.Text = "Origin";
             // 
-            // OutputDrivingLicenseExpiryDateLabel
+            // OutputModelYear
             // 
-            OutputDrivingLicenseExpiryDateLabel.AutoSize = true;
-            OutputDrivingLicenseExpiryDateLabel.Location = new Point(6, 135);
-            OutputDrivingLicenseExpiryDateLabel.Name = "OutputDrivingLicenseExpiryDateLabel";
-            OutputDrivingLicenseExpiryDateLabel.Size = new Size(85, 20);
-            OutputDrivingLicenseExpiryDateLabel.TabIndex = 63;
-            OutputDrivingLicenseExpiryDateLabel.Text = "Expiry Date";
+            OutputModelYear.Location = new Point(123, 196);
+            OutputModelYear.Name = "OutputModelYear";
+            OutputModelYear.Size = new Size(200, 27);
+            OutputModelYear.TabIndex = 58;
             // 
-            // OutputDrivingLicenseExpiryDate
+            // OutputModelYearLabel
             // 
-            OutputDrivingLicenseExpiryDate.CustomFormat = "dd/MM/yyyy";
-            OutputDrivingLicenseExpiryDate.Format = DateTimePickerFormat.Custom;
-            OutputDrivingLicenseExpiryDate.Location = new Point(106, 130);
-            OutputDrivingLicenseExpiryDate.MinDate = new DateTime(2024, 7, 1, 17, 31, 4, 743);
-            OutputDrivingLicenseExpiryDate.Name = "OutputDrivingLicenseExpiryDate";
-            OutputDrivingLicenseExpiryDate.Size = new Size(200, 27);
-            OutputDrivingLicenseExpiryDate.TabIndex = 64;
-            OutputDrivingLicenseExpiryDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputModelYearLabel.AutoSize = true;
+            OutputModelYearLabel.Location = new Point(6, 199);
+            OutputModelYearLabel.Name = "OutputModelYearLabel";
+            OutputModelYearLabel.Size = new Size(84, 20);
+            OutputModelYearLabel.TabIndex = 57;
+            OutputModelYearLabel.Text = "Model Year";
             // 
-            // groupBox3
+            // OutputVehicleModel
             // 
-            groupBox3.Controls.Add(PortalPanel);
-            groupBox3.Location = new Point(440, 33);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(782, 138);
-            groupBox3.TabIndex = 68;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "Portals";
+            OutputVehicleModel.Location = new Point(123, 162);
+            OutputVehicleModel.Name = "OutputVehicleModel";
+            OutputVehicleModel.Size = new Size(200, 27);
+            OutputVehicleModel.TabIndex = 56;
             // 
-            // ClearButton
+            // OutputVehicleModelLabel
             // 
-            ClearButton.Location = new Point(1028, 426);
-            ClearButton.Name = "ClearButton";
-            ClearButton.Size = new Size(94, 39);
-            ClearButton.TabIndex = 70;
-            ClearButton.Text = "Clear";
-            ClearButton.UseVisualStyleBackColor = true;
+            OutputVehicleModelLabel.AutoSize = true;
+            OutputVehicleModelLabel.Location = new Point(6, 165);
+            OutputVehicleModelLabel.Name = "OutputVehicleModelLabel";
+            OutputVehicleModelLabel.Size = new Size(103, 20);
+            OutputVehicleModelLabel.TabIndex = 55;
+            OutputVehicleModelLabel.Text = "Vehicle Model";
             // 
-            // CancelButton
+            // OutputTCNo
             // 
-            CancelButton.Location = new Point(1128, 426);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(94, 39);
-            CancelButton.TabIndex = 69;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
+            OutputTCNo.Location = new Point(123, 129);
+            OutputTCNo.Name = "OutputTCNo";
+            OutputTCNo.Size = new Size(200, 27);
+            OutputTCNo.TabIndex = 54;
             // 
-            // SubmitButton
+            // OutputTCNoLabel
             // 
-            SubmitButton.Location = new Point(928, 426);
-            SubmitButton.Name = "SubmitButton";
-            SubmitButton.Size = new Size(94, 39);
-            SubmitButton.TabIndex = 71;
-            SubmitButton.Text = "Submit";
-            SubmitButton.UseVisualStyleBackColor = true;
+            OutputTCNoLabel.AutoSize = true;
+            OutputTCNoLabel.Location = new Point(6, 132);
+            OutputTCNoLabel.Name = "OutputTCNoLabel";
+            OutputTCNoLabel.Size = new Size(53, 20);
+            OutputTCNoLabel.TabIndex = 53;
+            OutputTCNoLabel.Text = "T.C No";
+            // 
+            // OutputChassiNo
+            // 
+            OutputChassiNo.Location = new Point(123, 96);
+            OutputChassiNo.Name = "OutputChassiNo";
+            OutputChassiNo.Size = new Size(200, 27);
+            OutputChassiNo.TabIndex = 52;
+            // 
+            // OutputChassiNoLabel
+            // 
+            OutputChassiNoLabel.AutoSize = true;
+            OutputChassiNoLabel.Location = new Point(6, 99);
+            OutputChassiNoLabel.Name = "OutputChassiNoLabel";
+            OutputChassiNoLabel.Size = new Size(74, 20);
+            OutputChassiNoLabel.TabIndex = 51;
+            OutputChassiNoLabel.Text = "Chassi No";
+            // 
+            // OutPutEngineNo
+            // 
+            OutPutEngineNo.Location = new Point(123, 63);
+            OutPutEngineNo.Name = "OutPutEngineNo";
+            OutPutEngineNo.Size = new Size(200, 27);
+            OutPutEngineNo.TabIndex = 50;
+            // 
+            // OutPutEngineNoLabel
+            // 
+            OutPutEngineNoLabel.AutoSize = true;
+            OutPutEngineNoLabel.Location = new Point(6, 66);
+            OutPutEngineNoLabel.Name = "OutPutEngineNoLabel";
+            OutPutEngineNoLabel.Size = new Size(78, 20);
+            OutPutEngineNoLabel.TabIndex = 49;
+            OutPutEngineNoLabel.Text = "Engine No";
+            // 
+            // OutputTrafficPlateNo
+            // 
+            OutputTrafficPlateNo.Location = new Point(123, 30);
+            OutputTrafficPlateNo.Name = "OutputTrafficPlateNo";
+            OutputTrafficPlateNo.Size = new Size(200, 27);
+            OutputTrafficPlateNo.TabIndex = 48;
+            // 
+            // OutputTrafficPlateNoLabel
+            // 
+            OutputTrafficPlateNoLabel.AutoSize = true;
+            OutputTrafficPlateNoLabel.Location = new Point(6, 33);
+            OutputTrafficPlateNoLabel.Name = "OutputTrafficPlateNoLabel";
+            OutputTrafficPlateNoLabel.Size = new Size(111, 20);
+            OutputTrafficPlateNoLabel.TabIndex = 47;
+            OutputTrafficPlateNoLabel.Text = "Traffic Plate No";
+            // 
+            // TradeLicense
+            // 
+            TradeLicense.Location = new Point(1022, 203);
+            TradeLicense.Name = "TradeLicense";
+            TradeLicense.Size = new Size(200, 27);
+            TradeLicense.TabIndex = 55;
+            // 
+            // TradeLicenseLabel
+            // 
+            TradeLicenseLabel.AutoSize = true;
+            TradeLicenseLabel.Location = new Point(793, 206);
+            TradeLicenseLabel.Name = "TradeLicenseLabel";
+            TradeLicenseLabel.Size = new Size(98, 20);
+            TradeLicenseLabel.TabIndex = 53;
+            TradeLicenseLabel.Text = "Trade License";
+            // 
+            // PreviousInsuredType
+            // 
+            PreviousInsuredType.FormattingEnabled = true;
+            PreviousInsuredType.Location = new Point(1022, 136);
+            PreviousInsuredType.Name = "PreviousInsuredType";
+            PreviousInsuredType.Size = new Size(200, 28);
+            PreviousInsuredType.TabIndex = 56;
+            // 
+            // PreviousInsuredTypeLabel
+            // 
+            PreviousInsuredTypeLabel.AutoSize = true;
+            PreviousInsuredTypeLabel.Location = new Point(793, 139);
+            PreviousInsuredTypeLabel.Name = "PreviousInsuredTypeLabel";
+            PreviousInsuredTypeLabel.Size = new Size(151, 20);
+            PreviousInsuredTypeLabel.TabIndex = 54;
+            PreviousInsuredTypeLabel.Text = "Previous Insured Type";
+            // 
+            // PaymentMethod
+            // 
+            PaymentMethod.FormattingEnabled = true;
+            PaymentMethod.Location = new Point(1022, 170);
+            PaymentMethod.Name = "PaymentMethod";
+            PaymentMethod.Size = new Size(200, 28);
+            PaymentMethod.TabIndex = 52;
+            // 
+            // PaymentMethodLabel
+            // 
+            PaymentMethodLabel.AutoSize = true;
+            PaymentMethodLabel.Location = new Point(793, 173);
+            PaymentMethodLabel.Name = "PaymentMethodLabel";
+            PaymentMethodLabel.Size = new Size(121, 20);
+            PaymentMethodLabel.TabIndex = 51;
+            PaymentMethodLabel.Text = "Payment Method";
+            // 
+            // CityOfRegister
+            // 
+            CityOfRegister.FormattingEnabled = true;
+            CityOfRegister.Location = new Point(1022, 102);
+            CityOfRegister.Name = "CityOfRegister";
+            CityOfRegister.Size = new Size(200, 28);
+            CityOfRegister.TabIndex = 48;
+            // 
+            // CityOfRegisterLabel
+            // 
+            CityOfRegisterLabel.AutoSize = true;
+            CityOfRegisterLabel.Location = new Point(793, 105);
+            CityOfRegisterLabel.Name = "CityOfRegisterLabel";
+            CityOfRegisterLabel.Size = new Size(110, 20);
+            CityOfRegisterLabel.TabIndex = 47;
+            CityOfRegisterLabel.Text = "City of Register";
+            // 
+            // NoClaimDiscount
+            // 
+            NoClaimDiscount.FormattingEnabled = true;
+            NoClaimDiscount.Location = new Point(1022, 68);
+            NoClaimDiscount.Name = "NoClaimDiscount";
+            NoClaimDiscount.Size = new Size(200, 28);
+            NoClaimDiscount.TabIndex = 50;
+            // 
+            // NoClaimDiscountLabel
+            // 
+            NoClaimDiscountLabel.AutoSize = true;
+            NoClaimDiscountLabel.Location = new Point(793, 71);
+            NoClaimDiscountLabel.Name = "NoClaimDiscountLabel";
+            NoClaimDiscountLabel.Size = new Size(223, 20);
+            NoClaimDiscountLabel.TabIndex = 49;
+            NoClaimDiscountLabel.Text = "No Claim Discount (No of Years)";
             // 
             // MotorQuoteRequestForm
             // 
@@ -1185,15 +1186,15 @@
             GeneralInformationGroupBox.ResumeLayout(false);
             GeneralInformationGroupBox.PerformLayout();
             OutPutGroupBox.ResumeLayout(false);
+            groupBox3.ResumeLayout(false);
             PortalPanel.ResumeLayout(false);
             PortalPanel.PerformLayout();
-            OutputVehicleDetailsGroupBox.ResumeLayout(false);
-            OutputVehicleDetailsGroupBox.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            OutputVehicleDetailsGroupBox.ResumeLayout(false);
+            OutputVehicleDetailsGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1206,8 +1207,6 @@
         private Label CustomerLabel;
         private DateTimePicker PolicyStartDate;
         private Label PolicyStartDateLabel;
-        private ComboBox CityOfRegister;
-        private Label CityOfRegisterLabel;
         private ComboBox BusinessNature;
         private Label BusinessNatureLabel;
         private ComboBox ProductType;
@@ -1218,14 +1217,10 @@
         private Label MobileNumberLabel;
         private ComboBox VehicleColor;
         private Label VehicleColorLabel;
-        private ComboBox PaymentMethod;
-        private Label PaymentMethodLabel;
         private ComboBox Gender;
         private Label GenderLabel;
         private ComboBox VehicleRepairs;
         private Label VehicleRepairsLabel;
-        private ComboBox NoClaimDiscount;
-        private Label NoClaimDiscountLabel;
         private ComboBox VehicleType;
         private Label VehicleTypeLabel;
         private ComboBox PlateCategory;
@@ -1234,10 +1229,6 @@
         private Label GCCSpecLabel;
         private ComboBox ModifiedVehicle;
         private Label ModifiedVehicleLabel;
-        private ComboBox PreviousInsuredType;
-        private Label PreviousInsuredTypeLabel;
-        private TextBox TradeLicense;
-        private Label TradeLicenseLabel;
         private TextBox EmiratesIdBrowsePath;
         private Label EmiratesIdBrowseLabel;
         private Button EmiratesIdBrowseButton;
@@ -1305,5 +1296,15 @@
         private Button SubmitButton;
         private Button ClearButton;
         private Button CancelButton;
+        private TextBox TradeLicense;
+        private Label TradeLicenseLabel;
+        private ComboBox PreviousInsuredType;
+        private Label PreviousInsuredTypeLabel;
+        private ComboBox PaymentMethod;
+        private Label PaymentMethodLabel;
+        private ComboBox CityOfRegister;
+        private Label CityOfRegisterLabel;
+        private ComboBox NoClaimDiscount;
+        private Label NoClaimDiscountLabel;
     }
 }

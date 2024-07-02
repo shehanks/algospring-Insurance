@@ -1,5 +1,5 @@
 ﻿using AlgospringInsurance.App.Dtos;
-using AlgospringInsurance.Infrastructure;
+using AlgospringInsurance.Infrastructure.Contracts;
 
 namespace AlgospringInsurance.App.Forms
 {

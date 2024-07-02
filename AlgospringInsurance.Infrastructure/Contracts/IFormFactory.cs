@@ -1,4 +1,4 @@
-﻿namespace AlgospringInsurance.Infrastructure
+﻿namespace AlgospringInsurance.Infrastructure.Contracts
 {
     public interface IFormFactory
     {

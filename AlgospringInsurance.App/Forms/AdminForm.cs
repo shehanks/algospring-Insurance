@@ -1,6 +1,7 @@
 ﻿using AlgospringInsurance.App.Dtos;
 using AlgospringInsurance.DataAccess.UnitOfWork;
 using AlgospringInsurance.Infrastructure;
+using AlgospringInsurance.Infrastructure.Contracts;
 using System.Collections.Immutable;
 
 namespace AlgospringInsurance.App.Forms
@@ -248,7 +249,7 @@ namespace AlgospringInsurance.App.Forms
 
         private bool ValidateUserRegistrationUsername() =>
             validationProvider.Required(UserRegistrationUsername, UserRegistrationUsernameErrorProvider) &&
-            validationProvider.Length(4, UserRegistrationUsername, UserRegistrationUsernameErrorProvider);
+            validationProvider.MinLength(4, UserRegistrationUsername, UserRegistrationUsernameErrorProvider);
 
         private bool ValidateUserRegistrationPassword()
         {
@@ -257,7 +258,7 @@ namespace AlgospringInsurance.App.Forms
             {
                 return
                     validationProvider.Required(UserRegistrationPassword, UserRegistrationPasswordErrorProvider) &&
-                    validationProvider.Length(3, UserRegistrationPassword, UserRegistrationPasswordErrorProvider);
+                    validationProvider.MinLength(3, UserRegistrationPassword, UserRegistrationPasswordErrorProvider);
             }
 
             UserRegistrationPasswordErrorProvider.Clear();

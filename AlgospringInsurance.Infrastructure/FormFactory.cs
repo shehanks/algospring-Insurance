@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using AlgospringInsurance.Infrastructure.Contracts;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace AlgospringInsurance.Infrastructure
 {

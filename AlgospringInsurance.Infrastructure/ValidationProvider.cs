@@ -1,4 +1,5 @@
 ﻿using System.Text.RegularExpressions;
+using AlgospringInsurance.Infrastructure.Contracts;
 
 namespace AlgospringInsurance.Infrastructure
 {
@@ -29,7 +30,22 @@ namespace AlgospringInsurance.Infrastructure
             return valid;
         }
 
-        public bool Length(int minimumLength, Control control, ErrorProvider errorProvider)
+        public bool Length(int length, Control control, ErrorProvider errorProvider)
+        {
+            bool valid = false;
+
+            if (string.IsNullOrWhiteSpace(control.Text) || control.Text.Length != length)
+                errorProvider.SetError(control, $"Length should be {length}.");
+            else
+            {
+                errorProvider.SetError(control, string.Empty);
+                valid = true;
+            }
+
+            return valid;
+        }
+
+        public bool MinLength(int minimumLength, Control control, ErrorProvider errorProvider)
         {
             bool valid = false;
 

@@ -39,7 +39,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value)!;
+                var user = unitOfWork.UserRepository.GetById(Convert.ToInt32(selectedUser!.Value))!;
 
                 UserRegistrationEmail.Text = user.Email;
                 UserRegistrationName.Text = user.Name;
@@ -89,7 +89,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value);
+                var user = unitOfWork.UserRepository.GetById(Convert.ToInt32(selectedUser!.Value))!;
 
                 if (user is not null)
                 {
@@ -126,7 +126,7 @@ namespace AlgospringInsurance.App.Forms
             try
             {
 
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value);
+                var user = unitOfWork.UserRepository.GetById(Convert.ToInt32(selectedUser!.Value));
 
                 if (user is not null)
                 {
@@ -285,7 +285,10 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var EmailReceiverRegistration = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedEmailReceiverRegistration!.Value)!;
+                var EmailReceiverRegistration = unitOfWork.EmailReceiverRegistrationRepository
+                    .GetById(Convert.ToInt32(selectedEmailReceiverRegistration!.Value))!;
+
+
                 EmailReceiverRegistrationEmail.Text = EmailReceiverRegistration.Email;
                 EmailReceiverRegistrationIsMedical.Checked = EmailReceiverRegistration.IsMedical;
                 EmailReceiverRegistrationIsMotor.Checked = EmailReceiverRegistration.IsMotor;
@@ -331,7 +334,8 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Value);
+                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository
+                    .GetById(Convert.ToInt32(selectedUser!.Value))!;
 
                 if (emailReceiver is not null)
                 {
@@ -364,7 +368,8 @@ namespace AlgospringInsurance.App.Forms
             try
             {
 
-                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Value);
+                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository
+                    .GetById(Convert.ToInt32(selectedUser!.Value))!;
 
                 if (emailReceiver is not null)
                 {

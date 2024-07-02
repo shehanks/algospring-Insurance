@@ -39,7 +39,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id)!;
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value)!;
 
                 UserRegistrationEmail.Text = user.Email;
                 UserRegistrationName.Text = user.Name;
@@ -89,7 +89,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id);
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value);
 
                 if (user is not null)
                 {
@@ -126,7 +126,7 @@ namespace AlgospringInsurance.App.Forms
             try
             {
 
-                var user = unitOfWork.UserRepository.GetById(selectedUser!.Id);
+                var user = unitOfWork.UserRepository.GetById(selectedUser!.Value);
 
                 if (user is not null)
                 {
@@ -188,7 +188,7 @@ namespace AlgospringInsurance.App.Forms
                     {
                         UserRegistrationDropDown.Items.Add(new DropDownItem
                         {
-                            Id = user.Id,
+                            Value = user.Id.ToString(),
                             Text = $"{user.Name} - {user.Email}"
                         });
                     }
@@ -285,7 +285,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var EmailReceiverRegistration = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedEmailReceiverRegistration!.Id)!;
+                var EmailReceiverRegistration = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedEmailReceiverRegistration!.Value)!;
                 EmailReceiverRegistrationEmail.Text = EmailReceiverRegistration.Email;
                 EmailReceiverRegistrationIsMedical.Checked = EmailReceiverRegistration.IsMedical;
                 EmailReceiverRegistrationIsMotor.Checked = EmailReceiverRegistration.IsMotor;
@@ -331,7 +331,7 @@ namespace AlgospringInsurance.App.Forms
 
             try
             {
-                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Id);
+                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Value);
 
                 if (emailReceiver is not null)
                 {
@@ -364,7 +364,7 @@ namespace AlgospringInsurance.App.Forms
             try
             {
 
-                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Id);
+                var emailReceiver = unitOfWork.EmailReceiverRegistrationRepository.GetById(selectedUser!.Value);
 
                 if (emailReceiver is not null)
                 {
@@ -416,7 +416,7 @@ namespace AlgospringInsurance.App.Forms
                     {
                         EmailReceiverRegistrationDropDown.Items.Add(new DropDownItem
                         {
-                            Id = receiver.Id,
+                            Value = receiver.Id.ToString(),
                             Text = receiver.Email
                         });
                     }

@@ -141,7 +141,7 @@
             UserRegistrationDropDown.Name = "UserRegistrationDropDown";
             UserRegistrationDropDown.Size = new Size(428, 28);
             UserRegistrationDropDown.TabIndex = 19;
-            UserRegistrationDropDown.ValueMember = "Id";
+            UserRegistrationDropDown.ValueMember = "Value";
             UserRegistrationDropDown.SelectedIndexChanged += UserRegistrationDropDownSelectedIndexChanged;
             // 
             // UserRegistrationDeleteButton
@@ -308,7 +308,7 @@
             EmailReceiverRegistrationDropDown.Name = "EmailReceiverRegistrationDropDown";
             EmailReceiverRegistrationDropDown.Size = new Size(429, 28);
             EmailReceiverRegistrationDropDown.TabIndex = 21;
-            EmailReceiverRegistrationDropDown.ValueMember = "Id";
+            EmailReceiverRegistrationDropDown.ValueMember = "Value";
             EmailReceiverRegistrationDropDown.SelectedIndexChanged += EmailReceiverRegistrationDropDownSelectedIndexChanged;
             // 
             // EmailReceiverRegistrationIsMotor

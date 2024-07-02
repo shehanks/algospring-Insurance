@@ -28,9 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MotorQuoteRequestForm));
             MotorQuoteForm_Heading_Label = new Label();
             GeneralInformationGroupBox = new GroupBox();
+            TradeLicense = new TextBox();
+            TradeLicenseLabel = new Label();
+            PreviousInsuredType = new ComboBox();
+            PreviousInsuredTypeLabel = new Label();
+            PaymentMethod = new ComboBox();
+            PaymentMethodLabel = new Label();
+            CityOfRegister = new ComboBox();
+            CityOfRegisterLabel = new Label();
+            NoClaimDiscount = new ComboBox();
+            NoClaimDiscountLabel = new Label();
             LoadDataButton = new Button();
             VehicleRegistrationBackBrowseButton = new Button();
             VehicleRegistrationBackBrowsePath = new TextBox();
@@ -58,8 +69,8 @@
             GenderLabel = new Label();
             VehicleRepairs = new ComboBox();
             VehicleRepairsLabel = new Label();
-            MobileNumber = new TextBox();
-            MobileNumberLabel = new Label();
+            MobileNo = new TextBox();
+            MobileNoLabel = new Label();
             PolicyStartDate = new DateTimePicker();
             PolicyStartDateLabel = new Label();
             BusinessNature = new ComboBox();
@@ -70,10 +81,10 @@
             AccountTypeLabel = new Label();
             CustomerName = new TextBox();
             CustomerLabel = new Label();
-            OutPutGroupBox = new GroupBox();
+            OutputGroupBox = new GroupBox();
             SubmitButton = new Button();
             ClearButton = new Button();
-            CancelButton = new Button();
+            ResetButton = new Button();
             groupBox3 = new GroupBox();
             PortalPanel = new Panel();
             OutputPortalIsNewIndia = new CheckBox();
@@ -120,27 +131,21 @@
             OutputTCNoLabel = new Label();
             OutputChassiNo = new TextBox();
             OutputChassiNoLabel = new Label();
-            OutPutEngineNo = new TextBox();
-            OutPutEngineNoLabel = new Label();
+            OutputEngineNo = new TextBox();
+            OutputEngineNoLabel = new Label();
             OutputTrafficPlateNo = new TextBox();
             OutputTrafficPlateNoLabel = new Label();
-            TradeLicense = new TextBox();
-            TradeLicenseLabel = new Label();
-            PreviousInsuredType = new ComboBox();
-            PreviousInsuredTypeLabel = new Label();
-            PaymentMethod = new ComboBox();
-            PaymentMethodLabel = new Label();
-            CityOfRegister = new ComboBox();
-            CityOfRegisterLabel = new Label();
-            NoClaimDiscount = new ComboBox();
-            NoClaimDiscountLabel = new Label();
+            OutputEngineNoErrorProvider = new ErrorProvider(components);
+            MobileNoErrorProvider = new ErrorProvider(components);
             GeneralInformationGroupBox.SuspendLayout();
-            OutPutGroupBox.SuspendLayout();
+            OutputGroupBox.SuspendLayout();
             groupBox3.SuspendLayout();
             PortalPanel.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             OutputVehicleDetailsGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)OutputEngineNoErrorProvider).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)MobileNoErrorProvider).BeginInit();
             SuspendLayout();
             // 
             // MotorQuoteForm_Heading_Label
@@ -192,8 +197,8 @@
             GeneralInformationGroupBox.Controls.Add(GenderLabel);
             GeneralInformationGroupBox.Controls.Add(VehicleRepairs);
             GeneralInformationGroupBox.Controls.Add(VehicleRepairsLabel);
-            GeneralInformationGroupBox.Controls.Add(MobileNumber);
-            GeneralInformationGroupBox.Controls.Add(MobileNumberLabel);
+            GeneralInformationGroupBox.Controls.Add(MobileNo);
+            GeneralInformationGroupBox.Controls.Add(MobileNoLabel);
             GeneralInformationGroupBox.Controls.Add(PolicyStartDate);
             GeneralInformationGroupBox.Controls.Add(PolicyStartDateLabel);
             GeneralInformationGroupBox.Controls.Add(BusinessNature);
@@ -211,6 +216,90 @@
             GeneralInformationGroupBox.TabStop = false;
             GeneralInformationGroupBox.Text = "General Information";
             // 
+            // TradeLicense
+            // 
+            TradeLicense.Location = new Point(1022, 203);
+            TradeLicense.Name = "TradeLicense";
+            TradeLicense.Size = new Size(200, 27);
+            TradeLicense.TabIndex = 55;
+            // 
+            // TradeLicenseLabel
+            // 
+            TradeLicenseLabel.AutoSize = true;
+            TradeLicenseLabel.Location = new Point(793, 206);
+            TradeLicenseLabel.Name = "TradeLicenseLabel";
+            TradeLicenseLabel.Size = new Size(98, 20);
+            TradeLicenseLabel.TabIndex = 53;
+            TradeLicenseLabel.Text = "Trade License";
+            // 
+            // PreviousInsuredType
+            // 
+            PreviousInsuredType.FormattingEnabled = true;
+            PreviousInsuredType.Location = new Point(1022, 136);
+            PreviousInsuredType.Name = "PreviousInsuredType";
+            PreviousInsuredType.Size = new Size(200, 28);
+            PreviousInsuredType.TabIndex = 56;
+            // 
+            // PreviousInsuredTypeLabel
+            // 
+            PreviousInsuredTypeLabel.AutoSize = true;
+            PreviousInsuredTypeLabel.Location = new Point(793, 139);
+            PreviousInsuredTypeLabel.Name = "PreviousInsuredTypeLabel";
+            PreviousInsuredTypeLabel.Size = new Size(151, 20);
+            PreviousInsuredTypeLabel.TabIndex = 54;
+            PreviousInsuredTypeLabel.Text = "Previous Insured Type";
+            // 
+            // PaymentMethod
+            // 
+            PaymentMethod.FormattingEnabled = true;
+            PaymentMethod.Location = new Point(1022, 170);
+            PaymentMethod.Name = "PaymentMethod";
+            PaymentMethod.Size = new Size(200, 28);
+            PaymentMethod.TabIndex = 52;
+            // 
+            // PaymentMethodLabel
+            // 
+            PaymentMethodLabel.AutoSize = true;
+            PaymentMethodLabel.Location = new Point(793, 173);
+            PaymentMethodLabel.Name = "PaymentMethodLabel";
+            PaymentMethodLabel.Size = new Size(121, 20);
+            PaymentMethodLabel.TabIndex = 51;
+            PaymentMethodLabel.Text = "Payment Method";
+            // 
+            // CityOfRegister
+            // 
+            CityOfRegister.FormattingEnabled = true;
+            CityOfRegister.Location = new Point(1022, 102);
+            CityOfRegister.Name = "CityOfRegister";
+            CityOfRegister.Size = new Size(200, 28);
+            CityOfRegister.TabIndex = 48;
+            // 
+            // CityOfRegisterLabel
+            // 
+            CityOfRegisterLabel.AutoSize = true;
+            CityOfRegisterLabel.Location = new Point(793, 105);
+            CityOfRegisterLabel.Name = "CityOfRegisterLabel";
+            CityOfRegisterLabel.Size = new Size(110, 20);
+            CityOfRegisterLabel.TabIndex = 47;
+            CityOfRegisterLabel.Text = "City of Register";
+            // 
+            // NoClaimDiscount
+            // 
+            NoClaimDiscount.FormattingEnabled = true;
+            NoClaimDiscount.Location = new Point(1022, 68);
+            NoClaimDiscount.Name = "NoClaimDiscount";
+            NoClaimDiscount.Size = new Size(200, 28);
+            NoClaimDiscount.TabIndex = 50;
+            // 
+            // NoClaimDiscountLabel
+            // 
+            NoClaimDiscountLabel.AutoSize = true;
+            NoClaimDiscountLabel.Location = new Point(793, 71);
+            NoClaimDiscountLabel.Name = "NoClaimDiscountLabel";
+            NoClaimDiscountLabel.Size = new Size(223, 20);
+            NoClaimDiscountLabel.TabIndex = 49;
+            NoClaimDiscountLabel.Text = "No Claim Discount (No of Years)";
+            // 
             // LoadDataButton
             // 
             LoadDataButton.Location = new Point(1097, 293);
@@ -219,6 +308,7 @@
             LoadDataButton.TabIndex = 46;
             LoadDataButton.Text = "Load Data";
             LoadDataButton.UseVisualStyleBackColor = true;
+            LoadDataButton.Click += LoadDataButtonClick;
             // 
             // VehicleRegistrationBackBrowseButton
             // 
@@ -411,11 +501,13 @@
             // 
             // Gender
             // 
+            Gender.DisplayMember = "Text";
             Gender.FormattingEnabled = true;
             Gender.Location = new Point(130, 64);
             Gender.Name = "Gender";
             Gender.Size = new Size(200, 28);
             Gender.TabIndex = 19;
+            Gender.ValueMember = "Value";
             // 
             // GenderLabel
             // 
@@ -443,22 +535,25 @@
             VehicleRepairsLabel.TabIndex = 16;
             VehicleRepairsLabel.Text = "Vehicle Repairs";
             // 
-            // MobileNumber
+            // MobileNo
             // 
-            MobileNumber.Location = new Point(130, 98);
-            MobileNumber.MaxLength = 10;
-            MobileNumber.Name = "MobileNumber";
-            MobileNumber.Size = new Size(200, 27);
-            MobileNumber.TabIndex = 13;
+            MobileNo.Location = new Point(130, 98);
+            MobileNo.MaxLength = 10;
+            MobileNo.Name = "MobileNo";
+            MobileNo.PlaceholderText = "e.g 0701234567";
+            MobileNo.Size = new Size(200, 27);
+            MobileNo.TabIndex = 13;
+            MobileNo.TextChanged += MobileNoTextChanged;
+            MobileNo.KeyPress += MobileNumberKeyPress;
             // 
-            // MobileNumberLabel
+            // MobileNoLabel
             // 
-            MobileNumberLabel.AutoSize = true;
-            MobileNumberLabel.Location = new Point(6, 101);
-            MobileNumberLabel.Name = "MobileNumberLabel";
-            MobileNumberLabel.Size = new Size(80, 20);
-            MobileNumberLabel.TabIndex = 12;
-            MobileNumberLabel.Text = "Mobile No";
+            MobileNoLabel.AutoSize = true;
+            MobileNoLabel.Location = new Point(6, 101);
+            MobileNoLabel.Name = "MobileNoLabel";
+            MobileNoLabel.Size = new Size(80, 20);
+            MobileNoLabel.TabIndex = 12;
+            MobileNoLabel.Text = "Mobile No";
             // 
             // PolicyStartDate
             // 
@@ -469,7 +564,7 @@
             PolicyStartDate.Name = "PolicyStartDate";
             PolicyStartDate.Size = new Size(200, 27);
             PolicyStartDate.TabIndex = 11;
-            PolicyStartDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            PolicyStartDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 432);
             // 
             // PolicyStartDateLabel
             // 
@@ -547,21 +642,21 @@
             CustomerLabel.TabIndex = 0;
             CustomerLabel.Text = "Customer Name";
             // 
-            // OutPutGroupBox
+            // OutputGroupBox
             // 
-            OutPutGroupBox.Controls.Add(SubmitButton);
-            OutPutGroupBox.Controls.Add(ClearButton);
-            OutPutGroupBox.Controls.Add(CancelButton);
-            OutPutGroupBox.Controls.Add(groupBox3);
-            OutPutGroupBox.Controls.Add(groupBox2);
-            OutPutGroupBox.Controls.Add(groupBox1);
-            OutPutGroupBox.Controls.Add(OutputVehicleDetailsGroupBox);
-            OutPutGroupBox.Location = new Point(12, 425);
-            OutPutGroupBox.Name = "OutPutGroupBox";
-            OutPutGroupBox.Size = new Size(1270, 475);
-            OutPutGroupBox.TabIndex = 2;
-            OutPutGroupBox.TabStop = false;
-            OutPutGroupBox.Text = "Output";
+            OutputGroupBox.Controls.Add(SubmitButton);
+            OutputGroupBox.Controls.Add(ClearButton);
+            OutputGroupBox.Controls.Add(ResetButton);
+            OutputGroupBox.Controls.Add(groupBox3);
+            OutputGroupBox.Controls.Add(groupBox2);
+            OutputGroupBox.Controls.Add(groupBox1);
+            OutputGroupBox.Controls.Add(OutputVehicleDetailsGroupBox);
+            OutputGroupBox.Location = new Point(12, 425);
+            OutputGroupBox.Name = "OutputGroupBox";
+            OutputGroupBox.Size = new Size(1270, 475);
+            OutputGroupBox.TabIndex = 2;
+            OutputGroupBox.TabStop = false;
+            OutputGroupBox.Text = "Output";
             // 
             // SubmitButton
             // 
@@ -581,14 +676,14 @@
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
             // 
-            // CancelButton
+            // ResetButton
             // 
-            CancelButton.Location = new Point(1128, 426);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(94, 39);
-            CancelButton.TabIndex = 69;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
+            ResetButton.Location = new Point(1128, 426);
+            ResetButton.Name = "ResetButton";
+            ResetButton.Size = new Size(94, 39);
+            ResetButton.TabIndex = 69;
+            ResetButton.Text = "Reset";
+            ResetButton.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -729,7 +824,7 @@
             OutputDrivingLicenseExpiryDate.Name = "OutputDrivingLicenseExpiryDate";
             OutputDrivingLicenseExpiryDate.Size = new Size(200, 27);
             OutputDrivingLicenseExpiryDate.TabIndex = 64;
-            OutputDrivingLicenseExpiryDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDrivingLicenseExpiryDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 471);
             // 
             // OutputDrivingLicenseExpiryDateLabel
             // 
@@ -749,7 +844,7 @@
             OutputDrivingLicenseIssueDate.Name = "OutputDrivingLicenseIssueDate";
             OutputDrivingLicenseIssueDate.Size = new Size(200, 27);
             OutputDrivingLicenseIssueDate.TabIndex = 48;
-            OutputDrivingLicenseIssueDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDrivingLicenseIssueDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 473);
             // 
             // OutputDrivingLicenseIssueDateLabel
             // 
@@ -804,7 +899,7 @@
             OutputDateOfBirth.Name = "OutputDateOfBirth";
             OutputDateOfBirth.Size = new Size(200, 27);
             OutputDateOfBirth.TabIndex = 66;
-            OutputDateOfBirth.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputDateOfBirth.Value = new DateTime(2024, 7, 2, 11, 53, 24, 480);
             // 
             // OutputDateOfBirthLabel
             // 
@@ -841,7 +936,7 @@
             OutputEmiratesExpiryDate.Name = "OutputEmiratesExpiryDate";
             OutputEmiratesExpiryDate.Size = new Size(200, 27);
             OutputEmiratesExpiryDate.TabIndex = 64;
-            OutputEmiratesExpiryDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputEmiratesExpiryDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 485);
             // 
             // OutputEmiratesExpiryDateLabel
             // 
@@ -861,7 +956,7 @@
             OutputEmiratesIssueDate.Name = "OutputEmiratesIssueDate";
             OutputEmiratesIssueDate.Size = new Size(200, 27);
             OutputEmiratesIssueDate.TabIndex = 48;
-            OutputEmiratesIssueDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputEmiratesIssueDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 488);
             // 
             // OutputEmiratesIssueDateLabel
             // 
@@ -906,8 +1001,8 @@
             OutputVehicleDetailsGroupBox.Controls.Add(OutputTCNoLabel);
             OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNo);
             OutputVehicleDetailsGroupBox.Controls.Add(OutputChassiNoLabel);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNo);
-            OutputVehicleDetailsGroupBox.Controls.Add(OutPutEngineNoLabel);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputEngineNo);
+            OutputVehicleDetailsGroupBox.Controls.Add(OutputEngineNoLabel);
             OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNo);
             OutputVehicleDetailsGroupBox.Controls.Add(OutputTrafficPlateNoLabel);
             OutputVehicleDetailsGroupBox.Location = new Point(6, 33);
@@ -926,7 +1021,7 @@
             OutputInsExpDate.Name = "OutputInsExpDate";
             OutputInsExpDate.Size = new Size(200, 27);
             OutputInsExpDate.TabIndex = 64;
-            OutputInsExpDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputInsExpDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 494);
             // 
             // OutputInsExpDateLabel
             // 
@@ -946,7 +1041,7 @@
             OutputRegisterDate.Name = "OutputRegisterDate";
             OutputRegisterDate.Size = new Size(200, 27);
             OutputRegisterDate.TabIndex = 48;
-            OutputRegisterDate.Value = new DateTime(2024, 7, 1, 17, 31, 4, 743);
+            OutputRegisterDate.Value = new DateTime(2024, 7, 2, 11, 53, 24, 498);
             // 
             // OutputRegisterDateLabel
             // 
@@ -1053,21 +1148,22 @@
             OutputChassiNoLabel.TabIndex = 51;
             OutputChassiNoLabel.Text = "Chassi No";
             // 
-            // OutPutEngineNo
+            // OutputEngineNo
             // 
-            OutPutEngineNo.Location = new Point(123, 63);
-            OutPutEngineNo.Name = "OutPutEngineNo";
-            OutPutEngineNo.Size = new Size(200, 27);
-            OutPutEngineNo.TabIndex = 50;
+            OutputEngineNo.Location = new Point(123, 63);
+            OutputEngineNo.Name = "OutputEngineNo";
+            OutputEngineNo.PlaceholderText = "e.g R16B11404804";
+            OutputEngineNo.Size = new Size(200, 27);
+            OutputEngineNo.TabIndex = 50;
             // 
-            // OutPutEngineNoLabel
+            // OutputEngineNoLabel
             // 
-            OutPutEngineNoLabel.AutoSize = true;
-            OutPutEngineNoLabel.Location = new Point(6, 66);
-            OutPutEngineNoLabel.Name = "OutPutEngineNoLabel";
-            OutPutEngineNoLabel.Size = new Size(78, 20);
-            OutPutEngineNoLabel.TabIndex = 49;
-            OutPutEngineNoLabel.Text = "Engine No";
+            OutputEngineNoLabel.AutoSize = true;
+            OutputEngineNoLabel.Location = new Point(6, 66);
+            OutputEngineNoLabel.Name = "OutputEngineNoLabel";
+            OutputEngineNoLabel.Size = new Size(78, 20);
+            OutputEngineNoLabel.TabIndex = 49;
+            OutputEngineNoLabel.Text = "Engine No";
             // 
             // OutputTrafficPlateNo
             // 
@@ -1085,96 +1181,20 @@
             OutputTrafficPlateNoLabel.TabIndex = 47;
             OutputTrafficPlateNoLabel.Text = "Traffic Plate No";
             // 
-            // TradeLicense
+            // OutputEngineNoErrorProvider
             // 
-            TradeLicense.Location = new Point(1022, 203);
-            TradeLicense.Name = "TradeLicense";
-            TradeLicense.Size = new Size(200, 27);
-            TradeLicense.TabIndex = 55;
+            OutputEngineNoErrorProvider.ContainerControl = this;
             // 
-            // TradeLicenseLabel
+            // MobileNoErrorProvider
             // 
-            TradeLicenseLabel.AutoSize = true;
-            TradeLicenseLabel.Location = new Point(793, 206);
-            TradeLicenseLabel.Name = "TradeLicenseLabel";
-            TradeLicenseLabel.Size = new Size(98, 20);
-            TradeLicenseLabel.TabIndex = 53;
-            TradeLicenseLabel.Text = "Trade License";
-            // 
-            // PreviousInsuredType
-            // 
-            PreviousInsuredType.FormattingEnabled = true;
-            PreviousInsuredType.Location = new Point(1022, 136);
-            PreviousInsuredType.Name = "PreviousInsuredType";
-            PreviousInsuredType.Size = new Size(200, 28);
-            PreviousInsuredType.TabIndex = 56;
-            // 
-            // PreviousInsuredTypeLabel
-            // 
-            PreviousInsuredTypeLabel.AutoSize = true;
-            PreviousInsuredTypeLabel.Location = new Point(793, 139);
-            PreviousInsuredTypeLabel.Name = "PreviousInsuredTypeLabel";
-            PreviousInsuredTypeLabel.Size = new Size(151, 20);
-            PreviousInsuredTypeLabel.TabIndex = 54;
-            PreviousInsuredTypeLabel.Text = "Previous Insured Type";
-            // 
-            // PaymentMethod
-            // 
-            PaymentMethod.FormattingEnabled = true;
-            PaymentMethod.Location = new Point(1022, 170);
-            PaymentMethod.Name = "PaymentMethod";
-            PaymentMethod.Size = new Size(200, 28);
-            PaymentMethod.TabIndex = 52;
-            // 
-            // PaymentMethodLabel
-            // 
-            PaymentMethodLabel.AutoSize = true;
-            PaymentMethodLabel.Location = new Point(793, 173);
-            PaymentMethodLabel.Name = "PaymentMethodLabel";
-            PaymentMethodLabel.Size = new Size(121, 20);
-            PaymentMethodLabel.TabIndex = 51;
-            PaymentMethodLabel.Text = "Payment Method";
-            // 
-            // CityOfRegister
-            // 
-            CityOfRegister.FormattingEnabled = true;
-            CityOfRegister.Location = new Point(1022, 102);
-            CityOfRegister.Name = "CityOfRegister";
-            CityOfRegister.Size = new Size(200, 28);
-            CityOfRegister.TabIndex = 48;
-            // 
-            // CityOfRegisterLabel
-            // 
-            CityOfRegisterLabel.AutoSize = true;
-            CityOfRegisterLabel.Location = new Point(793, 105);
-            CityOfRegisterLabel.Name = "CityOfRegisterLabel";
-            CityOfRegisterLabel.Size = new Size(110, 20);
-            CityOfRegisterLabel.TabIndex = 47;
-            CityOfRegisterLabel.Text = "City of Register";
-            // 
-            // NoClaimDiscount
-            // 
-            NoClaimDiscount.FormattingEnabled = true;
-            NoClaimDiscount.Location = new Point(1022, 68);
-            NoClaimDiscount.Name = "NoClaimDiscount";
-            NoClaimDiscount.Size = new Size(200, 28);
-            NoClaimDiscount.TabIndex = 50;
-            // 
-            // NoClaimDiscountLabel
-            // 
-            NoClaimDiscountLabel.AutoSize = true;
-            NoClaimDiscountLabel.Location = new Point(793, 71);
-            NoClaimDiscountLabel.Name = "NoClaimDiscountLabel";
-            NoClaimDiscountLabel.Size = new Size(223, 20);
-            NoClaimDiscountLabel.TabIndex = 49;
-            NoClaimDiscountLabel.Text = "No Claim Discount (No of Years)";
+            MobileNoErrorProvider.ContainerControl = this;
             // 
             // MotorQuoteRequestForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1292, 909);
-            Controls.Add(OutPutGroupBox);
+            Controls.Add(OutputGroupBox);
             Controls.Add(GeneralInformationGroupBox);
             Controls.Add(MotorQuoteForm_Heading_Label);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -1185,7 +1205,7 @@
             Text = "Motor Quotation Request";
             GeneralInformationGroupBox.ResumeLayout(false);
             GeneralInformationGroupBox.PerformLayout();
-            OutPutGroupBox.ResumeLayout(false);
+            OutputGroupBox.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             PortalPanel.ResumeLayout(false);
             PortalPanel.PerformLayout();
@@ -1195,6 +1215,8 @@
             groupBox1.PerformLayout();
             OutputVehicleDetailsGroupBox.ResumeLayout(false);
             OutputVehicleDetailsGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)OutputEngineNoErrorProvider).EndInit();
+            ((System.ComponentModel.ISupportInitialize)MobileNoErrorProvider).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1213,8 +1235,8 @@
         private Label ProductTypeLabel;
         private ComboBox AccountType;
         private Label AccountTypeLabel;
-        private TextBox MobileNumber;
-        private Label MobileNumberLabel;
+        private TextBox MobileNo;
+        private Label MobileNoLabel;
         private ComboBox VehicleColor;
         private Label VehicleColorLabel;
         private ComboBox Gender;
@@ -1242,7 +1264,7 @@
         private Button VehicleRegistrationFrontBrowseButton;
         private TextBox VehicleRegistrationFrontBrowsePath;
         private Label VehicleRegistrationFrontBrowseLabel;
-        private GroupBox OutPutGroupBox;
+        private GroupBox OutputGroupBox;
         private Panel PortalPanel;
         private CheckBox OutputPortalIsAlsagar;
         private CheckBox OutputPortalOriental;
@@ -1260,8 +1282,8 @@
         private Label OutputTCNoLabel;
         private TextBox OutputChassiNo;
         private Label OutputChassiNoLabel;
-        private TextBox OutPutEngineNo;
-        private Label OutPutEngineNoLabel;
+        private TextBox OutputEngineNo;
+        private Label OutputEngineNoLabel;
         private GroupBox groupBox1;
         private ComboBox OutputNationality;
         private Label OutputNationalityLabel;
@@ -1295,7 +1317,7 @@
         private GroupBox groupBox3;
         private Button SubmitButton;
         private Button ClearButton;
-        private Button CancelButton;
+        private Button ResetButton;
         private TextBox TradeLicense;
         private Label TradeLicenseLabel;
         private ComboBox PreviousInsuredType;
@@ -1306,5 +1328,7 @@
         private Label CityOfRegisterLabel;
         private ComboBox NoClaimDiscount;
         private Label NoClaimDiscountLabel;
+        private ErrorProvider OutputEngineNoErrorProvider;
+        private ErrorProvider MobileNoErrorProvider;
     }
 }
